@@ -1,0 +1,30 @@
+@use "../../abstract" as var;
+
+.new-year-callback__container {
+    padding-top: 70px;
+    padding-bottom: 70px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+    font-weight: 500;
+}
+
+.new-year-callback__title {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 38px;
+}
+
+.new-year-callback__subtitle {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 20px;
+}
+
+.new-year-callback__btn {
+    margin-top: 30px;
+}

@@ -1,0 +1,52 @@
+@use 'fonts';
+@use 'base';
+@use "container";
+@use 'helpers';
+
+@use 'blocks/owl-custom';
+@use 'blocks/swal-custom';
+@use 'blocks/buttons';
+@use 'blocks/form';
+@use 'blocks/form-field';
+@use 'blocks/box-text';
+@use "blocks/social-link";
+@use "blocks/social";
+@use "blocks/ng-link";
+
+@use 'layout';
+@use 'header';
+@use 'footer';
+
+@use "blocks/welcome-screen";
+@use "blocks/new-year";
+@use "blocks/price-form";
+@use "blocks/price";
+@use "blocks/events";
+
+// OUR HOUSES SECTION
+@use "blocks/our-houses";
+@use "blocks/house-item";
+@use "blocks/house-carousel";
+
+// LOCATION
+@use 'blocks/map';
+@use 'blocks/address';
+@use "blocks/address-item";
+@use "blocks/location";
+
+// BOOKING
+@use "blocks/booking";
+@use "blocks/booking-form";
+@use "blocks/question";
+
+// PRA HOUSE
+@use "blocks/pra-interior-item";
+@use "blocks/pra-interior";
+@use "blocks/pra-gallery";
+@use "blocks/pra-territory";
+@use "blocks/pra-territory-item";
+@use "blocks/ushmor-interior";
+@use "blocks/ushmor-interior-item";
+@use "blocks/ushmor-territory";
+@use "blocks/ushmor-feature";
+@use "blocks/ushmor-features";

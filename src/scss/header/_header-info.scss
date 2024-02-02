@@ -1,0 +1,40 @@
+@use "../abstract" as var;
+
+.header-info {
+    display: none;
+}
+
+.header-info {
+    position: relative;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    // max-width: 400px;
+    height: 35px;
+
+    color: var.$brand-white;
+
+    z-index: 2;
+}
+
+.header-info__text {
+    margin: 0;
+
+    color: inherit;
+    font-size: 15px;
+    line-height: 1.2;
+
+    a {
+        color: var.$brand-white;
+        text-decoration: underline;
+        font-weight: 700;
+    }
+}
+
+.header-info__social {
+    margin-right: 15px;
+}

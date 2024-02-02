@@ -1,0 +1,26 @@
+@use "../abstract" as var;
+
+.ng-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 10px 20px;
+
+    color: #ffffff;
+    font-weight: 500;
+    font-size: 16px;
+
+    border: 2px solid #ffffff;
+}
+
+.ng-link__ico {
+    display: none;
+}
+
+@include var.tablet-size {
+
+    .ng-link__ico {
+        display: block;
+        margin-right: 10px;
+    }
+}

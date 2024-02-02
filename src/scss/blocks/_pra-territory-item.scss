@@ -1,0 +1,77 @@
+@use "../abstract" as var;
+
+.pra-territory-item {
+  position: relative;
+
+  padding: 5px;
+
+  text-align: center;
+
+  &::before {
+    content: '';
+
+    display: block;
+    width: 44px;
+    height: 44px;
+    margin: 0 auto 20px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.pra-territory-item__title {
+  font-weight: 400;
+  font-size: 13px;
+}
+
+.pra-territory-item--pines::before {
+  background-image: url("../images/ico-pines.png");
+}
+
+.pra-territory-item--garage::before {
+  background-image: url("../images/ico-garage.png");
+}
+
+.pra-territory-item--sauna::before {
+  background-image: url("../images/ico-sauna.png");
+}
+
+.pra-territory-item--grill::before {
+  background-image: url("../images/ico-grill.png");
+}
+
+.pra-territory-item--boat::before {
+  background-image: url("../images/ico-boat.png");
+}
+
+.pra-territory-item--guns::before {
+  background-image: url("../images/ico-guns.png");
+}
+
+.pra-interior-item__title {
+  margin: 0;
+
+  font-size: 12px;
+  font-weight: 400;
+}
+
+@include var.tablet-size {
+
+  .pra-territory-item {
+    padding: 10px;
+
+    &::before {
+      width: 64px;
+      height: 64px;
+    }
+  }
+
+  .pra-territory-item__title {
+    font-size: 16px;
+  }
+
+  .pra-interior-item__title {
+    font-size: 16px;
+  }
+}

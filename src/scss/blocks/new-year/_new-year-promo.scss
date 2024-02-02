@@ -1,0 +1,99 @@
+@use "../../abstract" as var;
+
+.new-year-promo {
+    position: relative;
+
+    width: 100%;
+
+    background-image: url("../images/new-year-bg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    z-index: 1;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+}
+
+
+.new-year-promo__container {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+
+    text-align: center;
+    color: #ffffff;
+    font-family: Kurale, sans-serif;
+
+    z-index: 2;
+}
+
+.new-year-promo__title {
+    margin-top: 0;
+    margin-bottom: 23px;
+
+    font-size: 48px;
+}
+
+.new-year-promo__subtitle {
+    margin: 0;
+
+    font-size: 28px;
+    font-family: inherit;
+    line-height: 1;
+}
+
+.new-year-promo__note {
+    margin-top: 20px;
+    margin-bottom: 0;
+
+    font-size: 20px;
+    font-family: 'Raleway', san-serif;
+    font-weight: 500;
+}
+
+.new-year-promo__form {
+    margin-top: 30px;
+}
+
+@include var.tablet-size {
+
+    .new-year-promo {
+        height: 400px;
+    }
+    
+}
+
+@include var.desktop-size {
+
+    .new-year-promo {
+        height: 700px;
+    }
+
+    .new-year-promo__title {
+        font-size: 56px;
+    }
+
+    .new-year-promo__subtitle {
+        font-size: 38px;
+    }
+
+
+}

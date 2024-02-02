@@ -1,0 +1,259 @@
+@use "../abstract" as var;
+
+.site-menu {
+  position: fixed;
+  left: 0;
+  top: 0;
+
+  width: 300px;
+  height: 100%;
+
+  background-color: var.$brand-white;
+
+  z-index: 9999;
+  transform: translateX(-105%);
+  transition: transform 0.5s;
+  backface-visibility: hidden;
+  will-change: transform;
+
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14),
+              0 3px 1px -2px rgba(0,0,0,0.12),
+              0 1px 5px 0 rgba(0,0,0,0.2);
+
+  background-image: url("../images/nav-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(240,240,240, 0.85);
+
+    z-index: -1;
+  }
+}
+
+.site-menu--isOpen {
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+
+.site-menu__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+
+  height: 100%;
+  padding: 25px 15px;
+
+  text-align: center;
+}
+
+.site-menu__close-menu {
+  @extend %btn-reset;
+
+  position: relative;
+
+  align-self: flex-start;
+  padding-left: 40px;
+
+  font-size: 16px;
+  font-weight: 700;
+  color: rgba(var.$brand-brown, 0.9);
+  text-transform: uppercase;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    display: block;
+    width: 34px;
+    height: 34px;
+    margin-top: -18px;
+
+    background-image: url("../images/ico-close.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+}
+
+.site-menu__list {
+  @extend %list-reset;
+
+  margin-top: auto;
+
+  text-align: center;
+}
+
+.site-menu__item {
+  margin-bottom: 20px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.site-menu__link {
+  display: block;
+
+  font-size: 18px;
+  font-weight: 500;
+  color: rgba(var.$brand-brown, 1);
+
+  transition: background-color 1s;
+
+  &:hover,
+  &:active {
+    color: rgba(var.$brand-brown, 0.7);
+  }
+
+  &:focus {
+    outline-style: solid;
+    outline-color: transparent;
+
+    transition: none;
+  }
+}
+
+.site-menu__address {
+  display: inline-block;
+
+  font-size: 14px;
+  line-height: 1.2;
+  color: rgba(var.$brand-brown, 0.9);
+  font-feature-settings: "lnum";
+}
+
+.site-menu__social {
+  margin-top: auto;
+  margin-bottom: 15px;
+}
+
+@include var.desktop-size {
+
+  .site-menu__social {
+    display: none;
+  }
+
+  .site-menu {
+    position: static;
+
+    width: auto;
+    height: 100%;
+
+    background-color: transparent;
+
+    z-index: 9999;
+    transform: translateX(0);
+    transition: none;
+    backface-visibility: hidden;
+    will-change: initial;
+
+    box-shadow: none;
+
+    background-image: none;
+
+    &::before {
+      display: none;
+    }
+  }
+
+  .site-menu__close-menu {
+    display: none;
+  }
+
+  .site-menu__address {
+    display: none;
+  }
+
+  .site-menu__wrapper {
+    padding: 0;
+  }
+
+  .site-menu__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .site-menu__item {
+    display: block;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .site-menu__link {
+    position: relative;
+
+    height: 100%;
+    padding: 33px 15px;
+
+    font-size: 18px;
+    font-family: Kurale, sans-serif;
+
+    transition: all .3s ease-in-out;
+
+    &::before {
+      content: '';
+
+      position: absolute;
+      bottom: 1px;
+      left: 0;
+
+      display: block;
+      width: 100%;
+      height: 3px;
+
+      background-color: transparent;
+      transition: all .3s ease-in-out;
+    }
+  }
+
+  .site-menu__link:hover {
+
+    opacity: 1;
+
+    &::before {
+      background-color: var.$brand-brown;
+    }
+  }
+
+  // MODS
+
+  .site-menu--white .site-menu__link {
+    padding: 0 15px;
+
+    color: #ffffff;
+
+    &:hover,
+    &:active {
+      color: var.$brand-danger;
+    }
+  
+
+    &::before {
+      display: none;
+    }
+  }
+}

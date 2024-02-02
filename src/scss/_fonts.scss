@@ -1,0 +1,44 @@
+@font-face {
+  font-family: "Kurale";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Kurale-Regular"),
+       url("../fonts/Kurale-Regular.woff2"),
+       url("../fonts/Kurale-Regular.woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  src: local("Raleway-Regular"),
+       url("../fonts/Raleway-Regular.woff2"),
+       url("../fonts/Raleway-Regular.woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 500;
+  src: local("Raleway-Medium"),
+       url("../fonts/Raleway-Medium.woff2"),
+       url("../fonts/Raleway-Medium.woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 400;
+  src: local("Raleway-Italic"),
+       url("../fonts/Raleway-Italic.woff2"),
+       url("../fonts/Raleway-Italic.woff");
+}
+
+@font-face {
+  font-family: "Raleway";
+  font-style: italic;
+  font-weight: 500;
+  src: local("Raleway-MediumItalic"),
+       url("../fonts/Raleway-MediumItalic.woff2"),
+       url("../fonts/Raleway-MediumItalic.woff");
+}

@@ -1,0 +1,10 @@
+@use "../abstract" as var;
+
+.box-text {
+  display: inline-block;
+  padding: 11px 20px 10px 20px;
+
+  font-weight: 500;
+  line-height: 1;
+  border: 2px solid var.$brand-white;
+}

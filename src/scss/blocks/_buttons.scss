@@ -1,0 +1,52 @@
+@use "../abstract" as var;
+
+.btn {
+  @extend %btn-reset;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  height: 42px;
+  padding: 2px 35px 0;
+
+  color: var.$brand-white;
+  line-height: 1;
+  vertical-align: middle;
+
+  border-radius: 20px;
+  background-color: var.$brand-brown;
+  border: 2px solid var.$brand-brown;
+
+  &:hover,
+  &:active {
+    color:  var.$brand-brown;
+
+    background-color: var.$brand-white;
+  }
+
+  &:focus-visible {
+    outline-color: rgba(var.$brand-danger, 0.5);
+  }
+}
+
+.btn__text {
+  font-size: 16px;
+  color: inherit;
+  font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.btn--danger {
+  color: var.$brand-white;
+
+  border: 2px solid var.$brand-danger;
+  background-color: var.$brand-danger;
+
+  &:hover,
+  &:active {
+    color: var.$brand-danger;
+  }
+}

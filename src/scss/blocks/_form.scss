@@ -1,0 +1,47 @@
+@use "../abstract" as var;
+
+.form__item {
+  width: 100%;
+  margin-bottom: 15px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+@include var.tablet-size {
+
+  .form__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .form__item {
+    width: calc((100% - 20px * 2) / 3);
+    margin-right: 20px;
+    margin-bottom: 0;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .form__item--half {
+    width: calc((100% - 20px) / 2);
+  }
+
+  .form__item--3 {
+    width: calc((100% - 20px * 2) / 3);
+  }
+
+  .form__item--booking {
+    width: calc((100% - 10px * 4) / 5);
+    margin-right: 10px;
+
+    &:nth-child(5) {
+      margin-right: 0;
+    }
+  }
+}

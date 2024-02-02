@@ -1,0 +1,12 @@
+@use "../abstract" as var;
+
+.ushmor-territory {
+  text-align: center;
+}
+
+@include var.desktop-size {
+
+  .ushmor-territory__gallery {
+    margin-top: 60px;
+  }
+}

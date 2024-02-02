@@ -1,0 +1,45 @@
+@use "../abstract" as var;
+
+.site-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.site-nav__list--isOpen {
+  transform: translateX(0);
+  transition: transform 0.5s;
+}
+
+@include var.tablet-size {
+
+  .site-nav__hamburger {
+    display: none;
+  }
+
+  .site-nav__list {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .site-nav__item {
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .site-nav__link {
+    font-size: 16px;
+    color: var.$brand-black;
+
+    cursor: pointer;
+
+    &:hover,
+    &:active {
+      color: var.$brand-danger;
+    }
+  }
+}

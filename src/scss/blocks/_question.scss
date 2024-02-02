@@ -1,0 +1,66 @@
+@use "../abstract" as var;
+
+.question {
+  position: relative;
+
+  color: var.$brand-brown;
+
+  background-color: var.$brand-primary;
+}
+
+.question__container {
+  max-width: var.$mobile-width;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  text-align: center;
+}
+
+.question__title {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.question-form__btn {
+  margin-top: 30px;
+}
+
+@include var.tablet-size {
+
+  .question__container {
+    max-width: var.$tablet-width;
+  }
+
+  .question__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .question-form__list {
+    width: calc(100% - 230px);
+  }
+
+  .question-form__btn {
+    width: 210px;
+    margin-top: 0;
+    margin-left: 20px;
+  }
+}
+
+@include var.desktop-size {
+
+  .question__container {
+    max-width: var.$desktop-width;
+    padding-top: 60px;
+    padding-bottom: 80px;
+  }
+
+  .question__title {
+    margin-bottom: 40px;
+  }
+}

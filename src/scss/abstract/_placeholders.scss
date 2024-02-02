@@ -1,0 +1,42 @@
+%list-reset {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+%form-field {
+  width: 100%;
+  padding: 15px 15px 15px 0;
+
+  font-family: Montserrat, sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+
+  border-top: none;
+  border-left: none;
+  border-right: none;
+}
+
+%btn-reset {
+  padding: 0;
+
+  font: inherit;
+  color: inherit;
+
+  border: none;
+  background-color: transparent;
+
+  cursor: pointer;
+  appearance: none;
+}
+
+%bg-gradient {
+  background: linear-gradient(to right, #553d3d 0%, #4c3e4b 20%, #3e4b54 40%, #414f42 60%, #57553e 80%, #574b3d 100%);
+}
+
+%box-shadow {
+  box-shadow: 0 2px 2px 0 rgb(0 0 0 / 14%),
+              0 3px 1px -2px rgb(0 0 0 / 12%),
+              0 1px 5px 0 rgb(0 0 0 / 20%);
+}

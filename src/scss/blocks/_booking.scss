@@ -1,0 +1,39 @@
+@use "../abstract" as var;
+
+.booking {
+  background-color: var.$brand-primary;
+}
+
+.booking--pra {
+  background-color: var.$brand-blue;
+}
+
+.booking--ushmor {
+  background-color: var.$brand-green;
+}
+
+.booking__container {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  text-align: center;
+}
+
+.booking__subtitle {
+  font-weight: 600;
+}
+
+@include var.desktop-size {
+
+  .booking__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .booking__form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+}

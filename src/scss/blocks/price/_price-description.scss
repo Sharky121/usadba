@@ -1,0 +1,21 @@
+@use "../../abstract" as var;
+
+.price-description {
+  text-align: center;
+}
+
+.price-description__list {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+
+  list-style-type: disc;
+}
+
+.price-description__sublist {
+  padding-left: 2px;
+  text-align: left;
+}
+
+

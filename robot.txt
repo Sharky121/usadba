@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+Host: otdyh-v-centre-meshery.ru
+Sitemap: http://otdyh-v-centre-meshery.ru/sitemap.xml

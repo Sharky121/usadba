@@ -1,0 +1,13 @@
+@use "../abstract" as var;
+
+.map {
+  width: 100%;
+  height: 200px;
+}
+
+@include var.tablet-size {
+
+  .map {
+    height: 400px;
+  }
+}

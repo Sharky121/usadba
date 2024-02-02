@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Отдых в центре Мещеры - мы готовы исполнить вашу мечту!</title>
+    <meta name="description" content="Каждый когда-нибудь мечтал оказаться вдали от городской суеты и рутинных проблем в окружении высоких деревьев, слиться с природой, но одновременно находиться в комфортных условиях." />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+    <meta name="format-detection" content="telephone=no">
+    <meta property="og:locale" content="ru_RU" />
+    <meta property="og:site_name" content="Отдых в Центре Мещеры - Мы готовы исполнить Вашу мечту!" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Отдых в центре Мещеры - мы готовы исполнить вашу мечту!" />
+    <meta property="og:description" content="Каждый когда-нибудь мечтал оказаться вдали от городской суеты и рутинных проблем в окружении высоких деревьев, слиться с природой, но одновременно находиться в комфортных условиях." />
+    <meta property="og:url" content="https://otdyh-v-centre-meshery.ru/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Отдых в центре Мещеры - мы готовы исполнить вашу мечту!" />
+    <meta name="twitter:description" content="Каждый когда-нибудь мечтал оказаться вдали от городской суеты и рутинных проблем в окружении высоких деревьев, слиться с природой, но одновременно находиться в комфортных условиях." />
+    <link rel="stylesheet" href="public/main.css?hash=7rs44eddd43e367b1"/>
+
+   </head>
+
+  <body class="page page-new-year">
+    <main class="page-main">
+        <div class="container">
+          <form class="booking__form booking-form booking-form-1 form" id="booking-example" action="send-form.php" enctype="multipart/form-data">
+            <ul class="booking-form__list form__list">
+              <li class="form__item form__item--booking form-field">
+                <label class="form-field__label visually-hidden" for="start-date">Дата заезда</label>
+                <input class="form-field__input" id="start-date" name="start-date" type="text" placeholder="Заезд" required>
+              </li>
+              <li class="form__item form__item--booking form-field">
+                <label class="form-field__label visually-hidden" for="end-date">Дата выезда</label>
+                <input class="form-field__input" id="end-date" name="end-date" type="text" placeholder="Выезд">
+              </li>
+              <li class="form__item form__item--booking form-field">
+                <label class="form-field__label visually-hidden" for="phone-1">Телефон</label>
+                <input class="form-field__input" id="phone-1" name="phone" type="tel" placeholder="Телефон" required>
+              </li>
+              <li class="form__item form__item--booking form-field">
+                <label class="form-field__label visually-hidden" for="email-1">E-mail</label>
+                <input class="form-field__input" id="email-1" name="email" type="text" placeholder="Email" required>
+              </li>
+              <li class="form__item form__item--booking form-field">
+                <label class="form-field__label visually-hidden" for="house-name">Дата выезда</label>
+                <select class="form-field__select" name="house-name" id="house-name" required>
+                  <option>Выбрать усадьбу</option>
+                  <option value="pra">Усадьба на Пре</option>
+                  <option value="ushmor">Усадьба Ушмор</option>
+                </select>
+              </li>
+            </ul>
+            <button class="booking-form__btn btn btn--danger" type="submit">
+              <span class="btn__text">Забронировать</span>
+            </button>
+          </form>
+        </div>    
+    </main>
+
+    <script>
+      const exampleFormElement = document.querySelector('#booking-example');
+
+      const checkEmailAddress = (email) => {
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        console.log(emailRegex.test(email));
+        return emailRegex.test(email);
+      }
+
+      exampleFormElement.addEventListener('submit', (evt) => {
+        evt.preventDefault();
+
+        const form = evt.target;
+
+        checkEmailAddress(form.email.value);
+    
+        const formData = new FormData(form);
+
+        // fetch(
+        //   'send-form.php',
+        //   {
+        //     method: 'POST',
+        //     body: formData,
+        //   },
+        // )
+        //   .then((response) => {
+        //     if (response.ok) {
+        //       console.log(response);
+        //     } else {
+        //       console.log('error');
+        //     }
+        //   })
+        //   .catch((error) => {
+        //     console.log(error);
+        //   });
+      });
+    </script>
+  </body>
+</html>

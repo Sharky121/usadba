@@ -1,0 +1,12 @@
+@use "../abstract" as var;
+
+.booking-form__btn {
+  margin-top: 30px;
+}
+
+@include var.desktop-size {
+
+  .booking-form__list {
+    width: 100%;
+  }
+}

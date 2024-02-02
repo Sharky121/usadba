@@ -1,0 +1,63 @@
+@use "../abstract" as var;
+
+.header-contacts__phone {
+  display: block;
+
+  font-size: 20px;
+  line-height: 1;
+  color: rgba(var.$brand-brown, 0.9);
+
+  font-feature-settings: "lnum";
+
+  b {
+    font-weight: 700;
+    color: var.$brand-brown;
+  }
+
+  span {
+    color: var.$brand-black;
+    display: none;
+  }
+}
+
+.header-contacts__address {
+  display: none;
+
+  color: var.$brand-black;
+}
+
+.header-contacts__social {
+  display: none;
+}
+
+@include var.tablet-size {
+
+  .header-contacts__phone {
+
+    svg {
+      display: none;
+    }
+
+    span {
+      display: block;
+    }
+  }
+
+  .header-contacts__address {
+    display: block;
+
+    text-align: center;
+    cursor: pointer;
+  }
+
+  .header-contacts {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .header-contacts__social {
+    display: block;
+    margin-left: 15px;
+  }
+}

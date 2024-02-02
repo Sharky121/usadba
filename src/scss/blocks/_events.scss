@@ -1,0 +1,11 @@
+@use "../abstract" as var;
+
+.events__owl-carousel {
+  max-height: 535px;
+
+  overflow: hidden;
+}
+
+.events__btn {
+  margin-top: 20px;
+}

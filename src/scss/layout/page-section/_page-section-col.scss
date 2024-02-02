@@ -1,0 +1,92 @@
+@use "../../abstract/index" as var;
+
+.page-section-col__header {
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.page-section-col__text {
+  margin-top: 0;
+  margin-bottom: 20px;
+
+  text-align: center;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+
+  &:first-of-type {
+    margin-bottom: 20px;
+  }
+}
+
+.page-section-col__item {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.page-section-col__title--brand {
+  position: relative;
+
+  padding-left: 50px;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    left: 0;
+    top: 50%;
+
+    display: block;
+    width: 36px;
+    height: 40px;
+    margin-top: -17px;
+
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+}
+
+.page-section-col__title--brand-pra::before {
+  background-image: url("../images/logo_pra_no-text_white.png");
+}
+
+.page-section-col__title--ushmor-pra::before {
+  background-image: url("../images/logo_ushmor_no-text_white.png");
+}
+
+.page-section-col__btn {
+  margin-top: 20px;
+
+  text-align: center;
+}
+
+@include var.tablet-size {
+
+  .page-section-col__header {
+    text-align: left
+  }
+
+  .page-section-col__text {
+    text-align: left;
+  }
+
+  .page-section-col__btn {
+    text-align: left;
+  }
+}
+
+@include var.desktop-size {
+
+  .page-section-col__title {
+    font-size: 32px;
+  }
+
+  .page-section-col__btn {
+    margin-top: 30px;
+  }
+}

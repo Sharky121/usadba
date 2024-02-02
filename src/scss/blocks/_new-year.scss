@@ -1,0 +1,99 @@
+@use "../abstract" as var;
+
+.new-year {
+  position: relative;
+
+  overflow: hidden;
+
+  color: var.$brand-white;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-blend-mode: multiply;
+    background-image: url("../images/bg-new-year.jpg");
+    background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+    filter: blur(3px);
+
+    z-index: 1;
+  }
+}
+
+.new-year__item {
+  text-align: center;
+
+  h3 {
+    margin-top: 0;
+    margin-bottom: 10px;
+
+    font-family: Kurale, sans-serif;
+    font-size: 32px;
+    text-align: center;
+  }
+
+  p {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 16px;
+    text-align: center;
+    font-weight: 500;
+  }
+
+  ul {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    font-size: 16px;
+    text-align: left;
+  }
+}
+
+@include var.tablet-size {
+
+  .new-year__container {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .new-year__item:nth-of-type(2) {
+    order: 1;
+  }
+
+  .new-year__item:nth-of-type(3) {
+    order: 3;
+    margin-top: 20px;
+  }
+
+  .new-year__item:nth-of-type(4) {
+    order: 2;
+  }
+}
+
+@include var.desktop-size {
+
+  .new-year__item:nth-of-type(2) {
+    order: 1;
+  }
+
+  .new-year__item:nth-of-type(3) {
+    order: 2;
+    margin-top: 0;
+  }
+
+  .new-year__item:nth-of-type(4) {
+    order: 3;
+  }
+}

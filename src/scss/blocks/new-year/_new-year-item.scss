@@ -1,0 +1,72 @@
+@use "../../abstract/index" as var;
+
+.new-year-item {
+  text-align: center;
+}
+
+.new-year-item__title {
+  margin-top: 0;
+  margin-bottom: 10px;
+
+  font-family: Kurale, sans-serif;
+  font-size: 32px;
+}
+
+.new-year-item__subtitle {
+  position: relative;
+
+  max-width: 80%;
+  margin: 0 auto 20px;
+  padding-bottom: 20px;
+
+  font-size: 16px;
+  font-weight: 500;
+
+  &::after {
+    content: '';
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    display: block;
+    width: 20%;
+    height: 2px;
+    margin: 0 auto;
+
+    background-color: var.$brand-white;
+  }
+}
+
+.new-year-item__list {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 480px;
+  margin-bottom: 30px;
+
+  font-size: 16px;
+  text-align: left;
+
+  list-style: disc;
+}
+
+.new-year-item__carousel {
+  margin-top: auto;
+}
+
+@include var.tablet-size {
+
+  .new-year-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .new-year-item__carousel {
+    box-shadow: 0 24px 38px 3px rgb(255 255 255 / 14%),
+                0 9px 46px 8px rgb(255 255 255 / 12%),
+                0 11px 15px -7px rgb(255 255 255 / 20%);
+  }
+}

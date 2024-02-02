@@ -1,0 +1,142 @@
+@use "../../abstract" as var;
+
+.new-year-farm__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+
+    text-align: center;
+}
+
+.new-year-farm__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-size: 36px;
+}
+
+.new-year-farm__list {
+    text-align: left;
+}
+
+.new-year-farm__left {
+    margin-bottom: 20px;
+}
+
+.new-year-farm__item {
+    position: relative;
+    margin-bottom: 15px;
+    padding-left: 25px;
+
+    font-size: 18px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: 0;
+        top: 6px;
+
+        display: block;
+        width: 10px;
+        height: 10px;
+
+        background-color: #ffffff;
+
+        transform: rotate(45deg);
+    }
+}
+
+.new-year-farm--brand-pra {
+    color: #ffffff;
+
+    background-image:  url("../images/top_brand_bg.png");
+    background-position: top left;
+    background-size: 283px 30px;
+    background-repeat: repeat-x;
+    background-color: var.$brand-blue;
+}
+
+.new-year-farm--brand-ushmor {
+    background-image: url("../images/bottom_brand_bg.png");
+    background-position: top left;
+    background-size: 283px 30px;
+    background-repeat: repeat-x;
+    background-color: var.$brand-primary;
+}
+
+.new-year-farm--brand-pra .new-year-farm__title::before {
+    background-image: url("../images/logo_pra_no-text_white.png");
+}
+
+.new-year-farm--brand-ushmor .new-year-farm__title::before {
+    background-image: url("../images/logo_ushmor_no-text_brown.png");
+}
+
+.new-year-farm--brand-ushmor .new-year-farm__item::before {
+    background-color: var.$brand-brown;
+}
+
+.new-year-farm__note {
+    margin-top: 30px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px 30px;
+
+    text-align: left;
+    font-size: 24px;
+
+    border: 2px solid var.$brand-white;
+}
+
+@include var.desktop-size {
+
+    .new-year-farm__container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    .new-year-farm__title {
+        position: relative;
+    
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        margin-bottom: 40px;
+    
+        font-size: 56px;
+    
+        &::before {
+            content: "";
+    
+            display: block;
+            width: 94px;
+            height: 103px;
+            margin-right: 30px;
+    
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+    
+    
+    .new-year-farm__left {
+        width: 50%;
+        margin-right: 120px;
+    }
+    
+    .new-year-farm__right {
+        width: calc(50% - 120px);
+        max-width: 455px;
+        height: 570px;
+    }
+}

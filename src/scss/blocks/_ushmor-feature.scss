@@ -1,0 +1,24 @@
+@use "../abstract" as var;
+
+.ushmor-feature__desc {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+@include var.tablet-size {
+
+  .ushmor-feature {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .ushmor-feature__gallery {
+    order: 1;
+    margin-bottom: 15px;
+  }
+
+  .ushmor-feature__desc {
+    order: 2;
+    margin-bottom: 0;
+  }
+}

@@ -1,0 +1,12 @@
+@use "../../abstract" as var;
+
+.page-new-year__promo {
+    margin-top: 0;
+}
+
+@include var.tablet-size {
+ 
+    .page-new-year__promo {
+        margin-top: -90px;
+    }
+}

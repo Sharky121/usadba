@@ -1,0 +1,81 @@
+@use "../abstract" as var;
+
+.page-header {
+  position: relative;
+
+  @extend %box-shadow;
+
+  background-color: var.$brand-primary;
+
+  transition: all 0.3s ease-in-out;
+  z-index: 9999;
+}
+
+.page-header__container {
+  padding-left: 0;
+}
+
+.page-header--fixed-top {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+
+  z-index: 999;
+
+  transition: all 0.3s ease-in-out;
+}
+
+.page-header--ghost {
+  background-color: transparent;
+  box-shadow: none;
+
+  .page-header__container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  .page-header__site-nav {
+    height: auto;
+  }
+}
+
+.page-header--fixed-top.page-header--ghost {
+  @extend %box-shadow;
+
+  background-color: rgba(var.$brand-blue, 0.9);
+  background-image: url("../images/new-year-bg.jpg");
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0, 0, 0, 0.4);
+}
+}
+
+.page-header__info {
+  margin-left: auto;
+}
+
+@include var.tablet-size {
+
+  .page-header__container {
+    height: 90px;
+    padding-left: 20px;
+  }
+
+  .page-header__site-nav {
+    height: 100%;
+  }
+}
+

@@ -1,0 +1,59 @@
+@use "../abstract" as var;
+
+.our-houses {
+  padding-top: 60px;
+
+  text-align: center;
+}
+
+.our-houses__wrapper {
+  margin: 0 -10px;
+
+  background-image:
+          url("../images/top_brand_bg.png"),
+          url("../images/bottom_brand_bg.png");
+}
+
+.our-houses__btn {
+  margin-top: 40px;
+}
+
+@include var.tablet-size {
+
+  .our-houses__wrapper {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    margin: 0;
+
+    background-image:
+            url("../images/top_brand_bg.png"),
+            url("../images/bottom_brand_bg.png"),
+            linear-gradient(to right, var.$brand-blue 50%, var.$brand-primary 50%);
+    background-size: 283px 30px, 283px 30px, 100% 100%;
+    background-position: top left, bottom left, 0 0;
+    background-repeat: repeat-x, repeat-x, no-repeat;
+  }
+
+  .our-houses__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    max-width: 100%;
+  }
+
+  .our-houses__col {
+    width: 50%;
+  }
+}
+
+@include var.desktop-size {
+
+  .our-houses {
+    padding-top: 80px;
+  }
+
+  .our-houses__wrapper {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+}

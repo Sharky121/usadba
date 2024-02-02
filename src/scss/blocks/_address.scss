@@ -1,0 +1,27 @@
+@use "../abstract" as var;
+
+.address__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.address__title {
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+@include var.desktop-size {
+
+  .address__item {
+    margin-bottom: 15px;
+  }
+
+  .address__title {
+    margin-bottom: 20px;
+
+    font-size: 20px;
+  }
+}

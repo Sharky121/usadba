@@ -1,0 +1,144 @@
+@use "../../abstract/index" as var;
+
+.page-section {
+  position: relative;
+}
+
+.page-section__container {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  column-gap: 20px;
+  row-gap: 20px;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  z-index: 2;
+}
+
+.page-section__header {
+  width: 100%;
+  margin-bottom: 30px;
+
+  text-align: center;
+}
+
+.page-section__btn,
+.page-section__note {
+  width: 100%;
+  margin-top: 30px;
+
+  text-align: center;
+}
+
+// MODIFICATORS
+
+.page-section--green {
+  background-color: var.$brand-green;
+}
+
+.page-section--brand-pra,
+.page-section--brand-ushmor {
+  background-image:
+          url("../images/top_brand_bg.png"),
+          url("../images/bottom_brand_bg.png");
+  background-position: top left, bottom left;
+  background-size: 283px 30px, 283px 30px;
+  background-repeat: repeat-x, repeat-x;
+}
+
+.page-section--top-border {
+  background-image:  url("../images/top_brand_bg.png");
+  background-position: top left;
+  background-size: 283px 30px;
+  background-repeat: repeat-x;
+}
+
+.page-section--bottom-border {
+  background-image: url("../images/bottom_brand_bg.png");
+  background-position: bottom left;
+  background-size: 283px 30px;
+  background-repeat: repeat-x;
+}
+
+.page-section--blue {
+  color: var.$brand-white;
+
+  background-color: var.$brand-blue;
+}
+
+.page-section--brand-pra {
+  color: var.$brand-white;
+
+  background-color: var.$brand-blue;
+}
+
+.page-section--brand-ushmor {
+  color: var.$brand-brown;
+
+  background-color: var.$brand-primary;
+}
+
+.page-section__link {
+  text-decoration: underline;
+}
+
+@include var.tablet-size {
+
+  .page-section__container {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    column-gap: 60px;
+    row-gap: 0;
+  }
+
+  .page-section__col {
+    width: calc((100% - 60px) / 2);
+  }
+
+  .page-section__title {
+    font-size: 32px;
+  }
+
+  .page-section__text {
+    text-align: center;
+  }
+}
+
+@include var.desktop-size {
+
+  .page-section__container {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  .page-section__header {
+    margin-bottom: 60px;
+  }
+
+  .page-section__title {
+    font-size: 40px;
+  }
+
+  .page-section__subtitle {
+    max-width: 60%;
+    margin: 15px auto 0;
+  }
+
+  .page-section__text {
+    font-size: 16px;
+  }
+
+  .page-section__btn {
+    margin-top: 60px;
+  }
+
+  // MODIFICATORS
+
+  .page-section__col--three {
+    width: calc((100% - 60px * 2) / 3);
+  }
+}

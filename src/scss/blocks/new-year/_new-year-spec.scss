@@ -1,0 +1,130 @@
+@use "../../abstract" as var;
+
+.new-year-spec {
+    background-image: url("../images/bottom_brand_bg.png");
+    background-position: top left;
+    background-size: 283px 30px;
+    background-repeat: repeat-x;
+    background-color: var.$brand-primary;
+}
+
+.new-year-spec__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+
+    text-align: center;
+}
+
+.new-year-spec__img {
+    display: none;
+}
+
+.new-year-spec__info {
+    width: 100%;
+}
+
+.new-year-spec__title {
+    margin-top: 0;
+    margin-bottom: 30px;
+
+    font-size: 28px;
+}
+
+.new-year-spec__subtitle {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    font-size: 18px;
+}
+
+.new-year-spec__item {
+    position: relative;
+
+    padding: 15px 15px 15px 32px;
+
+    font-size: 16px;
+
+    z-index: 2;
+
+    &:last-child {
+        margin-bottom: 0;
+
+        border: 1px solid #ffffff;
+        background-color: #ffffff;
+    }
+
+    &::before {
+        content: "";
+
+        position: absolute;
+        left: 12px;
+        top: 22px;
+
+        display: block;
+        width: 10px;
+        height: 10px;
+
+        background-color: var.$brand-brown;
+
+        transform: rotate(45deg);
+    }
+}
+
+.new-year-spec__note {
+    margin-top: 40px;
+    margin-bottom: 0;
+
+    font-size: 18px;
+}
+
+.new-year-spec__list {
+    text-align: left;
+}
+
+@include var.desktop-size {
+
+    .new-year-spec__img {
+        display: block;
+        width: 407px;
+        height: 568px;
+        margin-right: 60px;
+    
+        background-image: url("../images/new-year-woman.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+    }
+
+    .new-year-spec__info {
+        width: calc(100% - 467px);
+
+        text-align: left;
+    }
+
+    .new-year-spec__container {
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+
+        padding-top: 140px;
+        padding-bottom: 140px;
+    }
+
+    .new-year-spec__title {
+        font-size: 46px;
+    }
+
+    .new-year-spec__subtitle {
+        font-size: 24px;
+        text-align: left;
+    }
+    
+    .new-year-spec__item {
+        font-size: 18px;
+    }
+    
+    .new-year-spec__note {
+        font-size: 24px;
+    }
+    
+}

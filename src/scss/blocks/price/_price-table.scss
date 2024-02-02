@@ -1,0 +1,91 @@
+@use "../../abstract" as var;
+
+.price-table {
+  width: 100%;
+
+  font-size: 16px;
+
+  table-layout: fixed;
+  border-collapse: collapse;
+}
+
+.price-table__tr {
+  display: block;
+  width: 100%;
+
+  border-bottom: 1px solid var.$brand-white;
+
+  &:last-child {
+    border: none;
+  }
+}
+
+.price-table__td {
+  display: block;
+  padding: 10px;
+  width: 100%;
+
+  text-align: center;
+
+  p {
+    font-size: inherit;
+
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  p:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.price-table__tr:first-child {
+
+  .price-table__td:last-child {
+    padding-bottom: 30px;
+  }
+}
+
+.price-table__tr:last-child {
+
+  .price-table__td:first-child {
+    padding-top: 30px;
+  }
+}
+
+@include var.tablet-size {
+
+  .price-table {
+    font-size: 20px;
+  }
+
+  .price-table__tr {
+    display: table-row;
+
+    border-bottom: none;
+  }
+
+  .price-table__td {
+    display: table-cell;
+    width: 50%;
+    padding: 30px;
+
+    text-align: center;
+
+    &:not(:last-of-type) {
+      border-right: 1px solid var.$brand-white;
+    }
+
+    p {
+      font-size: inherit;
+
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    p:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
+}

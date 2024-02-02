@@ -1,0 +1,40 @@
+@use "../abstract" as var;
+
+.social-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  color: var.$brand-whatsapp;
+
+  &:hover,
+  &:active {
+    opacity: 0.7;
+  }
+
+  &:focus {
+    outline: rgba(var.$brand-whatsapp, 0.7) thin dotted;
+  }
+}
+
+.social-link__text {
+  line-height: 1;
+  vertical-align: middle;
+}
+
+.social-link--whatsapp {
+  color: var.$brand-whatsapp;
+
+  &:focus {
+    outline: rgba(var.$brand-whatsapp, 0.7) thin dotted;
+  }
+}
+
+.social-link--instagram {
+  color: var.$brand-instagram;
+
+  &:focus {
+    outline: rgba(var.$brand-instagram, 0.7) thin dotted;
+  }
+}

@@ -1,0 +1,64 @@
+@use "../abstract" as var;
+
+.form-field {
+  position: relative;
+
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  color: var.$brand-black;
+  text-align: left;
+  line-height: 1;
+}
+
+.form-field__input,
+.form-field__select {
+  width: 100%;
+  height: 37px;
+  padding-left: 10px;
+  padding-right: 10px;
+
+  color: inherit;
+  font-family: inherit;
+
+  background-color: var.$brand-white;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-feature-settings: "lnum";
+
+  &:focus {
+    outline: 1px solid rgba(#dadada, 0.5);
+  }
+
+  &:focus::placeholder {
+    color: transparent;
+  }
+
+  &:disabled {
+    background-color: #dadada;
+  }
+}
+
+.form-field__select {
+  padding-right: 35px;
+
+  //background-image: url("../images/caret.svg");
+  background-repeat: no-repeat;
+  background-size: 24px 24px;
+  background-position: right 6px center;
+}
+
+@include var.desktop-size {
+
+  .form-field {
+    font-size: 16px;
+  }
+
+  .form-field__input,
+  .form-field__select {
+    height: 42px;
+  }
+}

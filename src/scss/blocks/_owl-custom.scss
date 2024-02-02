@@ -1,0 +1,46 @@
+@use "../abstract" as var;
+
+.owl-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  margin-top: 20px;
+}
+
+.owl-nav button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+
+  color: var.$brand-white!important;
+
+  background-color: var.$brand-brown!important;
+  border: 2px solid var.$brand-brown!important;
+  border-radius: 50%;
+
+  &:hover {
+    color: var.$brand-brown!important;
+
+    background-color: var.$brand-white!important;
+  }
+}
+
+.owl-prev {
+  margin-right: 10px;
+}
+
+@include var.tablet-size {
+
+  .owl-nav {
+    position: absolute;
+    top: 50%;
+
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 10px;
+    margin-top: -20px;
+  }
+}

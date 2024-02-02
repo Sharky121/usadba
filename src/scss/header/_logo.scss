@@ -1,0 +1,25 @@
+@use "../abstract" as var;
+
+.logo {
+  font-size: 18px;
+  font-family: Kurale, sans-serif;
+  font-weight: bold;
+  color: var.$brand-brown;
+  text-align: center;
+  line-height: 1.1;
+  vertical-align: middle;
+}
+
+@include var.tablet-size {
+
+  .logo {
+    font-size: 22px;
+  }
+}
+
+@include var.desktop-size {
+
+  .logo {
+    font-size: 24px;
+  }
+}

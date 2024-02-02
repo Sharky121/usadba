@@ -1,0 +1,65 @@
+@use "../../abstract/index" as var;
+
+.welcome-screen {
+  position: relative;
+
+  text-align: center;
+
+  overflow: hidden;
+
+  &::before {
+    content: '';
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    background-blend-mode: multiply;
+    background-image: url("../images/welcome-screen.jpg");
+    background-color: rgba(0, 0, 0, 0.4);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+}
+
+.welcome-screen__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  padding: 30px 10px;
+}
+
+@include var.mobile-size {
+
+  .welcome-screen__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
+
+@include var.tablet-size {
+
+  .welcome-screen__container {
+    padding-top: 240px;
+    padding-bottom: 240px;
+  }
+}
+
+@include var.desktop-size {
+
+  .welcome-screen {
+
+    &::before {
+      background-image: url("../images/welcome-screen.jpg");
+      background-position: center center;
+    }
+  }
+}

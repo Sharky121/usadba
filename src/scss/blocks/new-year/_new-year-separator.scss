@@ -1,0 +1,22 @@
+@use "../../abstract" as var;
+
+.new-year-separator__container {
+    padding-top: 64px;
+    padding-bottom: 64px; 
+
+    text-align: center;
+}
+
+.new-year-separator__title {
+    margin: 0;
+
+    font-size: 24px;
+    color: var.$brand-brown;
+}
+
+@include var.desktop-size {
+
+    .new-year-separator__title {
+        font-size: 38px;
+    }
+}
