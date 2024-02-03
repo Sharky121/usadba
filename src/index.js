@@ -9,8 +9,10 @@ import './fonts/Raleway-Italic.woff2';
 import './fonts/Raleway-MediumItalic.woff';
 import './fonts/Raleway-MediumItalic.woff2';
 
-import './pdf/price-pra.pdf';
+import './pdf/wedding_pra.pdf';
+import './pdf/wedding_ushmor.pdf';
 import './pdf/price-ushmor.pdf';
+import './pdf/price-pra.pdf';
 import './pdf/pra_presentation.pdf';
 
 import './images/price-pra.jpg';
