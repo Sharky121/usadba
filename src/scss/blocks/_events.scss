@@ -9,3 +9,15 @@
 .events__btn {
   margin-top: 20px;
 }
+
+.events__list {
+  @extend %list-reset;
+}
+
+.events__item {
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
