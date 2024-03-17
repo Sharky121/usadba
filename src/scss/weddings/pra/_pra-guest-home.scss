@@ -1,0 +1,58 @@
+@use "../../abstract" as var;
+
+.pra-guest-home__container {
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    margin: 0 auto;
+    max-width: 100%;
+
+    text-align: center;
+}
+
+.pra-guest-home__image {
+    position: relative;
+
+    min-height: 200px;
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@include var.tablet-size {
+
+    .pra-guest-home__container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        align-items: stretch;
+        gap: 20px;
+
+        div:nth-child(1) {
+            order: 2;
+        }
+
+        div:nth-child(2) {
+            order: 1;
+        }
+
+        div:nth-child(3) {
+            order: 3;
+        }
+
+        div:nth-child(4) {
+            order: 4;
+        }
+    }
+
+    .pra-guest-home__image {
+        width: calc(50% - 20px);
+        min-height: 400px;
+        margin-bottom: 0;
+    }
+
+    .pra-guest-home__content {
+        width: calc(50% - 20px);
+        padding: 7rem 7rem 5rem 7rem;
+    }
+}

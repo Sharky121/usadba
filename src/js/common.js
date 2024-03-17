@@ -1,7 +1,6 @@
 import flatpickr from 'flatpickr';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import IMask from 'imask';
-import * as Snow from '/node_modules/snowfall.js/snow.js'
 import {Fancybox} from "@fancyapps/ui";
 import {Russian} from 'flatpickr/dist/l10n/ru';
 import {closeMenuHandler, menuToggleHandler} from './menu-toggle-handler';
@@ -11,14 +10,6 @@ flatpickr.localize(Russian);
 Fancybox.bind("[data-fancybox]", {
   height: '100%',
 });
-
-window.onload = function () {
-  var snow = new Snow.default({
-      id: 'snow',
-  });
-
-  snow.start();
-}
 
 const desktopMediaQuery = window.matchMedia('(min-width: 1280px)')
 const headerElement = document.querySelector('#page-header-main');
@@ -34,6 +25,12 @@ const hamburgerMenuElement = document.querySelector('#hamburger-menu');
 const closeMenuElement = document.querySelector('#close-mobile-nav');
 const menuLinksElements = document.querySelectorAll('[data-scroll]');
 const contactsElement = document.querySelectorAll('#contacts');
+const actionElement = document.querySelectorAll('#action');
+
+Fancybox.bind(actionElement, "[data-fancybox]", {
+  // Your custom options
+});
+
 
 let offsetHeader = 60;
 

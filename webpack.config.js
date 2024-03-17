@@ -9,10 +9,13 @@ module.exports = {
   watchOptions: {
     ignored: /node_modules/,
   },
-  entry: './src/index.js',
+  entry: {
+    index: './src/index.js',
+    wedding: './src/wedding.js'
+  },
   output: {
     path: path.resolve(__dirname, 'public'),
-    filename: 'bundle.js',
+    filename: `[name].js`
   },
 
   module: {

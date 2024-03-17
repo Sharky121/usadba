@@ -1,0 +1,26 @@
+@use "../../abstract" as var;
+
+.pra-package {
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.075);
+}
+
+.pra-package__container {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-end;
+}
+
+.pra-package__content {
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    justify-content: center;
+    width: 65%;
+    padding: 7rem 7rem 5rem 7rem;
+}
+
+.pra-package__image {
+    position: relative;
+
+    width: 35%;
+}

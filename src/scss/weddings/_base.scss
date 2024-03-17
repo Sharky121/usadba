@@ -1,0 +1,85 @@
+@use "../abstract" as var;
+@use "../base";
+
+html {
+    font-size: 14px;
+    line-height: 1.65;
+}
+
+h1 {
+    margin: 0 0 2rem 0;
+
+    font-size: 2.5rem;
+}
+
+h2 {
+    margin: 0 0 2rem 0;
+
+    font-family: Kurale, sans-serif;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 1;
+}
+
+p {
+    margin: 0 0 1rem 0;
+
+    font-size: 1rem;
+}
+
+ul {
+    list-style: disc;
+    margin: 0 0 2rem 0;
+    padding-left: 1rem;
+
+    max-width: 40rem;
+}
+
+ul li {
+    padding-left: 0.3rem;
+    margin: 0 0 0.5rem 0;
+
+    font-size: 1rem;
+
+    ul {
+        list-style-type: "-";
+        margin: 0;
+    }
+
+    ul li {
+        margin: 0;
+    }
+}
+
+img {
+    max-width: none;
+    height: auto;
+    display: inline;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+    object-position: center;
+}
+
+@include var.tablet-size {
+
+    html {
+        font-size: 18px;
+    }
+}
+  
+@include var.desktop-size {
+    
+    html {
+        font-size: 24px;
+    }
+}
