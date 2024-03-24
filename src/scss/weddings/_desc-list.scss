@@ -1,0 +1,25 @@
+@use "../abstract" as var;
+
+.desc-list__item {
+    margin-bottom: 0.4rem;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+.desc-list__term,
+.desc-list__definition {
+    margin: 0;
+}
+
+.desc-list__definition {
+    font-size: 1.2rem;
+}
+
+@include var.tablet-size {
+
+    .desc-list__definition {
+        font-size: 1rem;
+    }
+}

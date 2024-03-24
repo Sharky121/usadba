@@ -1,0 +1,52 @@
+@use "../abstract" as var;
+
+.logo__title {
+    position: relative;
+
+    margin: 0;
+    padding-top: 110px;
+
+    font-family: "Kurale";
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        top: 0;
+        left: 50%;
+
+        display: block;
+        width: 90px;
+        height: 100px;
+        margin-left: -50px;
+
+        background-image: url("../images/logo_ushmor_no-text_white.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
+
+.logo__subtitle {
+    margin: 0.5rem 0 0 0;
+
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+@include var.desktop-size {
+
+    .logo__title {
+        padding-top: 180px;
+
+        &::before {
+            width: 150px;
+            height: 167px;
+            margin-left: -75px;
+        }
+    }
+
+    .logo__subtitle {
+        font-size: 1rem;
+    }
+}

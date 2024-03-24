@@ -1,34 +1,26 @@
 @use "../../abstract" as var;
 
-.pra-main {
-    display: flex;
-    align-items: stretch;
-    justify-content: flex-end;
-    min-height: 100vh;
-}
-
 .pra-main__content {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    width: 50%;
-    padding: 7rem 7rem 5rem 7rem;
-
-    text-align: center;
+    width: 100%;
+    padding: 2rem 1rem;
 }
 
 .pra-main__image {
     position: relative;
 
-    width: 50%;
+    width: 100%;
+    min-height: 70vh;
 }
 
 .pra-main__title {
     position: relative;
 
     margin: 0;
-    padding-top: 180px;
+    padding-top: 110px;
 
     font-family: "Kurale";
 
@@ -40,9 +32,9 @@
         left: 50%;
 
         display: block;
-        width: 150px;
-        height: 167px;
-        margin-left: -75px;
+        width: 90px;
+        height: 100px;
+        margin-left: -50px;
 
         background-image: url("../images/logo_ushmor_no-text_white.png");
         background-repeat: no-repeat;
@@ -54,4 +46,39 @@
     margin: 0;
 
     font-size: 1.25rem;
+}
+
+@include var.desktop-size {
+
+    .pra-main {
+        display: flex;
+        align-items: stretch;
+        justify-content: flex-end;
+        min-height: 100vh;
+    }
+
+    .pra-main__title {
+        padding-top: 180px;
+
+        &::before {
+            width: 150px;
+            height: 167px;
+            margin-left: -75px;
+        }
+    }
+
+    .pra-main__content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        padding: 7rem 7rem 5rem 7rem;
+    
+        text-align: center;
+    }
+
+    .pra-main__image {
+        width: 50%;
+    }
 }

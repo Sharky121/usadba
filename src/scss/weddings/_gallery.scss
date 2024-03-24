@@ -1,0 +1,13 @@
+@use "../abstract" as var;
+
+.gallery__item {
+    overflow: hidden;
+}
+
+.gallery__image {
+    transition: all 2s ease;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

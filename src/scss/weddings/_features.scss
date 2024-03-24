@@ -1,0 +1,76 @@
+@use "../abstract" as var;
+
+.features__list {
+    text-align: left;
+}    
+
+.features__item {
+    margin: 0 0 0.1rem 0;
+}
+
+@include var.tablet-size {
+
+    .features__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.7rem;
+        max-width: 100%;
+
+        list-style: none;
+    }   
+
+    .features__item {
+        position: relative;
+
+        padding-top: 50px;
+        
+        font-size: 0.9rem;
+        text-align: center;
+
+        &::before {
+            content: "";
+
+            position: absolute;
+            top: 0;
+            left: 50%;
+
+            display: block;
+            width: 40px;
+            height: 40px;
+            margin-left: -20px;
+
+            background-image: url("../images/ico-key.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+
+        &--library::before {
+            background-image: url("../images/ico-library.png");
+        }
+
+        &--terrace::before {
+            background-image: url("../images/ico-terrace.png");
+        }
+
+        &--dinner::before {
+            background-image: url("../images/ico-dinner-table.png");
+        }
+
+        &--guest::before {
+            background-image: url("../images/ico-guest.png");
+        }
+
+        &--cutlery::before {
+            background-image: url("../images/ico-cutlery.png");
+        }
+
+        &--billiard::before {
+            background-image: url("../images/ico-billiard_1.png");
+        }
+
+        &--balcony::before {
+            background-image: url("../images/ico-balcony.png");
+        }
+    }
+}

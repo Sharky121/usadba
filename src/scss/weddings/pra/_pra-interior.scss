@@ -8,7 +8,7 @@
 }
 
 .pra-interior__container {
-    padding: 1rem 0.5rem 1rem 0.5rem;
+    padding: 2rem 1rem;
     margin: 0 auto;
     max-width: 100%;
     width: 64rem;
@@ -17,11 +17,6 @@
 }
 
 .pra-interior__list {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    height: 140px;
-
     text-align: left;
 }    
 
@@ -41,6 +36,22 @@
 }
 
 @include var.tablet-size {
+
+    .pra-interior__list {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 0.7rem;
+        max-width: 100%;
+
+        list-style: none;
+    }   
+
+    .pra-interior__item {
+        font-size: 0.8rem;
+
+        text-align: center;
+    }
 
     .pra-interior__gallery {
         display: grid;

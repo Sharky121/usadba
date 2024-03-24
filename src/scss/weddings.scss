@@ -5,7 +5,14 @@
 
 @use 'layout';
 @use 'header';
-@use 'footer';
+@use 'weddings/footer';
+@use "weddings/section";
+@use "weddings/wedding-page";
 
 @use "blocks/social-link";
+@use 'blocks/buttons';
+@use "weddings/gallery";
+@use "weddings/desc-list";
+@use "weddings/logo";
+@use "weddings/features";
 @use "weddings/pra";
