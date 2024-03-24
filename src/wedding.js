@@ -9,6 +9,8 @@ import './fonts/Raleway-Italic.woff2';
 import './fonts/Raleway-MediumItalic.woff';
 import './fonts/Raleway-MediumItalic.woff2';
 
+
+import './images/logo_pra_no-text_grey.png';
 import './images/ico-balcony.png';
 import './images/ico-billiard_1.png';
 import './images/ico-cutlery.png';
@@ -38,6 +40,9 @@ import './images/pra-wedding/pra-interior_10.jpg';
 import './images/pra-wedding/pra-interior_11.jpg';
 import './images/pra-wedding/pra-interior_12.jpg';
 import './images/pra-wedding/pra-interior_13.jpg';
+
+// ushmor
+import './images/ushmor-wedding/ushmor-wedding_1.jpg';
 
 import 'modern-normalize/modern-normalize.css';
 import "@fancyapps/ui/dist/fancybox.css";
