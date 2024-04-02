@@ -1,0 +1,50 @@
+@use "../../abstract" as var;
+
+.ushmor-library__item {
+    position: relative;
+
+    height: 200px;
+    margin-bottom: 20px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ushmor-library__subtitle {
+    margin-bottom: 20px;
+
+    text-align: center;
+}
+
+@include var.tablet-size {
+
+    .ushmor-library__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+
+    .ushmor-library__subtitle {
+        width: 100%;
+    }
+
+    .ushmor-library__item {
+        height: 300px;
+        width: calc((100% - 20px * 2) / 3);
+        margin-right: 20px;
+        margin-bottom: 0;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@include var.desktop-size {
+    
+    .ushmor-library__item {
+        height: 600px;
+    }
+}

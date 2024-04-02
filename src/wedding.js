@@ -43,6 +43,27 @@ import './images/pra-wedding/pra-interior_13.jpg';
 
 // ushmor
 import './images/ushmor-wedding/ushmor-wedding_1.jpg';
+import './images/ushmor-wedding/ushmor_organization_1.jpg';
+import './images/ushmor-wedding/ushmor_organization_2.jpg';
+import './images/ushmor-wedding/ushmor_organization_3.jpg';
+import './images/ushmor-wedding/ushmor_house_1.jpg';
+import './images/ushmor-wedding/ushmor_house_2.jpg';
+import './images/ushmor-wedding/ushmor_house_3.jpg';
+import './images/ushmor-wedding/ushmor_house_4.jpg';
+import './images/ushmor-wedding/ushmor_house_5.jpg';
+import './images/ushmor-wedding/ushmor_house_6.jpg';
+import './images/ushmor-wedding/ushmor_house_7.jpg';
+import './images/ushmor-wedding/ushmor_house_8.jpg';
+import './images/ushmor-wedding/ushmor-garden_1.jpg';
+import './images/ushmor-wedding/ushmor-garden_2.jpg';
+import './images/ushmor-wedding/ushmor-garden_3.jpg';
+import './images/ushmor-wedding/ushmor-garden_4.jpg';
+import './images/ushmor-wedding/ushmor_library_1.jpg';
+import './images/ushmor-wedding/ushmor_library_2.jpg';
+import './images/ushmor-wedding/ushmor_library_3.jpg';
+import './images/ushmor-wedding/guest_house_1.jpg';
+import './images/ushmor-wedding/guest_house_2.jpg';
+import './images/ushmor-wedding/guest_house_3.jpg';
 
 import 'modern-normalize/modern-normalize.css';
 import "@fancyapps/ui/dist/fancybox.css";
