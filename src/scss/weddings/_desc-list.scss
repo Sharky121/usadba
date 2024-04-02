@@ -17,9 +17,49 @@
     font-size: 1.2rem;
 }
 
+.desc-list--services {
+
+    .desc-list__item {
+        margin-bottom: 10px;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+
+    .desc-list__term {
+        font-size: 1.2rem;
+    }
+
+    .desc-list__definition {
+        display: inline-flex;
+        padding-left: 10px;
+
+        font-size: 1rem;
+
+        &::before {
+            content: '-';
+
+            display: block;
+            margin-right: 4px;
+        }
+    }
+}
+
 @include var.tablet-size {
 
     .desc-list__definition {
         font-size: 1rem;
+    }
+
+    .desc-list--services {
+
+        .desc-list__term {
+            font-size: 1rem;
+        }
+    
+        .desc-list__definition {
+            font-size: 0.8rem;
+        }
     }
 }

@@ -1,0 +1,83 @@
+@use "../../abstract" as var;
+
+.ushmor-guest-house__container {
+    padding: 1rem 2rem;
+}
+
+.ushmor-guest-house__item {
+    position: relative;
+
+    height: 200px;
+    margin-bottom: 20px;
+
+    &:nth-of-type(1) {
+        height: auto;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@include var.tablet-size {
+
+    .ushmor-guest-house__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        flex-wrap: wrap;
+    }
+
+    .ushmor-guest-house__title {
+        width: 100%;
+    }
+
+    .ushmor-guest-house__text {
+        width: 100%;
+        margin-bottom: 0;
+    }
+
+    .ushmor-guest-house__item {
+        width: 100%;
+        height: 250px;
+        width: calc((100% - 20px) / 2);
+        margin-right: 20px;
+
+        &:nth-of-type(1) {
+            order: 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 1rem;
+            width: calc((100% - 20px) / 2);
+        }
+
+        &:nth-of-type(2) {
+            order: 1;
+            margin-right: 0;
+        }
+
+        &:nth-of-type(3) {
+            order: 3;
+        }
+
+        &:nth-of-type(4) {
+            order: 4;
+            margin-right: 0;
+        }
+    }
+}
+
+@include var.desktop-size {
+
+    .ushmor-guest-house__item {
+        height: 600px;
+
+        &:nth-of-type(1) {
+            padding: 2.5rem;
+        }
+
+    }
+}

@@ -1,0 +1,73 @@
+@use "../../abstract" as var;
+
+.ushmor-church__container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ushmor-church__text {
+    width: 100%;
+}
+
+.ushmor-church__item  {
+    position: relative;
+
+    height: 200px;
+    margin-bottom: 20px;
+
+    &:nth-of-type(1) {
+        height: auto;
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+@include var.tablet-size {
+
+    .ushmor-church__container {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: auto auto;
+        gap: 20px;
+    }
+
+    .ushmor-church__text {
+        margin: 0;
+    }
+
+    .ushmor-church__item {
+        margin: 0;
+
+        &:nth-of-type(1) {
+            grid-column: 1 / 2;
+            grid-row: 1 / 2;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            height: 600px;
+            padding: 2.5rem;
+        }
+
+        &:nth-of-type(2) {
+            grid-column: 2 / 3;
+            grid-row: 1 / 3;
+            height: 1220px;
+        }
+
+        &:nth-of-type(3) {
+            grid-column: 1 / 2;
+            grid-row: 2 / 3;
+            height: 600px;
+        }
+    }
+}
+
+@include var.desktop-size {
+
+
+}

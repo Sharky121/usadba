@@ -1,0 +1,37 @@
+@use "../../abstract" as var;
+
+.ushmor-services__container {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.ushmor-services__img {
+    display: none;
+}
+
+@include var.tablet-size {
+
+    .ushmor-services__container {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+
+        padding: 0;
+    }
+
+    .ushmor-services__img {
+        position: relative;
+
+        display: block;
+        width: 50%;
+    }
+
+    .ushmor-services__content {
+        width: 50%;
+        padding: 1rem 2rem;
+    }
+}
+
+@include var.desktop-size {
+
+}

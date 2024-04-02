@@ -1,0 +1,33 @@
+@use "../../abstract" as var;
+
+.ushmor-about {
+    box-shadow: inset 0 1px 0 0 rgba(0, 0, 0, 0.075);
+}
+
+.ushmor-about__item {
+    padding: 1rem 2rem;
+
+    text-align: center;
+}
+
+.ushmor-about__bg {
+    position: relative;
+
+    width: 100%;
+    height: 300px;
+}
+
+@include var.tablet-size {
+    
+    .ushmor-about__item {
+        padding: 2.5rem;
+    }
+
+    .ushmor-about__bg {
+        height: 800px;
+
+        .background-image {
+            object-position: 50% 55%;
+        }
+    }
+}
