@@ -40,6 +40,7 @@ import './images/pra-wedding/pra-interior_10.jpg';
 import './images/pra-wedding/pra-interior_11.jpg';
 import './images/pra-wedding/pra-interior_12.jpg';
 import './images/pra-wedding/pra-interior_13.jpg';
+import './images/pra-wedding/pra-interior_14.jpg';
 
 // ushmor
 import './images/ushmor-wedding/ushmor-bg.jpg';
