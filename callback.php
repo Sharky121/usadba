@@ -1,7 +1,7 @@
 <?php
 
 //$to = 'info@usadba-na-pre.ru';
-$to = 'Sharky121@mail.ru, info@usadba-na-pre.ru, olga6227@gmail.com, Ushmor@list.ru';
+$to = 'Sharky121@mail.ru, info@usadba-na-pre.ru, olga6227@gmail.com, Ushmor@list.ru, Samorukova_k@inbox.ru';
 $subject = 'Перезвоните мне';
 $headers = array();
 $headers[] = "MIME-Version: 1.0";

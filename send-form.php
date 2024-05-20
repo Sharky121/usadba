@@ -1,6 +1,6 @@
 <?php
 
-$to = 'Sharky121@mail.ru';
+$to = 'Sharky121@mail.ru, Samorukova_k@inbox.ru';
 $subject = 'Бронирование с сайта';
 $headers = array();
 $headers[] = "MIME-Version: 1.0";

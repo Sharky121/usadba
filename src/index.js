@@ -9,12 +9,12 @@ import './fonts/Raleway-Italic.woff2';
 import './fonts/Raleway-MediumItalic.woff';
 import './fonts/Raleway-MediumItalic.woff2';
 
-import './pdf/wedding_pra.pdf';
-import './pdf/wedding_ushmor.pdf';
-import './pdf/price-ushmor.pdf';
-import './pdf/price-pra.pdf';
-import './pdf/pra_presentation.pdf';
 
+import './pdf/wedding_pra.pdf';
+import './images/pra_logo_white.png';
+import './images/ushmor_logo_white.png';
+import './images/white2023.svg';
+import './images/wa_logo.png';
 import './images/price-pra.jpg';
 import './images/price-ushmor.jpg';
 import './images/nav-bg.jpg';

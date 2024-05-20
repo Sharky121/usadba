@@ -10,8 +10,7 @@
   margin: 0 -10px;
 
   background-image:
-          url("../images/top_brand_bg.png"),
-          url("../images/bottom_brand_bg.png");
+          url("../images/top_brand_bg.png");
 }
 
 .our-houses__btn {
@@ -27,11 +26,10 @@
 
     background-image:
             url("../images/top_brand_bg.png"),
-            url("../images/bottom_brand_bg.png"),
             linear-gradient(to right, var.$brand-blue 50%, var.$brand-primary 50%);
-    background-size: 283px 30px, 283px 30px, 100% 100%;
-    background-position: top left, bottom left, 0 0;
-    background-repeat: repeat-x, repeat-x, no-repeat;
+    background-size: 283px 30px, 100% 100%;
+    background-position: top left, 0 0;
+    background-repeat: repeat-x, no-repeat;
   }
 
   .our-houses__container {

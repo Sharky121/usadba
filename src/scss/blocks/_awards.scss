@@ -1,0 +1,26 @@
+@use "../abstract" as var;
+
+.awards {
+    width: 100%;
+    z-index: 2;
+
+    color: #ffffff;
+}
+
+.awards__list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+@include var.tablet-size {
+
+    .awards__list {
+        gap: 40px;
+    }
+
+    .awards__img {
+        width: 120px;
+    }
+}

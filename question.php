@@ -1,6 +1,6 @@
 <?php
 
-$to = 'info@usadba-na-pre.ru, Sharky121@mail.ru, olga6227@gmail.com, Ushmor@list.ru';
+$to = 'info@usadba-na-pre.ru, Sharky121@mail.ru, olga6227@gmail.com, Ushmor@list.ru, Samorukova_k@inbox.ru';
 $subject = 'Вопрос с сайта';
 $headers = array();
 $headers[] = "MIME-Version: 1.0";

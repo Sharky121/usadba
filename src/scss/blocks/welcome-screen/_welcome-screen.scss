@@ -37,6 +37,10 @@
   padding: 30px 10px;
 }
 
+.welcome-screen__awards {
+  margin-top: 60px;
+}
+
 @include var.mobile-size {
 
   .welcome-screen__container {
@@ -50,6 +54,12 @@
   .welcome-screen__container {
     padding-top: 240px;
     padding-bottom: 240px;
+  }
+
+  .welcome-screen__awards {
+    position: absolute;
+    bottom: 60px;
+    left: 0;
   }
 }
 

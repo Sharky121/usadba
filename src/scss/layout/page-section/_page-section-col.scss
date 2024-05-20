@@ -32,37 +32,41 @@
 .page-section-col__title--brand {
   position: relative;
 
-  padding-left: 50px;
+  // padding-left: 50px;
 
-  &::before {
-    content: '';
+  // &::before {
+  //   content: '';
 
-    position: absolute;
-    left: 0;
-    top: 50%;
+  //   position: absolute;
+  //   left: 0;
+  //   top: 50%;
 
-    display: block;
-    width: 36px;
-    height: 40px;
-    margin-top: -17px;
+  //   display: block;
+  //   width: 36px;
+  //   height: 30px;
+  //   margin-top: -15px;
 
-    background-size: cover;
-    background-repeat: no-repeat;
-  }
+  //   background-size: cover;
+  //   background-repeat: no-repeat;
+  // }
 }
 
 .page-section-col__title--brand-pra::before {
-  background-image: url("../images/logo_pra_no-text_white.png");
+  // background-image: url("../images/pra_logo_white.png");
 }
 
 .page-section-col__title--ushmor-pra::before {
-  background-image: url("../images/logo_ushmor_no-text_white.png");
+  // background-image: url("../images/ushmor_logo_white.png");
 }
 
 .page-section-col__btn {
   margin-top: 20px;
 
   text-align: center;
+}
+
+.page-section-col__price {
+  margin-top: 20px;
 }
 
 @include var.tablet-size {

@@ -3,6 +3,8 @@
 @use "container";
 @use 'helpers';
 
+@use 'blocks/owl-carousel';
+@use 'blocks/awards';
 @use 'blocks/owl-custom';
 @use 'blocks/swal-custom';
 @use 'blocks/buttons';
