@@ -67,6 +67,8 @@
 
 .page-section-col__price {
   margin-top: 20px;
+
+  text-align: center;
 }
 
 @include var.tablet-size {
@@ -82,6 +84,11 @@
   .page-section-col__btn {
     text-align: left;
   }
+
+  .page-section-col__price {
+    text-align: left;
+  }
+  
 }
 
 @include var.desktop-size {
