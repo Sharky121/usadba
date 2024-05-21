@@ -1,5 +1,9 @@
 @use "../../abstract/index" as var;
 
+.page-section__title {
+  font-family: 'Forum', sans-serif;
+}
+
 .page-section {
   position: relative;
 }

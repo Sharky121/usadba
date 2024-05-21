@@ -29,34 +29,12 @@
   }
 }
 
+.page-section-col__title {
+  font-family: 'Forum', sans-serif;
+}
+
 .page-section-col__title--brand {
   position: relative;
-
-  // padding-left: 50px;
-
-  // &::before {
-  //   content: '';
-
-  //   position: absolute;
-  //   left: 0;
-  //   top: 50%;
-
-  //   display: block;
-  //   width: 36px;
-  //   height: 30px;
-  //   margin-top: -15px;
-
-  //   background-size: cover;
-  //   background-repeat: no-repeat;
-  // }
-}
-
-.page-section-col__title--brand-pra::before {
-  // background-image: url("../images/pra_logo_white.png");
-}
-
-.page-section-col__title--ushmor-pra::before {
-  // background-image: url("../images/ushmor_logo_white.png");
 }
 
 .page-section-col__btn {

@@ -8,12 +8,14 @@ import './fonts/Raleway-Italic.woff';
 import './fonts/Raleway-Italic.woff2';
 import './fonts/Raleway-MediumItalic.woff';
 import './fonts/Raleway-MediumItalic.woff2';
-
+import './fonts/Forum.woff';
+import './fonts/Forum.ttf';
+import './fonts/Forum.eot';
 
 import './pdf/wedding_pra.pdf';
 import './images/pra_logo_white.png';
 import './images/ushmor_logo_white.png';
-import './images/white2023.svg';
+import './images/white2024.svg';
 import './images/wa_logo.png';
 import './images/price-pra.jpg';
 import './images/price-ushmor.jpg';

@@ -3,9 +3,10 @@
 .header-contacts__phone {
   display: block;
 
-  font-size: 20px;
+  font-size: 24px;
   line-height: 1;
   color: rgba(var.$brand-brown, 0.9);
+  font-family: 'Forum', sans-serif;
 
   font-feature-settings: "lnum";
 
@@ -24,6 +25,7 @@
   display: none;
 
   color: var.$brand-black;
+  font-family: inherit;
 }
 
 .header-contacts__social {

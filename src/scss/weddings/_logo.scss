@@ -6,7 +6,7 @@
     margin: 0;
     padding-top: 110px;
 
-    font-family: "Kurale";
+    font-family: "Forum", sans-serif;
 
     &::before {
         content: '';
@@ -31,14 +31,25 @@
 }
 
 .logo__subtitle {
-    margin: 0.5rem 0 0 0;
+    margin: 0;
 
-    font-family: 'Raleway', Arial, sans-serif;
+    font-family: "Forum", sans-serif;
     font-size: 1.25rem;
     font-weight: 400;
 }
 
+@include var.tablet-size {
+
+    .logo img {
+        width: 200px;
+    }
+}
+
 @include var.desktop-size {
+
+    .logo img {
+        width: 240px;
+    }
 
     .logo__title {
         padding-top: 180px;

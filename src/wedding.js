@@ -8,8 +8,12 @@ import './fonts/Raleway-Italic.woff';
 import './fonts/Raleway-Italic.woff2';
 import './fonts/Raleway-MediumItalic.woff';
 import './fonts/Raleway-MediumItalic.woff2';
+import './fonts/Forum.woff';
+import './fonts/Forum.ttf';
+import './fonts/Forum.eot';
 
-
+import './images/pra_logo_grey.png';
+import './images/logo_ushmor_red.png';
 import './images/logo_pra_no-text_grey.png';
 import './images/ico-balcony.png';
 import './images/ico-billiard_1.png';

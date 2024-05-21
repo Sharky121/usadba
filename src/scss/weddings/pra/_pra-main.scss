@@ -22,7 +22,7 @@
     margin: 0;
     padding-top: 110px;
 
-    font-family: "Kurale";
+    font-family: "Forum", sans-serif;
 
     &::before {
         content: '';
@@ -46,6 +46,7 @@
     margin: 0;
 
     font-size: 1.25rem;
+    font-family: "Forum", sans-serif;
 }
 
 @include var.desktop-size {
