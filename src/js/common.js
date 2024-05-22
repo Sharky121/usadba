@@ -3,15 +3,14 @@ import Swal from 'sweetalert2/dist/sweetalert2.js';
 import IMask from 'imask';
 import {Fancybox} from "@fancyapps/ui";
 import {Russian} from 'flatpickr/dist/l10n/ru';
+import Menu from './menu/menu';
 import {closeMenuHandler, menuToggleHandler} from './menu-toggle-handler';
+import { createRoot } from 'react-dom/client';
 
 flatpickr.localize(Russian);
 
-Fancybox.bind("[data-fancybox]", {
-  height: '100%',
-});
-
 const desktopMediaQuery = window.matchMedia('(min-width: 1280px)')
+const menuElement = document.querySelector('#menu');
 const headerElement = document.querySelector('#page-header-main');
 const questionForm = document.querySelector('#question-form');
 const newYearForm = document.querySelector('#new-year-form');
@@ -28,16 +27,18 @@ const menuLinksElements = document.querySelectorAll('[data-scroll]');
 const contactsElement = document.querySelectorAll('#contacts');
 const actionElement = document.querySelectorAll('#action');
 
-Fancybox.bind(actionElement, "[data-fancybox]", {
-  // Your custom options
-});
-
+Fancybox.bind(actionElement, "[data-fancybox]", {});
+Fancybox.bind("[data-fancybox]", {height: '100%'});
 
 let offsetHeader = 60;
 
 if (desktopMediaQuery.matches) {
   offsetHeader = 90;
 }
+
+const root = createRoot(menuElement);
+root.render(<Menu />);
+
 
 const flatpickrSettings = {
   dateFormat: 'Y-m-d',
@@ -271,7 +272,6 @@ if (hamburgerMenuElement) {
 if (closeMenuElement) {
   closeMenuElement.addEventListener('click', menuToggleHandler);
 }
-
 
 $(document).ready(function() {
   $('.ushmor-territory__gallery').owlCarousel({

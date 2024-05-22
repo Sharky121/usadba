@@ -98,13 +98,17 @@
 .site-menu__list {
   @extend %list-reset;
 
-  margin-top: auto;
+  margin-top: 20px;
 
   text-align: center;
 }
 
 .site-menu__item {
   margin-bottom: 20px;
+
+  span {
+    cursor: pointer;
+  }
 
   &:last-child {
     margin-bottom: 0;
@@ -146,6 +150,10 @@
 .site-menu__social {
   margin-top: auto;
   margin-bottom: 15px;
+}
+
+.site-menu__subitem {
+  margin-top: 10px;
 }
 
 @include var.desktop-size {
@@ -193,9 +201,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 0;
   }
 
   .site-menu__item {
+    position: relative;
+
     display: block;
     margin-bottom: 0;
 
@@ -238,6 +249,15 @@
     &::before {
       background-color: var.$brand-brown;
     }
+  }
+
+  .site-menu__subitem {
+    position: absolute;
+    top: 60px;
+    left: 50%;
+
+    width: 250px;
+    margin-left: -125px;
   }
 
   // MODS

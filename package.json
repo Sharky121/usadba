@@ -10,6 +10,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@babel/preset-env": "7.24.5",
     "autoprefixer": "^10.4.13",
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.2",
@@ -21,12 +22,16 @@
     "webpack-cli": "^5.0.1"
   },
   "dependencies": {
+    "@babel/preset-react": "^7.24.1",
     "@fancyapps/ui": "^4.0.31",
+    "babel-loader": "^9.1.3",
     "flatpickr": "^4.6.13",
     "imask": "^6.4.3",
     "modern-normalize": "^1.1.0",
     "owl.carousel": "^2.3.4",
     "postcss": "^8.4.20",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "snowfall.js": "^1.0.2",
     "sweetalert2": "11.2.0"
   },
