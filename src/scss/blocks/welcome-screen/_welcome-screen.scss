@@ -52,8 +52,9 @@
 @include var.tablet-size {
 
   .welcome-screen__container {
-    padding-top: 240px;
-    padding-bottom: 240px;
+    padding-top: 0;
+    padding-bottom: 0;
+    height: 660px;
   }
 
   .welcome-screen__awards {

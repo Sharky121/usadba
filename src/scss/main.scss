@@ -4,7 +4,6 @@
 @use 'helpers';
 
 @use 'blocks/owl-carousel';
-@use 'blocks/awards';
 @use 'blocks/owl-custom';
 @use 'blocks/swal-custom';
 @use 'blocks/buttons';
@@ -20,6 +19,7 @@
 @use 'footer';
 
 @use "blocks/welcome-screen";
+@use 'blocks/awards';
 @use "blocks/wedding-screen";
 @use "blocks/new-year";
 @use "blocks/price-form";

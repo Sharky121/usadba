@@ -14,6 +14,18 @@
     gap: 20px;
 }
 
+.awards__btn {
+    margin-top: 20px;
+    height: 34px;
+    padding-top: 0;
+    padding-bottom: 0;
+
+    .btn__text {
+        text-transform: none;
+        font-size: 14px;
+    }
+}
+
 @include var.tablet-size {
 
     .awards__list {
@@ -22,5 +34,10 @@
 
     .awards__img {
         width: 120px;
+    }
+
+    .awards__btn {
+        height: 40px;
+        margin-top: 30px;
     }
 }

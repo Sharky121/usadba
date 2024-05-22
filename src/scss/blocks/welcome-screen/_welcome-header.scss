@@ -35,7 +35,7 @@
   margin-bottom: 15px;
 
   font-family: 'Forum', sans-serif;
-  line-height: 1.2;
+  line-height: 1;
 
   br {
     display: none;
@@ -46,6 +46,7 @@
   margin: 0;
 
   font-family: 'Forum', sans-serif;
+  line-height: 1;
 }
 
 .welcome-header__logo {
@@ -55,6 +56,12 @@
 .welcome-header__ng-link {
   margin-top: 30px;
 }
+
+.welcome-header__awards {
+  width: 100%;
+  order: 4;
+  margin-top: 40px;
+} 
 
 @include var.tablet-size {
 
@@ -70,12 +77,15 @@
     font-size: 20px;
     font-weight: 500;
   }
+
+  .welcome-header__awards {
+    margin-top: 60px;
+  }
 }
 
 @include var.desktop-size {
 
   .welcome-header {
-    flex-wrap: nowrap;
     max-width: var.$desktop-width;
   }
 
@@ -98,6 +108,11 @@
   .welcome-header__link:nth-of-type(2) {
     order: 3;
   }
+
+  .welcome-header__awards {
+    order: 4;
+    margin-top: 80px;
+  } 
 
   .welcome-header__title {
 

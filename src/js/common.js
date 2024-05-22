@@ -16,6 +16,7 @@ const headerElement = document.querySelector('#page-header-main');
 const questionForm = document.querySelector('#question-form');
 const newYearForm = document.querySelector('#new-year-form');
 const callbackElement = document.querySelector('#callback');
+const callbackAwardsElement = document.querySelector('#callback-2');
 const conditions = document.querySelector('#conditions');
 const bookingForms = document.querySelectorAll('.booking-form');
 const phoneInputs = document.querySelectorAll('[type="tel"]');
@@ -374,6 +375,14 @@ const popupFormHandler = (title, subject) => {
 
 if (callbackElement) {
   callbackElement.addEventListener('click', (evt) => {
+    evt.preventDefault();
+  
+    popupFormHandler(`Мы перезвоним </br> в течение 15 минут!`, 'Обратный звонок с сайта');
+  });
+}
+
+if(callbackAwardsElement) {
+  callbackAwardsElement.addEventListener('click', (evt) => {
     evt.preventDefault();
   
     popupFormHandler(`Мы перезвоним </br> в течение 15 минут!`, 'Обратный звонок с сайта');
