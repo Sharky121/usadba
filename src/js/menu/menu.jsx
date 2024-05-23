@@ -25,8 +25,25 @@ const data = [
     },
     {
         title: 'Усадьба Ушмор',
-        slug: 'wedding',
-        submenu: [],
+        slug: 'ushmor',
+        submenu: [
+            {
+                title: 'Об Усадьбе',
+                slug: 'ushmor'
+            },
+            {
+                title: 'Территория',
+                slug: 'ushmor-territory'
+            },
+            {
+                title: 'Гостевой дом Усадьбы Ушмор',
+                slug: 'ushmor-guest'
+            },
+            {
+                title: 'Обзор интерьера',
+                slug: 'ushmor-interior'
+            },
+        ],
     },
     {
         title: 'Свадьбы',

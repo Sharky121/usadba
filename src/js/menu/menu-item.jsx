@@ -26,7 +26,7 @@ const MenuItem = ({data}) => {
     return (
         <>
             {submenu.length > 0 ? (
-                <li className="site-menu__item" onMouseEnter={handleOpenSubmenu}>
+                <li className="site-menu__item" onClick={handleOpenSubmenu}>
                     <span className="site-menu__link" ref={menuRef}>{title}</span>
 
                     {
