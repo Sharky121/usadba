@@ -1,6 +1,6 @@
 @use "../../abstract" as var;
 
-.pra-main__content {
+.wedding-main__content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,14 +9,14 @@
     padding: 2rem 1rem;
 }
 
-.pra-main__image {
+.wedding-main__image {
     position: relative;
 
     width: 100%;
     min-height: 70vh;
 }
 
-.pra-main__title {
+.wedding-main__title {
     position: relative;
 
     margin: 0;
@@ -42,23 +42,27 @@
     }
 }
 
-.pra-main__subtitle {
+.wedding-main__subtitle {
     margin: 0;
 
     font-size: 1.25rem;
     font-family: "Forum", sans-serif;
 }
 
+.wedding-main__price {
+    margin-top: 15px;
+}
+
 @include var.desktop-size {
 
-    .pra-main {
+    .wedding-main {
         display: flex;
         align-items: stretch;
         justify-content: flex-end;
         min-height: 100vh;
     }
 
-    .pra-main__title {
+    .wedding-main__title {
         padding-top: 180px;
 
         &::before {
@@ -68,7 +72,7 @@
         }
     }
 
-    .pra-main__content {
+    .wedding-main__content {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -79,7 +83,7 @@
         text-align: center;
     }
 
-    .pra-main__image {
+    .wedding-main__image {
         width: 50%;
     }
 }

@@ -94,6 +94,10 @@
   }
 }
 
+.price__note {
+  margin-top: 15px;
+}
+
 @include var.tablet-size {
 
   .price {

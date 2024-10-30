@@ -34,6 +34,19 @@ import './images/ico-close.svg';
 import './images/ico-spruce.svg';
 import './images/new-year-woman.jpg';
 
+// pra sauna
+import './images/pra-sauna/sauna_2.jpg';
+import './images/pra-sauna/sauna_3.jpg';
+import './images/pra-sauna/sauna_4.jpg';
+import './images/pra-sauna/sauna_5.jpg';
+import './images/pra-sauna/sauna_6.jpg';
+import './images/pra-sauna/sauna_7.jpg';
+import './images/pra-sauna/sauna_8.jpg';
+import './images/pra-sauna/sauna_9.jpg';
+import './images/pra-sauna/sauna_10.jpg';
+import './images/pra-sauna/sauna_11.jpg';
+import './images/pra-sauna/sauna_12.jpg';
+
 // event
 import './images/events/event_1.jpg';
 import './images/events/event_2.jpg';
@@ -114,6 +127,18 @@ import './images/ushmor-apartments/ushmor-apartments_13.jpg';
 import './images/ushmor-apartments/ushmor-apartments_14.jpg';
 import './images/ushmor-apartments/ushmor-apartments_15.jpg';
 
+// ГРАФСКИЙ ДОМ УСАДЬБЫ УШМОР
+import './images/ushmor-graph/ushmor-graph_1.jpg';
+import './images/ushmor-graph/ushmor-graph_2.jpg';
+import './images/ushmor-graph/ushmor-graph_3.jpg';
+import './images/ushmor-graph/ushmor-graph_4.jpg';
+import './images/ushmor-graph/ushmor-graph_5.jpg';
+import './images/ushmor-graph/ushmor-graph_6.jpg';
+import './images/ushmor-graph/ushmor-graph_7.jpg';
+import './images/ushmor-graph/ushmor-graph_8.jpg';
+import './images/ushmor-graph/ushmor-graph_9.jpg';
+import './images/ushmor-graph/ushmor-graph_10.jpg';
+
 //
 import './images/ushmor-features/feature_1.jpg';
 import './images/ushmor-features/feature_2.jpg';
@@ -171,10 +196,13 @@ import './images/ico-garage.png';
 import './images/ico-guns.png';
 import './images/ico-grill.png';
 import './images/ico-tennis.svg';
+import './images/ico-lake.png';
+import './images/ico-stable.png';
 
 import './images/ico-arrow-left.svg';
 import './images/ico-arrow-right.svg';
 import './images/new-year-bg.jpg';
+
 
 //  new year
 import './images/new-year/new-year_1.jpg';

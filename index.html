@@ -15,7 +15,8 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Отдых в центре Мещеры - мы готовы исполнить вашу мечту!" />
     <meta name="twitter:description" content="Каждый когда-нибудь мечтал оказаться вдали от городской суеты и рутинных проблем в окружении высоких деревьев, слиться с природой, но одновременно находиться в комфортных условиях." />
-    <link rel="stylesheet" href="public/index.css?hash=7rsd7b1"/>
+    <link rel="stylesheet" href="public/index.css?hash=7rrwe7b1"/>
+    <link rel="stylesheet" href="https://yookassa.ru/integration/simplepay/css/yookassa_construct_form.css">
 
     <!-- Yandex captcha -->
     <script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onloadFunction" defer></script>
@@ -80,7 +81,6 @@
       })(window);
     </script>
     <!-- end TL head script -->
-
   </head>
 
   <body class="page">
@@ -88,7 +88,6 @@
       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N6PF2LW" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <!-- End Google Tag Manager (noscript) -->
   
-
     <!-- HEADER -->
     <header class="page__header page-header" id="page-header-main">
       <div class="page-header__container container">
@@ -105,7 +104,10 @@
           <div class="site-nav__menu site-menu" data-menu="site-menu">
             <div class="site-menu__wrapper">
               <button class="site-menu__close-menu" id="close-mobile-nav">Закрыть</button>
-              <div id="menu"></div>  
+              <div id="menu"></div>
+              <button class="site-menu__pay btn-pay">
+                <span>Онлайн оплата</span>
+              </button>
               <div class="site-menu__social social">
                 <ul class="social__list">
                   <li class="social__item">
@@ -113,7 +115,7 @@
                       <svg class="social-link__ico" viewBox="0 0 24 24" width="37" height="37" aria-hidden="true" focusable="false">
                         <use xlink:href="#ico-wa" x="0" y="0"></use>
                       </svg>
-                      <span class="sociype = 'TRADE_TYPE_PRIVATIZATION_UPDATE';al-link__text"><b>WhatsApp</b></span>
+                      <span class="social-link__text"><b>WhatsApp</b></span>
                     </a>
                   </li>
                 </ul>
@@ -131,7 +133,9 @@
                 </svg>
                 <span>+7 (910) <b>613-00-22</b></span>
               </a>
-              <a class="header-contacts__address callback" id="callback">Заказать обратный звонок</a>
+              <button class="header-contacts__pay btn-pay">
+                <span>Онлайн оплата</span>
+              </button>
             </div>
             <div class="header-contacts__social social">
               <ul class="social__list social__list--inline">
@@ -177,7 +181,7 @@
                 </li>
               </ul>
   
-              <a class="awards__btn btn btn--danger" id="callback-2">
+              <a class="awards__btn btn btn--danger" href="#contacts">
                 <span class="btn__text">Связаться с нами</span>
               </a>
             </div>
@@ -189,8 +193,8 @@
       <section class="page__section page-section wedding-screen" id="wedding">
         <div class="wedding-screen__container container">
           <div class="wedding-screen__header">
-            <h2 class="wedding-screen__title">Cвадьба вашей мечты</h2>
-            <ul class="wedding-screen__list">
+            <!-- <h2 class="wedding-screen__title">Cвадьба вашей мечты</h2> -->
+            <!-- <ul class="wedding-screen__list">
               <li class="wedding-screen__item">
                 <a href="wedding_ushmor.html" class="btn" target="_blank">
                   <span class="btn__text">Свадьба в Усадьбе Ушмор</span>
@@ -201,7 +205,7 @@
                   <span class="btn__text">Свадьба в Усадьбе на Пре</span>
                 </a>
               </li>
-            </ul>
+            </ul> -->
           </div>
         </div>
         <video class="wedding-screen__video" playsinline autoplay muted loop id="wedding-video">
@@ -311,7 +315,7 @@
       </section>
 
       <!-- ЗАБРОНИРОВАТЬ -->
-      <!-- <section class="page__section page-section booking">
+       <section class="page__section page-section booking">
         <div class="booking__container container">
           <h2 class="visually-hidden">Бронирование</h2>
 
@@ -325,16 +329,16 @@
               margin: 0 auto;
               padding: 0 30px;
             }
-          </style> -->
+          </style>
           <!-- start TL Search form script -->
-          <!-- <div class='block-search'>
+           <div class='block-search'>
             <div id='tl-search-form' class='tl-container'>
               <noindex><a href='https://www.travelline.ru/products/tl-hotel/' rel='nofollow' target='_blank'>TravelLine</a></noindex>
             </div>
-          </div> -->
+          </div>
           <!-- end TL Search form script -->
-        <!--</div>
-      </section> -->
+        </div>
+      </section>
 
       <!-- УСАДЬБА НА ПРЕ -->
       <section class="page__section page-section page-section--brand-pra" id="pra">
@@ -389,7 +393,8 @@
               Прекрасный усадебный комплекс, гармонично вписанный  в мещерскую  природу. Большая территория (6 ГА)  со своим нетронутым лесом, внутренним прудом и, что очень важно для любителей водных прогулок и рыбалки, c возможностью выхода к реке (100м).
             </p>
             <p class="page-section-col__text">Главный дом (площадью 500 кв.м) из рубленного лафета в  стиле уютного русского загородного имения.</p>
-            <div class="page-section-col__price">
+            
+           <div class="page-section-col__price">
               <a class=" btn btn--danger btn-price btn-get-price-1" data-fancybox data-src="#price-pra">
                 <span class="btn__text">Прайс-лист</span>
               </a>
@@ -435,7 +440,7 @@
           </div>
           <div class="page-section__col page-section-col">
             <ul class="page-section-col__list">
-              <li class="page-section-col__item">5 (комфортабельных) спален с отдельными  санузлами, рассчитаны на комфортное размещение 10 человек;</li>
+              <li class="page-section-col__item">5 спален с отдельными  санузлами, рассчитаны на комфортное размещение 10 человек;</li>
               <li class="page-section-col__item">просторная гостиная  с двумя зонами для отдыха с французским камином и роялем;</li>
               <li class="page-section-col__item">уютная столовая с голландской печью;</li>
               <li class="page-section-col__item">кабинет - библиотека;</li>
@@ -484,7 +489,7 @@
               <img src="./public/images/apartments_pra_10.jpg" alt="" loading="lazy">
             </div>
           </div>
-          <div class="page-section__btn">
+           <div class="page-section__btn">
             <a class="btn btn--danger btn-price btn-get-price-1" id="get-price-1" data-fancybox data-src="#price-pra">
               <span class="btn__text">Прайс-лист</span>
             </a>
@@ -528,20 +533,103 @@
         </div>
       </section>
 
+      <section class="page__section pra-sauna" id="pra-sauna">
+        <div class="pra-sauna__container container">
+          <div class="pra-sauna__col">
+            <h2>Баня</h2>
+            <p>В любое время года поездка за город на природу – это шанс успокоить и душу, и тело.</p>
+            <blockquote>
+              Летом, в самый зной, под пение птиц повсюду цветут кустарники и деревья, и можно чувствовать аромат свежего леса, слушать шум реки. <br> 
+              Осенью, когда природа остывает, сбрасывает зелень и облачается в золото, птицы поют реже, но аромат леса становится сильнее.<br>
+              Зимой, под покровом белоснежного снега, так хорошо попить чай из самовара, и прогуляться, хрустя валенками, до спящей реки.<br>
+              Весной, когда природа просыпается от зимнего сна, бегут ручейки и расцветают первоцветы…
+            </blockquote>
+            <p>Так хорошо просто отвлечься от городской суеты, уехав в красивое поместье в сердце Мещерского заповедника!</p>
+            <p><b>И ничего не украсит этот отдых лучше русской бани. Ведь это не просто способ отдохнуть и расслабиться, это настоящий обряд очищения души.</b></p>
+          </div>
+          <div class="pra-sauna__col">
+            <p>Только представьте…<br>
+              Пока вы гуляете по окрестностям или пьете чай на веранде, в бане уже горит пламя и слышен робкий треск дров. Воздух наполняется ароматом трав и эфирных масел, в парной греются березовые веники…</p>
+            <p>После бани можно окунуться в прохладную воду пруда или дойти до реки, освежиться и ощутить себя вновь рожденным.</p>
+            <p>Русская баня на природе - это не просто способ провести время, это настоящий исцеляющий ритуал, который помогает встретить новый день с бодростью и радостью.</p>
+            <p><b>И наша баня подходит для этого как ничто лучше!</b></p>
+          </div>
+          <div class="pra-sauna__col owl-carousel owl-theme">
+            <div>
+              <a href="./public/images/sauna_6.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_6.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_3.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_3.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_4.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_4.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_5.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_5.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_2.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_2.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_7.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_7.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+          </div>
+          <div class="pra-sauna__col owl-carousel owl-theme">
+            <div>
+              <a href="./public/images/sauna_8.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_8.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_9.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_9.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_10.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_10.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_11.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_11.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+            <div>
+              <a href="./public/images/sauna_12.jpg" data-fancybox>
+                <img class="about-screen-carousel__img" src="./public/images/sauna_12.jpg" alt="" loading="lazy">
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <!-- ЗАБРОНИРОВАТЬ -->
-      <!-- <section class="page__section page-section booking booking--pra">
+       <section class="page__section page-section booking booking--pra">
         <div class="booking__container container">
-          <h2 class="visually-hidden">Бронирование</h2> -->
+          <h2 class="visually-hidden">Бронирование</h2>
 
           <!-- start TL Search form script -->
-          <!-- <div id='block-search'>
+           <div id='block-search'>
             <div id='tl-search-form-pre' class='tl-container'>
               <noindex><a href='https://www.travelline.ru/products/tl-hotel/' rel='nofollow' target='_blank'>TravelLine</a></noindex>
             </div>
-          </div> -->
+          </div>
           <!-- end TL Search form script -->
-        <!-- </div>
-      </section> -->
+         </div>
+      </section>
 
       <!-- УСАДЬБА УШМОР -->
       <!------------------->
@@ -551,6 +639,11 @@
       <section class="page__section page-section page-section--brand-ushmor" id="ushmor">
         <div class="page-section__container container">
           <div class="page-section__col page-section-col owl-carousel owl-theme">
+            <div class="house-carousel__item">
+              <a href="./public/images/ushmor-graph_1.jpg" data-fancybox>
+                <img class="house-carousel__img" src="./public/images/ushmor-graph_1.jpg" alt="" loading="lazy">
+              </a>
+            </div>
             <div class="house-carousel__item">
               <a href="./public/images/territory_ushmor_7.jpg" data-fancybox>
                 <img class="house-carousel__img" src="./public/images/territory_ushmor_7.jpg" alt="" loading="lazy">
@@ -616,24 +709,124 @@
           </div>
 
           <ul class="pra-territory__list">
-            <li class="pra-territory__item pra-territory__item--four pra-interior-item pra-territory-item--pines">
+            <li class="pra-territory__item pra-interior-item pra-territory-item--pines">
               <h3 class="pra-interior-item__title">Парк</h3>
             </li>
-            <li class="pra-territory__item pra-territory__item--four pra-interior-item pra-territory-item--garage">
+            <li class="pra-territory__item pra-interior-item pra-territory-item--garage">
               <h3 class="pra-interior-item__title">Охраняемая территория и стоянка</h3>
             </li>
-            <li class="pra-territory__item pra-territory__item--four pra-interior-item pra-interior-item--tennis">
+            <li class="pra-territory__item pra-interior-item pra-interior-item--tennis">
               <h3 class="pra-interior-item__title">Теннисный корт</h3>
             </li>
-            <li class="pra-territory__item pra-territory__item--four pra-interior-item pra-territory-item--boat">
+            <li class="pra-territory__item pra-interior-item pra-territory-item--boat">
               <h3 class="pra-interior-item__title">Зарыбленный пруд</h3>
+            </li>
+            <li class="pra-territory__item pra-interior-item pra-territory-item--stable">
+              <h3 class="pra-interior-item__title">Конюшня с крытым манежем</h3>
+            </li>
+            <li class="pra-territory__item pra-interior-item pra-territory-item--lake">
+              <h3 class="pra-interior-item__title">Выход к озеру</h3>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ГРАФСКИЙ ДОМ УСАДЬБЫ УШМОР -->
+      <section class="page__section page-section page-section--brand-ushmor" id="ushmor-guest">
+        <div class="page-section__container container">
+          <div class="page-section__header">
+            <h2 class="page-section__title">Графский дом Усадьбы Ушмор</h2>
+          </div>
+          <div class="page-section__col page-section-col">
+            <p class="page-section-col__text">Интерьеры графского дома, воссоздающие усадебный стиль, оформлены
+              изысканной мебелью с элементами антиквариата, бронзовыми скульптурными
+              композициями и коллекцией картин известных художников XIX века.</p> 
+            <p>Сердце дома - большой зимний сад (более 100 кв.м.) с двумя
+              видовыми балконами, небольшим прудиком и роялем. Удобен для
+              проведения роскошных камерных мероприятий (до 30 гостей).</p>
+            <p class="page-section-col__text">Торжественную столовую залу украшает мейсоновский фарфор, пейзажная
+              живопись и голландские натюрморты. Стол сервируется посудой
+              Handpainted (до 12 гостей).
+              Каминный зал с выходом к озеру.</p>
+            <p class="page-section-col__text">Неизменный атрибут дворянского быта - большая библиотека.
+              Массивная деревянная лестница ведет к сигарной, бильярдной комнате,
+              кинотеатру и винному погребу.</p>
+            <p class="page-section-col__text">В графской спальне (60 кв.м.) собрана коллекция придворного художника
+              Муравьева. Синяя и золотая спальни (по 40 кв.м.) украшены французскими
+              гобеленами. Графский дом готов принять 6 гостей.</p>
+          </div>
+          <div class="page-section__col owl-carousel owl-theme">
+            <div>
+              <img src="./public/images/ushmor-graph_1.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_2.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_3.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_4.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_5.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_6.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_7.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_8.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_9.jpg" alt="">
+            </div>
+            <div>
+              <img src="./public/images/ushmor-graph_10.jpg" alt="">
+            </div>
+          </div>
+           <div class="page-section__btn">
+            <a class="btn btn--danger btn-price btn-get-price-2" id="get-price-2" data-fancybox data-src="#price-ushmor">
+              <span class="btn__text">Прайс-лист</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ИНТЕРЬЕР УШМОР -->
+      <section class="page__section page-section pra-interior" id="ushmor-interior">
+        <div class="page-section__container container">
+          <div class="page-section__header">
+            <h2 class="page-section__title">Обзор интерьера</h2>
+          </div>
+
+          <ul class="pra-territory__list">
+            <li class="pra-territory__item pra-territory-item pra-interior-item--terrace">
+              <h3 class="pra-territory-item__title">Большой зимний сад (до 30 гостей)</h3>
+            </li>
+            <li class="pra-territory__item pra-territory-item pra-interior-item--furnace">
+              <h3 class="pra-territory-item__title">Каминный зал <br> с выходом к озеру</h3>
+            </li>
+            <li class="pra-territory__item pra-territory-item pra-interior-item--dinner-table">
+              <h3 class="pra-territory-item__title">Торжественная столовая <br> (до 12 гостей)</h3>
+            </li>
+            <li class="pra-territory__item pra-territory-item pra-interior-item--bed">
+              <h3 class="pra-territory-item__title">3 больших спальни (до 6 гостей)</h3>
+            </li>
+            <li class="pra-territory__item pra-territory-item pra-interior-item--library">
+              <h3 class="pra-territory-item__title">Большая библиотека</h3>
+            </li>
+            <li class="pra-territory__item pra-territory-item pra-interior-item--billiard">
+              <h3 class="pra-territory-item__title">Бильярдная комната</h3>
             </li>
           </ul>
         </div>
       </section>
 
       <!-- ГОСТЕВОЙ ДОМ УСАДЬБЫ УШМОР -->
-      <section class="page__section page-section page-section--brand-ushmor" id="ushmor-guest">
+      <section class="page__section page-section page-section--brand-ushmor">
         <div class="page-section__container container">
           <div class="page-section__header">
             <h2 class="page-section__title">Гостевой дом Усадьбы Ушмор</h2>
@@ -691,50 +884,20 @@
         </div>
       </section>
 
-      <!-- ИНТЕРЬЕР УШМОР -->
-      <section class="page__section page-section pra-interior" id="ushmor-interior">
-        <div class="page-section__container container">
-          <div class="page-section__header">
-            <h2 class="page-section__title">Обзор интерьера</h2>
-          </div>
-
-          <ul class="pra-territory__list">
-            <li class="pra-territory__item pra-territory-item pra-interior-item--bed">
-              <h3 class="pra-territory-item__title"> 3 спальных  полностью оборудованных ĸомнат, с мебелью и техникой в английском стиле. </h3>
-            </li>
-            <li class="pra-territory__item pra-territory-item pra-interior-item--library">
-              <h3 class="pra-territory-item__title">Апартаменты с двумя полностью оборудованными спальнями, мебелью и техникой в стиле "Прованс"</h3>
-            </li>
-            <li class="pra-territory__item pra-territory-item pra-interior-item--dinner-table">
-              <h3 class="pra-territory-item__title">Две стилизованные, изолированные друг от друга кухни</h3>
-            </li>
-            <li class="pra-territory__item pra-territory-item pra-interior-item--furnace">
-              <h3 class="pra-territory-item__title">Каминный зал <br> с обеденной зоной</h3>
-            </li>
-            <li class="pra-territory__item pra-territory-item pra-interior-item--tv">
-              <h3 class="pra-territory-item__title">Спутниĸовое TV</h3>
-            </li>
-            <li class="pra-territory__item pra-territory-item pra-interior-item--wifi">
-              <h3 class="pra-territory-item__title">Интернет Wi-Fi</h3>
-            </li>
-          </ul>
-        </div>
-      </section>
-
       <!-- ЗАБРОНИРОВАТЬ -->
-      <!-- <section class="page__section booking booking--ushmor">
+      <section class="page__section booking booking--ushmor">
         <div class="booking__container container">
-          <h2 class="visually-hidden">Бронирование</h2> -->
+          <h2 class="visually-hidden">Бронирование</h2>
 
           <!-- start TL Search form script -->
-          <!-- <div class='block-search'>
+           <div class='block-search'>
             <div id='tl-search-form-ushmor' class='tl-container'>
               <noindex><a href='https://www.travelline.ru/products/tl-hotel/' rel='nofollow' target='_blank'>TravelLine</a></noindex>
             </div>
-          </div> -->
+          </div>
           <!-- end TL Search form script -->
-        <!-- </div>
-      </section> -->
+         </div>
+      </section>
 
       <!-- ГДЕ НАС НАЙТИ -->
       <section class="page__section page-section location" id="contacts">
@@ -747,8 +910,12 @@
             <div class="map" id="map"></div>
           </div>
           <div class="page-section__col address">
-            <h3 class="address__title">Адрес</h3>
+            <h3 class="address__title">Контакта</h3>
             <ul class="address__list">
+              <li class="address__item address-item">
+                <h4 class="address-item__title">Реквизиты</h4>
+                <p class="address-item__description">ООО "УК УШМОР" ИНН 6234173874 ОГРН 1176234028651</p>
+              </li>
               <li class="address__item address-item">
                 <h4 class="address-item__title">Усадьба на Пре</h4>
                 <p class="address-item__description">Рязанская область, Клепиковский район, с.Подлипки</p>
@@ -797,13 +964,13 @@
       <!-- ОСТАЛИСЬ ВОПРОСЫ -->
       <section class="page__section page-section page-section--brand-ushmor question">
         <div class="question__container container">
-          <h2 class="visually-hidden">Бронирование</h2>
+          <h2 class="visually-hidden">Консультация</h2>
           <h4 class="question__title">Если у вас остались вопросы, оставьте свои контакты и мы вас проконсультируем.</h4>
           <form class="question__form question-form form" action="question.php" id="question-form" enctype="multipart/form-data">
             <ul class="question-form__list form__list">
               <li class="form__item form-field form__item--3">
                 <label class="form-field__label visually-hidden" for="name">Имя</label>
-                <input class="form-field__input" id="name" name="name" type="text" placeholder="Имя" required>
+                <input class="form-field__input" id="name" name="name" type="text" placeholder="Имя" minlength="2" maxlength="20" required>
               </li>
               <li class="form__item form-field form__item--3">
                 <label class="form-field__label visually-hidden" for="phone">Телефон</label>
@@ -877,129 +1044,124 @@
       </svg>
     </div>
 
+    <!-- Прайс Пра -->
     <div class="price" id="price-pra">
       <div class="price__wrapper">
         <div class="price__header">
           <img class="price__logo" src="./public/images/logo_pra_white.png" width="100" height="78" alt="Логотип усадьба на Пре">
           <h3 class="price__title">Прайс лист</h3>
         </div>
-        
-        <!-- <div class="price__description price-description">
-          <ul class="price-description__list">
-            <li class="price-description__item">6 Га охраняемой закрытой территории</li>
-            <li class="price-description__item">Крытая стоянка</li>
-            <li class="price-description__item">Банный комплекс с выходом в пруд</li>
-            <li class="price-description__item">Мангальная зона с беседкой</li>
-            <li class="price-description__item">Усадебный дом на 10 персон:
-              <ul class="price-description__sublist">
-                <li class="price-description__sub-item">- 5 комфортабельных спален</li>
-                <li class="price-description__sub-item">- библиотека</li>
-                <li class="price-description__sub-item">- столовая</li>
-                <li class="price-description__sub-item">- укомплектованная кухня</li>
-                <li class="price-description__sub-item">- бильярдная</li>
-              </ul>
+
+        <div class="price__weekdays price-weekdays">
+          <!-- <h3 class="price-weekdays__title">Аренда <span> 120&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;сутки </span></h3>  -->
+          <ul class="price-weekdays__list">
+            <li class="price-weekdays__item">
+              <strong>Аренда 120&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;сутки</span></strong>
+            </li>
+            <li class="price-weekdays__item">
+              <strong>Уикенд 320&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;3-е суток <span> (с Пт-Пн, баня включена)</span></strong>
+            </li>
+            <li class="price-weekdays__item">
+              <strong>Акция! Будни 25&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;сутки<span>(Пн-Чт, на 2х человек, действует до 25.12.24)</span></strong>
+            </li>
+            <li class="price-weekdays__item">
+              <strong>Баня 15&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;в день</strong>
+            </li>
+            <li class="price-weekdays__item">
+              <strong>Новогодние праздники <br> </strong>
+              800&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;3-e суток <span>(30.12.-02.01)</span>
+              150&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;в сутки <span>(30.12.-08.01)</span>
+              <span>(баня включена)</span>
             </li>
           </ul>
+        </div>
+
+        <!-- <div class="price__weekend price-weekend">
+          <h3 class="price-weekend__title">Стоимость выходные <span>(пятница - воскресенье)</span></h3> 
+          <ul class="price-weekdays__list">
+            <li class="price-weekdays__item">
+              <strong>100&nbsp;тысяч&nbsp;рублей&nbsp;<span>(вся усадьба под закрытие)</span></strong>
+            </li>
+          </ul>
+        </div>
+
+        <div class="price__note">
+          <ul>
+            <li>Аренда под фотосъемку до 4 человек (3 часа максимум) <strong>20&nbsp;тысяч&nbsp;рублей</strong> </li>
+            <li>Аренда под фотосъемку 4-8 человек (3 часа максимум) <strong>30&nbsp;тысяч&nbsp;рублей</strong></li>
+          </ul>
         </div> -->
-        <h3 class="price__title">Стоимость будние&nbsp;/&nbsp;выходные</h3> 
-        <h4 class="price__value">
-          <strong>25&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;спальня <span> (для двух человек)</span></strong>
-          <strong>12,5&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;дети<span>(доп спальня -50%)</span></strong>
-          <strong>50&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;две спальни <span>(для четырех человек)</span></strong>
-          <strong>100&nbsp;тысяч&nbsp;рублей&nbsp;<span>(вся усадьба под закрытие)</span></strong>
-          <strong>15&nbsp;тысяч&nbsp;рублей&nbsp; в день&nbsp;/&nbsp;баня <span>(время пользования не ограничено)</span></strong>
-        </h4>
-
-        <ul>
-          <li>Аренда под фотосъемку до 4 человек (3 часа максимум) <strong>20&nbsp;тысяч&nbsp;рублей</strong> </li>
-          <li>Аренда под фотосъемку 4-8 человек (3 часа максимум) <strong>30&nbsp;тысяч&nbsp;рублей</strong></li>
-        </ul>
-     
-        <!-- <h4 class="price__value">
-          <strong>60&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;сутки <span>(будние дни)</span></strong>
-          <strong>75&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;первые сутки, далее 60&nbsp;тысяч&nbsp;рублей <span>(выходные и праздничные дни)</span></strong>
-          <strong>Баня - 10&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp; (с 12.00 до 23.00)</strong>
-        </h4> -->
-
-<!--        <div class="price__promo price-promo">-->
-<!--          <div class="price-promo__wrapper">-->
-<!--            <div class="price-promo__title">Акция:</div>-->
-<!--            <ul class="price-promo__list">-->
-<!--              <li class="price-promo__item">В будние дни возможна аренда покомнатно</li>-->
-<!--              <li class="price-promo__item">Двухместная спальня <b>20&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;сутки</b> <br> (при отсутствии брони)</li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
       </div>
     </div>
 
+    <!-- Прайс ушмор -->
     <div class="price price--ushmor" id="price-ushmor">
       <div class="price__wrapper">
         <div class="price__header">
           <img class="price__logo" src="./public/images/logo_ushmor_white.png" width="100" height="78" alt="Логотип усадьба на Пре">
           <h3 class="price__title">Прайс лист</h3>
         </div>
-        <h3 class="price__title">Стоимость будние&nbsp;/&nbsp;выходные</h3> 
+        <!-- <h3 class="price__title">Стоимость будние&nbsp;/&nbsp;выходные</h3>  -->
 
-        <!-- <div class="price__description price-description">
-          <ul class="price-description__list">
-            <li class="price-description__item">3 двухкомнатные спальни</li>
-            <li class="price-description__item">Столовая</li>
-            <li class="price-description__item">Кухня</li>
-            <li class="price-description__item">Просторная гостинная</li>
-            <li class="price-description__item">Усадебный дом на 10 персон:
-              <ul class="price-description__sublist">
-                <li class="price-description__sub-item">- 3 комфортабельные спальни</li>
-                <li class="price-description__sub-item">- библиотека</li>
-                <li class="price-description__sub-item">- столовая</li>
-                <li class="price-description__sub-item">- укомплектованная кухня</li>
-                <li class="price-description__sub-item">- гостевая зона</li>
+        <div class="price__weekdays price-weekdays">
+          <!-- <h3 class="price-weekdays__title">Аренда <span> 120&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;сутки </span></h3>  -->
+          <ul class="price-weekdays__list">
+            <li class="price-weekdays__item">
+              <strong>Уикенд 1&nbsp;млн&nbsp;рублей&nbsp;/&nbsp;сутки</span></strong>
+              <ul>
+                <li>- усадьба закрывается полностью</li>
+                <li>- размещение в графском доме до 6 человек</li>
+                <li>- размещение в гостевом доме до 10 человек</li>
+                <li>- обеды и ужины подаются в столовой графского дома</li>
+                <li>- подача завтрака возможна в 2-х домах</li>
+                <li>- уборка, завтраки по базовому меню</li>
+              </ul>
+            </li>
+            <li class="price-weekdays__item">
+              <strong>Новый год  - &nbsp;2,5&nbsp;млн&nbsp;рублей&nbsp;<span> (заезд 30.12 после 14.00, выезд 02.11 до 14.00)</span></strong>
+              <ul>
+                <li>- размещение в графском доме до 6 человек</li>
+                <li>- размещение в гостевом доме до 10 человек</li>
+                <li>- завтраки, уборка включены в стоимость</li>
+                <li>- кейтеринг заказывается отдельно</li>
+                <li>- программа обсуждается и заказывается отдельно</li>
               </ul>
             </li>
           </ul>
         </div>
-        <p class="price__note">*Максимальное размещение - 6 человек</p> -->
-
-        <h4 class="price__value">
-          <strong><span>2 человека  - </span>25&nbsp;тысяч&nbsp;рублей</strong>
-          <strong><span>Для детей (доп. спальня 50%)</span> 12,5&nbsp;тысяч&nbsp;рублей</strong>
-          <strong><span>4 человека - </span>50&nbsp;тысяч&nbsp;рублей</strong>
-          <strong><span>6 человек - </span>75&nbsp;тысяч&nbsp;рублей</strong>
-        </h4>
-        <!-- <h4 class="price__value">
-          <strong>75&nbsp;тысяч&nbsp;рублей&nbsp;<span>(6 человек, вся усадьба под закрытие)</span></strong>
-          <strong>25&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;спальня <span> (2 человека, полное закрытие)</span></strong>
-          <strong>12,5&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;дети<span>(доп спальня -50%)</span></strong>
-          <strong>50&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;две спальни <span>(4 человека)</span></strong>
-          <strong>15&nbsp;тысяч&nbsp;рублей&nbsp; в день&nbsp;/&nbsp;баня <span>(время пользования не ограничено)</span></strong>
-        </h4> -->
-
-        <ul>
-          <li>Баня в день (время пользования не ограничено) <br> <strong>15&nbsp;тысяч&nbsp;рублей</strong> </li>
-          <li>Аренда под фотосъемку до 4 человек (3 часа максимум) <br> <strong>20&nbsp;тысяч&nbsp;рублей</strong> </li>
-          <li>Аренда под фотосъемку 4-8 человек (3 часа максимум) <br> <strong>30&nbsp;тысяч&nbsp;рублей</strong></li>
-        </ul>
-
-
-<!--        <div class="price__promo price-promo">-->
-<!--          <div class="price-promo__wrapper">-->
-<!--            <div class="price-promo__title">Акция:</div>-->
-<!--            <ul class="price-promo__list">-->
-<!--              <li class="price-promo__item">В будние дни возможна аренда покомнатно</li>-->
-<!--              <li class="price-promo__item">Двухместная спальня <b>20&nbsp;тысяч&nbsp;рублей&nbsp;/&nbsp;сутки</b> <br> (при отсутствии брони)</li>-->
-<!--            </ul>-->
-<!--          </div>-->
-<!--        </div>-->
       </div>
     </div>
 
-    <div class="price price--ushmor" id="action">
-      <div class="price__wrapper">
+    <!-- Онлайн оплата -->
+    <template id="yookassa-template">
+      <swal-title>
+        Онлайн оплата
+      </swal-title>
+      <swal-html>
+        <form class="yoomoney-payment-form" action="https://yookassa.ru/integration/simplepay/payment" method="post" accept-charset="utf-8" >
+          <div class="ym-customer-info">
+            <div class="ym-block-title">О покупателе</div>
+              <input name="cps_email" class="ym-input" placeholder="Email" type="text" value="">
+              <input name="cps_phone" class="ym-input" placeholder="Телефон" type="text" value="">
+              <input name="custName" class="ym-input" placeholder="ФИО" type="text" value="">
+              <textarea class="ym-textarea" name="orderDetails" placeholder="Комментарий" value=""></textarea>
+          </div>
+          <div class="ym-hidden-inputs"></div>
+          <input name="customerNumber" type="hidden" value="Проживание">
+          <div class="ym-payment-btn-block ym-before-line ym-align-space-between">
+            <div class="ym-input-icon-rub">
+              <input name="sum" placeholder="0.00" class="ym-input ym-sum-input ym-required-input" type="number" step="any">
+            </div>
+            <button data-text="Оплатить проживание" class="ym-btn-pay ym-result-price" onclick="ym(91549794, 'reachGoal', 'successful_payment'); return true;"><span class="ym-text-crop">Оплатить проживание</span> <span class="ym-price-output"></span></button><svg class="ym-logo" width="114" height="27" viewBox="0 0 114 27" fill="none" xmlns="http://www.w3.org/2000/svg" aria-labelledby="logoTitle" role="img"><path d="M59.3827 7.348H55.7087L53.0599 11.9619H51.6929V2.05054H48.1897V19.9081H51.6929V15.0379H53.0599L56.4777 19.9081H60.408L55.8796 13.4145L59.3827 7.348Z" fill="black" fill-opacity="0.4"></path><path d="M85.6996 13.2436C85.016 12.7309 84.1616 12.4746 83.3926 12.2183C83.1363 12.1328 82.88 12.0474 82.6236 11.9619C82.5382 11.9619 82.4527 11.8765 82.4527 11.8765C81.9401 11.7056 81.4274 11.5347 81.4274 11.0221C81.4274 10.7657 81.5983 10.5094 81.7692 10.2531C82.0255 10.0822 82.2819 9.99676 82.6236 9.99676C83.3072 9.91132 83.9053 10.1676 84.5034 10.5094L84.5888 10.5949L86.4686 8.45878L86.3831 8.37334C86.1268 8.20245 85.8705 7.94613 85.6141 7.86068C84.9306 7.51891 84.4179 7.34802 84.0762 7.26258C83.7344 7.17714 82.7945 7.00625 81.6838 7.26258C81.1711 7.34802 80.4021 7.51891 79.6331 8.11701C78.7787 8.80055 78.266 9.65498 78.1806 10.5949C78.1806 10.9366 78.0952 12.1328 78.7787 13.0727C79.4622 13.9271 80.573 14.3544 81.342 14.6107C81.4274 14.6107 81.4274 14.6107 81.5129 14.6961C81.5983 14.6961 81.6838 14.7816 81.8546 14.7816C83.1363 15.2088 83.4781 15.3797 83.649 15.7214C83.8198 15.9778 83.8198 16.1487 83.8198 16.1487C83.8198 16.7468 83.0508 17.0031 82.5382 17.174C81.8546 17.3449 81.0857 17.0885 80.4876 16.7468C80.0603 16.405 79.6331 15.9778 79.2913 15.5506C79.1205 15.7214 77.1553 17.6866 77.1553 17.6866L77.2407 17.7721C77.9243 18.6265 79.1205 19.7373 80.9148 20.079C81.1711 20.1645 81.5129 20.1645 81.9401 20.1645C82.0255 20.1645 82.1964 20.1645 82.2819 20.1645C83.1363 20.1645 84.4179 19.9936 85.5287 19.1392C85.8705 18.8828 86.554 18.3702 86.8958 17.3449C87.2376 16.405 87.1521 15.2942 86.554 14.3544C86.4686 13.9271 86.1268 13.5854 85.6996 13.2436Z" fill="black" fill-opacity="0.4"></path><path d="M96.9777 13.2436C96.2941 12.7309 95.4397 12.4746 94.6707 12.2183C94.4144 12.1328 94.158 12.0474 93.9017 11.9619C93.8163 11.9619 93.7308 11.8765 93.7308 11.8765C93.2182 11.7056 92.7055 11.5347 92.7055 11.0221C92.7055 10.7657 92.8764 10.5094 93.0473 10.2531C93.3036 10.0822 93.5599 9.99676 93.9017 9.99676C94.5853 9.91132 95.1834 10.1676 95.7815 10.5094L95.8669 10.5949L97.7466 8.45878L97.6612 8.37334C97.4049 8.20245 97.1485 7.94613 96.8922 7.86068C96.2087 7.51891 95.696 7.34802 95.3542 7.26258C95.0125 7.17714 94.0726 7.00625 92.9618 7.26258C92.4492 7.34802 91.6802 7.51891 90.9112 8.11701C90.0568 8.80055 89.5441 9.65498 89.4587 10.5949C89.4587 10.9366 89.3732 12.1328 90.0568 13.0727C90.7403 13.9271 91.8511 14.3544 92.6201 14.6107C92.7055 14.6107 92.7055 14.6107 92.791 14.6961C92.8764 14.6961 92.9618 14.7816 93.1327 14.7816C94.4144 15.2088 94.7561 15.3797 94.927 15.7214C95.0979 15.9778 95.0979 16.1487 95.0979 16.1487C95.0979 16.7468 94.3289 17.0031 93.8163 17.174C93.1327 17.3449 92.3637 17.0885 91.7656 16.7468C91.3384 16.405 90.9112 15.9778 90.5694 15.5506C90.3985 15.7214 88.4333 17.6866 88.4333 17.6866L88.5188 17.7721C89.2023 18.6265 90.3985 19.7373 92.1929 20.079C92.4492 20.1645 92.791 20.1645 93.2182 20.1645C93.3036 20.1645 93.4745 20.1645 93.5599 20.1645C94.4144 20.1645 95.696 19.9936 96.8068 19.1392C97.1485 18.8828 97.8321 18.3702 98.1739 17.3449C98.5156 16.405 98.4302 15.2942 97.8321 14.3544C97.7466 13.9271 97.4049 13.5854 96.9777 13.2436Z" fill="black" fill-opacity="0.4"></path><path d="M70.8323 7.34811V8.54432H70.6614C69.5507 7.519 68.3544 7.00635 67.0728 7.00635C65.3639 7.00635 63.7405 7.68989 62.6298 8.88609C61.519 10.0823 60.9209 11.7057 60.9209 13.5C60.9209 15.3798 61.519 17.0032 62.6298 18.1994C63.7405 19.3956 65.2785 20.0791 66.9874 20.0791C68.269 20.0791 69.5507 19.5665 70.6614 18.6266H70.8323V19.7374H74.4209V7.17723H70.8323V7.34811ZM71.0032 13.6709C71.0032 14.7817 70.6614 15.7215 70.0633 16.4905C69.4652 17.1741 68.6108 17.5158 67.5855 17.5158C66.6456 17.5158 65.8766 17.1741 65.1931 16.4051C64.5949 15.7215 64.2532 14.7817 64.2532 13.5855C64.2532 12.4747 64.5949 11.6203 65.1931 10.8513C65.7912 10.1677 66.6456 9.74052 67.5855 9.74052C68.6108 9.74052 69.3798 10.0823 70.0633 10.7658C70.6614 11.6203 71.0032 12.5601 71.0032 13.6709Z" fill="black" fill-opacity="0.4"></path><path d="M110.222 7.34811V8.54432H110.051C108.94 7.519 107.744 7.00635 106.462 7.00635C104.753 7.00635 103.13 7.68989 102.019 8.88609C100.908 10.0823 100.31 11.7057 100.31 13.5C100.31 15.3798 100.908 17.0032 102.019 18.1994C103.13 19.3956 104.668 20.0791 106.377 20.0791C107.658 20.0791 108.94 19.5665 110.051 18.6266H110.222V19.7374H113.81V7.17723H110.222V7.34811ZM110.393 13.6709C110.393 14.7817 110.051 15.7215 109.453 16.4905C108.855 17.1741 108 17.5158 106.975 17.5158C106.035 17.5158 105.266 17.1741 104.582 16.4051C103.984 15.7215 103.643 14.7817 103.643 13.5855C103.643 12.4747 103.984 11.6203 104.582 10.8513C105.181 10.1677 106.035 9.74052 106.975 9.74052C108 9.74052 108.769 10.0823 109.453 10.7658C110.051 11.6203 110.393 12.5601 110.393 13.6709Z" fill="black" fill-opacity="0.4"></path><path d="M24.4366 0C16.9176 0 10.9366 6.06646 10.9366 13.5C10.9366 21.019 17.003 27 24.4366 27C31.8701 27 37.9366 20.9335 37.9366 13.5C38.022 6.06646 31.8701 0 24.4366 0ZM24.4366 18.5411C21.7024 18.5411 19.3954 16.2342 19.3954 13.5C19.3954 10.7658 21.7024 8.45886 24.4366 8.45886C27.1708 8.45886 29.4777 10.7658 29.4777 13.5C29.4777 16.2342 27.2562 18.5411 24.4366 18.5411Z" fill="black" fill-opacity="0.4"></path><path d="M10.9367 3.93036V23.5823H6.1519L0 3.93036H10.9367Z" fill="black" fill-opacity="0.4"></path></svg><lineargradient id="paint0_linear" x1="57.3564" y1="0" x2="57.3564" y2="63" gradientunits="userSpaceOnUse"><stop stop-color="#0160D1"><stop offset="1" stop-color="#00479C"></stop></stop></lineargradient>
+            <lineargradient id="paint1_linear" x1="12.8472" y1="9.35889" x2="12.8472" y2="55.2393" gradientunits="userSpaceOnUse"><stop stop-color="#0160D1"><stop offset="1" stop-color="#00479C"></stop></stop></lineargradient>
+          </div>
+          <input name="shopId" type="hidden" value="395117">
+        </form>
+      </swal-html>
+    </template>
 
-      </div>
-    </div>
-    
     <script src="https://api-maps.yandex.ru/2.1/?apikey=63206c9d-b428-415d-985a-17b4af8c9595&lang=ru_RU" type="text/javascript"></script>
-    <script src="public/index.js?hash=187xsdf2d234b1"></script>
+    <script src="https://yookassa.ru/integration/simplepay/js/yookassa_construct_form.js"></script>
+    <script src="public/index.js?hash=1834r34b1"></script>
   </body>
 </html>

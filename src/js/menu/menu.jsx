@@ -21,6 +21,10 @@ const data = [
                 title: 'Обзор интерьера',
                 slug: 'pra-interior-review',
             },
+            {
+                title: 'Баня',
+                slug: 'pra-sauna',
+            }
         ],
     },
     {
@@ -45,11 +49,11 @@ const data = [
             },
         ],
     },
-    {
-        title: 'Свадьбы',
-        slug: 'wedding',
-        submenu: [],
-    },
+    // {
+    //     title: 'Свадьбы',
+    //     slug: 'wedding',
+    //     submenu: [],
+    // },
     {
         title: 'Контакты',
         slug: 'contacts',

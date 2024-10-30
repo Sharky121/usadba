@@ -49,6 +49,14 @@
   background-image: url("../images/ico-guns.png");
 }
 
+.pra-territory-item--stable::before {
+  background-image: url("../images/ico-stable.png");
+}
+
+.pra-territory-item--lake::before {
+  background-image: url("../images/ico-lake.png");
+}
+
 .pra-interior-item__title {
   margin: 0;
 

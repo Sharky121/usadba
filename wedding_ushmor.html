@@ -15,7 +15,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Отдых в центре Мещеры - мы готовы исполнить вашу мечту!" />
     <meta name="twitter:description" content="Каждый когда-нибудь мечтал оказаться вдали от городской суеты и рутинных проблем в окружении высоких деревьев, слиться с природой, но одновременно находиться в комфортных условиях." />
-    <link rel="stylesheet" href="public/wedding.css?hash=7rs4sdf4d3e367b1"/>
+    <link rel="stylesheet" href="public/wedding.css?hash=7rs4s3e367b1"/>
 
     <!-- Yandex captcha -->
     <script src="https://smartcaptcha.yandexcloud.net/captcha.js?render=onload&onload=onloadFunction" defer></script>
@@ -90,14 +90,19 @@
 
     <!-- MAIN -->
     <main class="page__wedding wedding-page">
-      <section class="pra-main">
-        <div class="pra-main__image">
+      <section class="wedding-main">
+        <div class="wedding-main__image">
           <img class="background-image" src="./public/images/ushmor-wedding_1.jpg" alt="Усадьба Ушмор">
         </div>
-        <div class="pra-main__content logo">
-          <div class="logo">
+        <div class="wedding-main__content">
+          <div class="wedding-main__logo logo">
             <img src="./public/images/logo_ushmor_red.png" width="120" alt="">
           </div>
+          <!-- <div class="wedding-main__price">
+            <a class="btn btn--danger btn-price" data-fancybox data-src="#price-wedding-ushmor">
+              <span class="btn__text">Прайс-лист</span>
+            </a>
+          </div> -->
         </div>
       </section>
 
@@ -122,19 +127,33 @@
 
       <section class="ushmor-organization">
         <div class="ushmor-organization__container">
-          <div class="ushmor-organization__item">
-            <h2 class="visually-hidden">Организация мероприятий</h2>
-            <p class="ushmor-organization__text">Мы готовы взять на себя организацию вашей свадьбы,
-              начиная с ужина влюбленных в аристократической
-              гостиной гостевого дома, где будущий жених
-              в утонченной обстановке сделает своей возлюбленной
-              предложение руки и сердца и заканчивая чудесным
-              утром супружеской пары в роскошных апартаментах
-              графского дома.</p>
+<!--           <div class="ushmor-organization__item">
+            <h3>Пакетное предложение - 450 тыс. руб.</h3>
+            <ul>
+              <li>
+                <b>Аренда всей территории Усадьбы для проведения мероприятия 05:00-00:00</b>
+                <ul>
+                  <li>10га живописная территория</li>
+                  <li>выход к реке</li>
+                  <li>охрана</li>
+                </ul>
+              </li>
+              <li>
+                <b>Проживание гостей в гостевом доме (максимум 12 человек) до 18:00 следующего дня</b>
+                <ul>
+                  <li>возможно дополнительное размещение до 12 гостей в Усадьбе на Пре (20 минут езды на автомобиле) – 100 000 рублей, питание не включено</li>
+                </ul>
+              </li>
+              <li><b>Зимний сад Графского дома для банкета до 30 человек или фуршета</b></li>
+              <li><b>Роскошный номер для молодоженов в Графском Доме 50 кв метров с большой ванной комнатой и завтрак</b></li>
+              <li><b>Фотосессия «утро невесты» в интерьерах графского дома</b></li>
+              <li><b>Столы, стулья, посуда</b></li>
+              <li><b>Сопровождение администратора в день мероприятия</b></li>
+            </ul>
           </div>
           <div class="ushmor-organization__item">
             <img class="background-image" src="./public/images/ushmor_organization_3.jpg" alt="Логотип усадьба на Пре">
-          </div>
+          </div> -->
           <div class="ushmor-organization__item">
             <img class="background-image" src="./public/images/ushmor_organization_2.jpg" alt="Логотип усадьба на Пре">
           </div>
@@ -152,6 +171,13 @@
                 интерьерами, большие просторные залы
                 обставлены изысканной мебелью и украшены
                 картинами известных художников.</p>
+                <p class="ushmor-house__text">Мы готовы взять на себя организацию вашей свадьбы,
+                  начиная с ужина влюбленных в аристократической
+                  гостиной гостевого дома, где будущий жених
+                  в утонченной обстановке сделает своей возлюбленной
+                  предложение руки и сердца и заканчивая чудесным
+                  утром супружеской пары в роскошных апартаментах
+                  графского дома.</p>
             </div>
             <div class="ushmor-house__item">
               <img class="background-image" src="./public/images/ushmor_house_1.jpg" alt="Логотип усадьба на Пре">
@@ -319,9 +345,9 @@
               <dd class="desc-list__definition"><a href="index.html">usadba-na-pre.ru</a></dd>
             </div>
           </dl>
-          <a class="footer__btn btn btn--danger" href="public/pdf/wedding_ushmor.pdf">
+          <!-- <a class="footer__btn btn btn--danger" href="public/pdf/wedding_ushmor.pdf">
             <span class="btn__text">Презентация</span>
-          </a>
+          </a> -->
         </div>
       </div>
     </footer>
@@ -379,6 +405,27 @@
           </path>  
         </symbol>
       </svg>
+    </div>
+
+    <div class="price price--ushmor" id="price-wedding-ushmor">
+      <div class="price__wrapper">
+        <div class="price__header">
+          <img src="./public/images/logo_ushmor_white.png" width="100" height="78" alt="Логотип усадьба Ушмор">
+          <h3>Прайс лист</h3>
+        </div>
+
+        <h4 class="price__title">В аренду усадьбы Ушмор под мероприятие до 30 человек входит за 400 тыс.рублей:</h4> 
+
+        <ul class="price__list">
+          <li class="price__item">Сопровождение администратора  на протяжении всего мероприятия </li>
+          <li class="price__item">Фото/видео съемка на территории усадьбы (услуги фотографа не входят)</li>
+          <li class="price__item">Аренда  всей территории и зимнего сада на 12 часов</li>
+          <li class="price__item">Столы/стулья/посуда на 12 часов</li>
+          <li class="price__item">Утро невесты (ранний заезд невесты ,фотосессия в графском доме. При необходимости заезда накануне -возможно размещение в гостевом доме за отдельную плату)</li>
+          <li class="price__item">Апартаменты для ночи молодоженов с завтраком (графский дом)</li>
+          <li class="price__item">Размещение гостей в гостевом доме (до 12 человек)</li>
+        </ul>
+      </div>
     </div>
 
     <script src="public/wedding.js?hash=187xsdf2d2d3dd4e8534b1"></script>

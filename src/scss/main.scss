@@ -3,6 +3,7 @@
 @use "container";
 @use 'helpers';
 
+@use 'blocks/info-popup';
 @use 'blocks/owl-carousel';
 @use 'blocks/owl-custom';
 @use 'blocks/swal-custom';
@@ -27,6 +28,7 @@
 @use "blocks/events";
 
 // OUR HOUSES SECTION
+@use "blocks/pra-sauna";
 @use "blocks/our-houses";
 @use "blocks/house-item";
 @use "blocks/house-carousel";

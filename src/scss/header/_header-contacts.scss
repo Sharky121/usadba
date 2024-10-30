@@ -21,7 +21,7 @@
   }
 }
 
-.header-contacts__address {
+.header-contacts__pay {
   display: none;
 
   color: var.$brand-black;
@@ -30,6 +30,10 @@
 
 .header-contacts__social {
   display: none;
+}
+
+.header-contacts__pay {
+  margin-top: 2px;
 }
 
 @include var.tablet-size {
@@ -45,11 +49,8 @@
     }
   }
 
-  .header-contacts__address {
+  .header-contacts__pay {
     display: block;
-
-    text-align: center;
-    cursor: pointer;
   }
 
   .header-contacts {

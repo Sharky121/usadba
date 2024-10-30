@@ -1,0 +1,61 @@
+@use "../abstract" as var;
+
+.pra-sauna {
+    background-color: var.$brand-blue;
+
+    color: #ffffff;
+
+    background-image:
+        url("../images/top_brand_bg.png"),
+        url("../images/bottom_brand_bg.png");
+    background-position: top left, bottom left;
+    background-size: 283px 30px, 283px 30px;
+    background-repeat: repeat-x, repeat-x;
+}
+
+.pra-sauna__container {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.pra-sauna__col {
+    margin-bottom: 20px;
+
+    &:last-of-type {
+        margin-bottom: 0;
+    }
+}
+
+@include var.desktop-size {
+
+    .pra-sauna__container {
+        display: flex;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 60px;
+        padding-top: 80px;
+        padding-bottom: 80px;
+    }
+    
+    .pra-sauna__col {
+        width: calc((100% - 60px) / 2);
+        margin-bottom: 0;
+
+        &:nth-child(1) {
+            order: 1;
+        }
+
+        &:nth-child(2) {
+            order: 4;
+        }
+
+        &:nth-child(3) {
+            order: 3;
+        }
+
+        &:nth-child(4) {
+            order: 3;
+        }
+    }
+}

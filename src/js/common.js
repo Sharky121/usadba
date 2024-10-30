@@ -1,31 +1,22 @@
-import flatpickr from 'flatpickr';
 import Swal from 'sweetalert2/dist/sweetalert2.js';
 import IMask from 'imask';
 import {Fancybox} from "@fancyapps/ui";
-import {Russian} from 'flatpickr/dist/l10n/ru';
 import Menu from './menu/menu';
 import {closeMenuHandler, menuToggleHandler} from './menu-toggle-handler';
 import { createRoot } from 'react-dom/client';
-
-flatpickr.localize(Russian);
 
 const desktopMediaQuery = window.matchMedia('(min-width: 1280px)')
 const menuElement = document.querySelector('#menu');
 const headerElement = document.querySelector('#page-header-main');
 const questionForm = document.querySelector('#question-form');
-const newYearForm = document.querySelector('#new-year-form');
 const callbackElement = document.querySelector('#callback');
-const callbackAwardsElement = document.querySelector('#callback-2');
-const conditions = document.querySelector('#conditions');
-const bookingForms = document.querySelectorAll('.booking-form');
 const phoneInputs = document.querySelectorAll('[type="tel"]');
-const startDate = document.querySelectorAll('[name="start-date"]');
-const endDate = document.querySelectorAll('[name="end-date"]');
 const hamburgerMenuElement = document.querySelector('#hamburger-menu');
 const closeMenuElement = document.querySelector('#close-mobile-nav');
 const menuLinksElements = document.querySelectorAll('[data-scroll]');
 const contactsElement = document.querySelectorAll('#contacts');
 const actionElement = document.querySelectorAll('#action');
+const yookassaBtn = document.querySelectorAll('.btn-pay');
 
 Fancybox.bind(actionElement, "[data-fancybox]", {});
 Fancybox.bind("[data-fancybox]", {height: '100%'});
@@ -38,15 +29,6 @@ if (desktopMediaQuery.matches) {
 
 const root = createRoot(menuElement);
 root.render(<Menu />);
-
-
-const flatpickrSettings = {
-  dateFormat: 'Y-m-d',
-  altFormat: "d.m.Y",
-  altInput: true,
-  disableMobile: true,
-  minDate: "2023-09-29",
-};
 
 const owlCarouselConfig = {
   dots: false,
@@ -66,31 +48,6 @@ const owlCarouselConfig = {
   ]
 }
 
-const getPriceForm = (subject) => {
-  return (
-    `<form class="booking__form price-form form" enctype="multipart/form-data" id="price-form">
-        <input type="hidden" name="subject" value="${subject}">
-        <ul class="price-form__list form__list">
-          <li class="form__item form__item--3 form-field">
-            <label class="form-field__label visually-hidden" for="name">Имя</label>
-            <input class="form-field__input" id="name" name="name" type="text" placeholder="Имя">
-          </li>
-          <li class="form__item form__item--3 form-field">
-            <label class="form-field__label visually-hidden" for="email">Email</label>
-            <input class="form-field__input" id="email" name="email" type="email" placeholder="Email" required>
-          </li>
-          <li class="form__item form__item--3 form-field">
-            <label class="form-field__label visually-hidden" for="phone">Телефон</label>
-            <input class="form-field__input" id="phone" name="phone" type="tel" placeholder="Телефон" required>
-          </li>
-        </ul>
-        <button class="price-form__btn btn btn--danger">
-          <span class="btn__text">Отправить</span>
-        </button>
-     </form>`
-  );
-}
-
 const onScroll = () => {
   const scroll = document.documentElement.scrollTop;
 
@@ -105,6 +62,12 @@ const onScroll = () => {
       document.querySelector('main').style.paddingTop = '0px';
     }
   }
+}
+
+window.addEventListener('scroll', onScroll);
+
+if (contactsElement) {
+  ymaps.ready(init);
 }
 
 function init () {
@@ -139,15 +102,6 @@ function init () {
   ryazanMap.geoObjects.add(warehousePlacemark);
 }
 
-startDate.forEach((item) => {
-  flatpickr(item, flatpickrSettings);
-});
-
-endDate.forEach((item) => {
-  flatpickr(item, flatpickrSettings);
-});
-
-
 if (phoneInputs) {
   phoneInputs.forEach((element) => {
     const phoneMask = IMask(element, {
@@ -156,6 +110,7 @@ if (phoneInputs) {
   });
 }
 
+// Форма Консультация в футере
 if (questionForm) {
   questionForm.addEventListener('submit', (evt) => {
     evt.preventDefault();
@@ -206,65 +161,6 @@ if (questionForm) {
   });
 }
 
-if (bookingForms) {
-  bookingForms.forEach((form) => {
-    form.addEventListener('submit', (evt) => {
-      evt.preventDefault();
-  
-      const form = evt.target;
-      const formData = new FormData(form);
-  
-      fetch(
-        'send.php',
-        {
-          method: 'POST',
-          body: formData,
-        },
-      )
-        .then((response) => {
-          if (response.ok) {
-            Swal.fire({
-              title: 'Спасибо',
-              text: 'Менеджер свяжется с вами в ближайшее время',
-              icon: 'success',
-              confirmButtonText: 'Закрыть',
-              confirmButtonColor: '#86abbb',
-              timer: 1500
-            });
-          } else {
-            Swal.fire({
-              position: 'top-center',
-              icon: 'error',
-              title: 'Произошла ошибка!',
-              showConfirmButton: false,
-              confirmButtonText: 'Закрыть',
-              confirmButtonColor: '#86abbb',
-              timer: 1500
-            });
-          }
-        })
-        .catch((error) => {
-          Swal.fire({
-            position: 'top-center',
-            icon: 'error',
-            title: `Произошла ошибка!`,
-            showConfirmButton: false,
-            confirmButtonText: 'Закрыть',
-            confirmButtonColor: '#86abbb',
-            timer: 11500
-          });
-        });
-    });
-  });
-  
-}
-
-if (contactsElement) {
-  ymaps.ready(init);
-}
-
-window.addEventListener('scroll', onScroll);
-
 if (hamburgerMenuElement) {
   hamburgerMenuElement.addEventListener('click', menuToggleHandler);
 }
@@ -297,103 +193,9 @@ $(document).ready(function() {
   });
 });
 
-const callbackSubmitHandler = (evt) => {
-  evt.preventDefault();
-
-  const formData = new FormData(evt.target);
-
-  return fetch(
-    'callback.php',
-    {
-      method: 'POST',
-      body: formData,
-    },
-  ).then(() => {
-    Swal.fire({
-      title: 'Спасибо',
-      text: 'Менеджер свяжется с вами в ближайшее время',
-      icon: 'success',
-      customClass: {
-        confirmButton: 'price-form__btn btn btn--danger',
-      },
-      buttonsStyling: false,
-      confirmButtonText: 'Закрыть',
-      confirmButtonColor: '#86abbb',
-      timer: 1500
-    });
-  }).catch((error) => {
-    Swal.fire({
-      position: 'top-center',
-      icon: 'error',
-      title: `Произошла ошибка! ${error}`,
-      showConfirmButton: false,
-      confirmButtonText: 'Закрыть',
-      confirmButtonColor: '#86abbb',
-      timer: 11500
-    });
-  });
-};
-
-const popupFormHandler = (title, subject) => {
-
-  Swal.fire({
-    title: title,
-    html: getPriceForm(subject),
-    width: '42em',
-    showConfirmButton: false,
-    showCloseButton: true,
-    focusConfirm: true,
-    didRender: () => {
-      const form = Swal.getHtmlContainer().querySelector('form');
-
-      if (form) {
-        const phone = form.querySelector('[name="phone"]');
-
-        const phoneMask = IMask(phone, {
-          mask: '+{7} (000) 000-00-00',
-        });
-  
-        form.addEventListener('submit', callbackSubmitHandler);
-      }
-    },
-    didOpen: () => {
-      const inputEls = Swal.getFocusableElements();
-      console.log(inputEls);
-      if (inputEls.length) {
-        inputEls.forEach((el) => el.blur()); // Снимаем фокус с input
-      }
-    },
-    didClose: () => {
-      const form = Swal.getHtmlContainer().querySelector('form');
-
-      if (form) {
-        form.removeEventListener('submit', callbackSubmitHandler);
-      }
-    },
-  });
-};
-
 if (callbackElement) {
   callbackElement.addEventListener('click', (evt) => {
     evt.preventDefault();
-  
-    popupFormHandler(`Мы перезвоним </br> в течение 15 минут!`, 'Обратный звонок с сайта');
-  });
-}
-
-if(callbackAwardsElement) {
-  callbackAwardsElement.addEventListener('click', (evt) => {
-    evt.preventDefault();
-  
-    popupFormHandler(`Мы перезвоним </br> в течение 15 минут!`, 'Обратный звонок с сайта');
-  });
-}
-
-if (conditions) {
-  conditions.addEventListener('click', (evt) => {
-    evt.preventDefault();
-  
-    popupFormHandler('Получить условия', 'Получить условия для проведения мероприятий');
   });
 }
 
@@ -414,8 +216,7 @@ if (menuLinksElements) {
       const scrollElementId = evt.currentTarget.dataset.scroll;
       const scrollElement = document.getElementById(`${scrollElementId}`);
       let rectY;
-      // console.log(document.documentElement.scrollTop);
-      // console.log(scroll);
+
       if (scroll > 40) {
         rectY = scrollElement.getBoundingClientRect().top;
         console.log(rectY);
@@ -430,58 +231,37 @@ if (menuLinksElements) {
   });
 }
 
-if (newYearForm) {
-  newYearForm.addEventListener('submit', (evt) => {
-    evt.preventDefault();
-  
-    const form = evt.target;
-    const button = form.querySelector('button');
-    
-    const formData = new FormData(form);
-    button.disabled = true;
-  
-    fetch(
-      'newYear.php',
-      {
-        method: 'POST',
-        body: formData,
-      },
-    )
-      .then((response) => {
-        if (response.ok) {
-          Swal.fire({
-            title: 'Спасибо',
-            text: 'Менеджер свяжется с вами в ближайшее время',
-            icon: 'success',
-            confirmButtonText: 'Закрыть',
-            confirmButtonColor: '#86abbb',
-            timer: 1500
-          });
-        } else {
-          Swal.fire({
-            position: 'top-center',
-            icon: 'error',
-            title: 'Произошла ошибка!',
-            showConfirmButton: false,
-            confirmButtonText: 'Закрыть',
-            confirmButtonColor: '#86abbb',
-            timer: 1500
-          });
+// Swal.fire({
+//   title: 'Уважаемые гости!',
+//   html: `
+//           <div class="info-popup">
+//             <p class="info-popup__title">Бронирование через TravelLine временно недоступно.</p>
+//             <p> Просьба, уточнять даты и стоимость по телефону:</p>
+//               <a class="info-popup__phone" href="tel:+79106130022">+7 (910) 613-00-22</a>
+//             </p>
+//             <p>Также, вы можете связаться с нами через форму обратной связи на сайте, <a href="whatsapp://send/?phone=+79106130022" target="_blank">Whatsapp</a> или <a href="mailto:info@usadba-na-pre.ru">email: info@usadba-na-pre.ru</a></p>
+//           </div>
+//         `,
+//   confirmButtonText: 'Закрыть',
+//   confirmButtonColor: '#86abbb',
+// });
+
+if(yookassaBtn.length) {
+  yookassaBtn.forEach((element) => {
+    element.addEventListener('click', () => {
+      Swal.fire({
+        template: "#yookassa-template",
+        confirmButtonText: 'Закрыть',
+        confirmButtonColor: '#86abbb',
+        customClass: {
+          htmlContainer: 'pay-container',
+        },
+        didOpen: () => {
+          const titleElement = Swal.getHtmlContainer().querySelector('.ym-block-title');
+          
+          titleElement.remove();
         }
-      })
-      .catch((error) => {
-        Swal.fire({
-          position: 'top-center',
-          icon: 'error',
-          title: `Произошла ошибка! ${error}`,
-          showConfirmButton: false,
-          confirmButtonText: 'Закрыть',
-          confirmButtonColor: '#86abbb',
-          timer: 11500
-        });
-      })
-      .finally(() => {
-        button.disabled = false;
       });
+    });
   });
 }

@@ -22,6 +22,11 @@
   background-image: url("../images/ico-library.png");
 }
 
+.pra-interior-item--terrace::before {
+  background-image: url("../images/ico-terrace.png");
+}
+
+
 .pra-interior-item--billiard::before {
   background-image: url("../images/ico-billiard.png");
 }

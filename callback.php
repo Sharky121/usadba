@@ -16,23 +16,21 @@ if(isset($_POST["subject"]) && !empty($_POST["subject"])) {
   $subject = 'Обратная связь с сайта';
 }
 
-if(isset($_POST["name"]) && !empty($_POST["name"])) {
-  $name = trim($_POST["name"]);
-} else {
-  $name = '';
+$name = isset($_POST["name"]) && !empty($_POST["name"]) ? trim($_POST["name"]) : '';
+$email = isset($_POST["email"]) && !empty($_POST["email"]) ? trim($_POST["email"]) : '';
+$phone = isset($_POST["phone"]) && !empty($_POST["phone"]) ? trim($_POST["phone"]) : '';
+
+// Проверка имени на русском языке
+if (!empty($name) && !preg_match('/^[а-яё\s]+$/ui', $name)) {
+    echo "Имя должно быть на русском языке!";
+    exit;
 }
 
-if(isset($_POST["email"]) && !empty($_POST["email"])) {
-  $email = trim($_POST["email"]);
-} else {
-  $email = '';
-}
-
-
-if(isset($_POST["phone"]) && !empty($_POST["phone"])) {
-  $phone = trim($_POST["phone"]);
-} else {
-  $phone = '';
+// Проверка на пустоту всех полей
+if (empty($name) && empty($email) && empty($phone)) {
+  // Все поля пусты, не отправляем письмо
+  echo "Необходимо заполнить хотя бы одно поле!";
+  exit;
 }
 
 $message = '<b>Имя:</b> ' . $name . '<br>' .

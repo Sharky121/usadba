@@ -147,8 +147,12 @@
   font-feature-settings: "lnum";
 }
 
-.site-menu__social {
+.site-menu__pay {
   margin-top: auto;
+  margin-bottom: 15px;
+}
+
+.site-menu__social {
   margin-bottom: 15px;
 }
 
@@ -157,6 +161,10 @@
 }
 
 @include var.desktop-size {
+
+  .site-menu__pay {
+    display: none;
+  }
 
   .site-menu__social {
     display: none;

@@ -76,10 +76,21 @@
         width: calc((100% - 20px) / 2);
         margin-right: 20px;
 
+        h3 {
+            width: 100%;
+
+            font-size: 28px;
+        }
+
+        ul li {
+            font-size: 18px;
+        }
+
         &:nth-child(1) {
             display: flex;
             align-items: center;
             justify-content: center;
+            flex-wrap: wrap;
             padding: 2.5rem;
         }
 
