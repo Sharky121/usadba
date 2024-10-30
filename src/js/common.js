@@ -231,20 +231,27 @@ if (menuLinksElements) {
   });
 }
 
-// Swal.fire({
-//   title: 'Уважаемые гости!',
-//   html: `
-//           <div class="info-popup">
-//             <p class="info-popup__title">Бронирование через TravelLine временно недоступно.</p>
-//             <p> Просьба, уточнять даты и стоимость по телефону:</p>
-//               <a class="info-popup__phone" href="tel:+79106130022">+7 (910) 613-00-22</a>
-//             </p>
-//             <p>Также, вы можете связаться с нами через форму обратной связи на сайте, <a href="whatsapp://send/?phone=+79106130022" target="_blank">Whatsapp</a> или <a href="mailto:info@usadba-na-pre.ru">email: info@usadba-na-pre.ru</a></p>
-//           </div>
-//         `,
-//   confirmButtonText: 'Закрыть',
-//   confirmButtonColor: '#86abbb',
-// });
+Swal.fire({
+  title: 'Новый год в Усадьбе Ушмор!',
+  html: `
+          <div class="info-popup">
+            <p class="info-popup__title">Стоимость  - &nbsp;2,5&nbsp;млн&nbsp;рублей&nbsp; <br><span> (заезд 30.12 после 14.00, выезд 02.11 до 14.00)</span></p>
+            <ul>
+              <li>- размещение в графском доме до 6 человек</li>
+              <li>- размещение в гостевом доме до 10 человек</li>
+              <li>- завтраки, уборка включены в стоимость</li>
+              <li>- кейтеринг заказывается отдельно</li>
+              <li>- программа обсуждается и заказывается отдельно</li>
+            </ul>
+            <p>Всю информацию вы можете узнать по телефону:</p>
+              <a class="info-popup__phone" href="tel:+79106130022">+7 (910) 613-00-22</a>
+            </p>
+            <p>Также, вы можете связаться с нами через форму обратной связи на сайте, <a href="whatsapp://send/?phone=+79106130022" target="_blank">Whatsapp</a> или <a href="mailto:info@usadba-na-pre.ru">email: info@usadba-na-pre.ru</a></p>
+          </div>
+        `,
+  confirmButtonText: 'Закрыть',
+  confirmButtonColor: '#86abbb',
+});
 
 if(yookassaBtn.length) {
   yookassaBtn.forEach((element) => {
