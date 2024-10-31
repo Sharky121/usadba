@@ -1,6 +1,58 @@
 @use "../../abstract" as var;
 
+.swal-info-popup {
+    position: relative;
+
+    overflow: hidden;
+
+    &::before {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background-image: url("../images/new-year-bg.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+
+        z-index: 1;
+
+        filter: blur(2px);
+    }
+
+    &::after {
+        content: '';
+
+        position: absolute;
+        bottom: 0;
+        left: 0;
+
+        display: block;
+        width: 100%;
+        height: 100%;
+
+        background-color: rgba(0, 0, 0, 0.4);
+
+        z-index: 2;
+    }
+
+}
+
+.swal-info-container {
+    z-index: 3;
+}
+
 .info-popup {
+    position: relative;
+
+    color: white;
+
+    z-index: 3;
 
     p {
         margin-top: 0;
@@ -12,7 +64,7 @@
     }
 
     a {
-        color: var.$brand-brown;
+        color: white;
     }
 
     ul {
@@ -29,11 +81,13 @@
     font-size: 24px;
 }
 
-.info-popup__title {
+.swal-info-actions {
+    z-index: 4;
+}
+
+.info-popup__subtitle {
     font-size: 18px;
     font-weight: 700;
-
-    color: var.$brand-danger;
 
     span {
         font-size: 16px;

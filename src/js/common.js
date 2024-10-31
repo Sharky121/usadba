@@ -232,10 +232,15 @@ if (menuLinksElements) {
 }
 
 Swal.fire({
-  title: 'Новый год в Усадьбе Ушмор!',
+  customClass: {
+    htmlContainer: 'swal-info-container',
+    popup: 'swal-info-popup',
+    actions: 'swal-info-actions',
+  },
   html: `
           <div class="info-popup">
-            <p class="info-popup__title">Стоимость  - &nbsp;2,5&nbsp;млн&nbsp;рублей&nbsp; <br><span> (заезд 30.12 после 14.00, выезд 02.11 до 14.00)</span></p>
+            <h3 class="info-popup__title">Новый год в Усадьбе Ушмор!</h3>  
+            <p class="info-popup__subtitle">Стоимость  - &nbsp;2,5&nbsp;млн&nbsp;рублей&nbsp; <br><span> (заезд 30.12 после 14.00, выезд 02.11 до 14.00)</span></p>
             <ul>
               <li>- размещение в графском доме до 6 человек</li>
               <li>- размещение в гостевом доме до 10 человек</li>
