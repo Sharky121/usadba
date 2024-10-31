@@ -110,6 +110,8 @@ import './images/apartaments-pra/apartments_pra_8.jpg';
 import './images/apartaments-pra/apartments_pra_9.jpg';
 import './images/apartaments-pra/apartments_pra_10.jpg';
 
+import './images/ushmor-common/ushmor_common_1.jpg';
+
 // ГОСТЕВОЙ ДОМ УСАДЬБЫ УШМОР
 import './images/ushmor-apartments/ushmor-apartments_1.jpg';
 import './images/ushmor-apartments/ushmor-apartments_2.jpg';
