@@ -267,6 +267,8 @@ import './images/new-year/new-year_53.jpg';
 
 import './images/popup_bg.jpg';
 
+import './images/new-year-bg_1.jpg';
+
 import 'modern-normalize/modern-normalize.css';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'flatpickr/dist/flatpickr.min.css';
