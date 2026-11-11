@@ -46,7 +46,7 @@
   @extend %box-shadow;
 
   background-color: rgba(var.$brand-blue, 0.9);
-  background-image: url("../images/new-year-bg.jpg");
+  background-image: url("/images/new-year-bg.jpg");
 
   &::before {
     content: "";

@@ -53,7 +53,7 @@
 .new-year-farm--brand-pra {
     color: #ffffff;
 
-    background-image:  url("../images/top_brand_bg.png");
+    background-image:  url("/images/top_brand_bg.png");
     background-position: top left;
     background-size: 283px 30px;
     background-repeat: repeat-x;
@@ -61,7 +61,7 @@
 }
 
 .new-year-farm--brand-ushmor {
-    background-image: url("../images/bottom_brand_bg.png");
+    background-image: url("/images/bottom_brand_bg.png");
     background-position: top left;
     background-size: 283px 30px;
     background-repeat: repeat-x;
@@ -69,11 +69,11 @@
 }
 
 .new-year-farm--brand-pra .new-year-farm__title::before {
-    background-image: url("../images/logo_pra_no-text_white.png");
+    background-image: url("/images/logo_pra_no-text_white.png");
 }
 
 .new-year-farm--brand-ushmor .new-year-farm__title::before {
-    background-image: url("../images/logo_ushmor_no-text_brown.png");
+    background-image: url("/images/logo_ushmor_no-text_brown.png");
 }
 
 .new-year-farm--brand-ushmor .new-year-farm__item::before {

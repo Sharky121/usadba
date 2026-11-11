@@ -1,4 +1,11 @@
-node_modules
+/node_modules
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+.env*
+!.env.example
+.DS_Store
 .idea
-.well-known
-video
+# видео (~1.5 ГБ) в git не храним — на сервер кладутся отдельно в public/video/
+/public/video
