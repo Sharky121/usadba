@@ -9,3 +9,4 @@ next-env.d.ts
 .idea
 # видео (~1.5 ГБ) в git не храним — на сервер кладутся отдельно в public/video/
 /public/video
+/.next-*/

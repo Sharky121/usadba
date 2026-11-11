@@ -10,6 +10,8 @@ const nextConfig: NextConfig = {
     root: import.meta.dirname,
   },
   poweredByHeader: false,
+  // На сервере сборка идёт в отдельную папку и подменяет .next только при успехе (scripts/remote-build.sh)
+  distDir: process.env.NEXT_DIST_DIR || ".next",
   // Файлы из public по умолчанию отдаются без кэширования — задаём его явно.
   async headers() {
     const cache = (source: string, value: string) => ({ source, headers: [{ key: "Cache-Control", value }] });

@@ -1,0 +1,46 @@
+name: Deploy
+
+# Пуш в ветку nextjs → копирование файлов на сервер, сборка и перезапуск сайта.
+# Нужен секрет SSH_KEY (закрытый ключ деплоя). Видео (public/video) в git нет — на сервере они не трогаются.
+on:
+  push:
+    branches: [nextjs]
+  workflow_dispatch:
+
+concurrency:
+  group: deploy
+  cancel-in-progress: false
+
+env:
+  HOST: 2.56.89.90
+  USER: root
+  DIR: /var/www/ushmor
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Настроить SSH
+        env:
+          SSH_KEY: ${{ secrets.SSH_KEY }}
+        run: |
+          mkdir -p ~/.ssh
+          printf '%s\n' "$SSH_KEY" > ~/.ssh/deploy
+          chmod 600 ~/.ssh/deploy
+          # Отпечаток сервера зафиксирован, чтобы не подключиться к подменённому хосту
+          echo "2.56.89.90 ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIMGKwaaC+kvEjQTK+kWUm/4E5vTe70goUVoMYwTAm8cY" > ~/.ssh/known_hosts
+
+      - name: Скопировать файлы
+        run: |
+          rsync -az --delete \
+            --exclude .git --exclude .github --exclude node_modules --exclude '.next*' \
+            --exclude '.env*' --exclude next-env.d.ts --exclude '*.tsbuildinfo' --exclude .deployed-commit \
+            --exclude public/video \
+            -e "ssh -i ~/.ssh/deploy -o IdentitiesOnly=yes" \
+            ./ "$USER@$HOST:$DIR/"
+
+      - name: Собрать и перезапустить
+        run: ssh -i ~/.ssh/deploy -o IdentitiesOnly=yes "$USER@$HOST" "bash $DIR/scripts/remote-build.sh ${GITHUB_SHA::7}"
