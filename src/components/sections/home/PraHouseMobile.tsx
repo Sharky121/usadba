@@ -15,62 +15,62 @@ export default function PraHouseMobile() {
               </h3>
               <div className="house-item__carousel house-carousel owl-carousel owl-theme">
                 <div className="house-carousel__item">
-                  <a href="/images/territory_pra_1.jpg" data-fancybox="">
+                  <a href="/images/territory_pra_1.jpg">
                     <img className="house-carousel__img" src="/images/territory_pra_1.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_pra_2.jpg" data-fancybox="">
+                  <a href="/images/territory_pra_2.jpg">
                     <img className="house-carousel__img" src="/images/territory_pra_2.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_pra_3.jpg" data-fancybox="">
+                  <a href="/images/territory_pra_3.jpg">
                     <img className="house-carousel__img" src="/images/territory_pra_3.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_pra_4.jpg" data-fancybox="">
+                  <a href="/images/territory_pra_4.jpg">
                     <img className="house-carousel__img" src="/images/territory_pra_4.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_1.jpg" data-fancybox="">
+                  <a href="/images/pra_house_1.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_1.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_10.jpg" data-fancybox="">
+                  <a href="/images/pra_house_10.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_10.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_11.jpg" data-fancybox="">
+                  <a href="/images/pra_house_11.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_11.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_12.jpg" data-fancybox="">
+                  <a href="/images/pra_house_12.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_12.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_13.jpg" data-fancybox="">
+                  <a href="/images/pra_house_13.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_13.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_14.jpg" data-fancybox="">
+                  <a href="/images/pra_house_14.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_14.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_15.jpg" data-fancybox="">
+                  <a href="/images/pra_house_15.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_15.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/pra_house_16.jpg" data-fancybox="">
+                  <a href="/images/pra_house_16.jpg">
                     <img className="about-screen-carousel__img" src="/images/pra_house_16.jpg" alt="" loading="lazy" />
                   </a>
                 </div>

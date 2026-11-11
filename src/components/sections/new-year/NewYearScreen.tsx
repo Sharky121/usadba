@@ -49,52 +49,52 @@ export default function NewYearScreen() {
               </div>
               <div className="new-year-col__gallery new-year-gallery owl-carousel owl-theme" id="pra-gallery">
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_1.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_1.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_1.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_2.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_2.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_2.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_3.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_3.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_3.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_4.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_4.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_4.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_5.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_5.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_5.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_6.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_6.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_6.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_7.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_7.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_7.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_8.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_8.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_8.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_9.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_9.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_9.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_pra_25_10.jpg" data-fancybox="new-year-pra">
+                  <a href="/images/ng_pra_25_10.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_pra_25_10.jpg" alt="Новогодний заезд в Усадьбе на Пре" loading="lazy" />
                   </a>
                 </div>
@@ -134,32 +134,32 @@ export default function NewYearScreen() {
               </div>
               <div className="new-year-col__gallery new-year-gallery owl-carousel owl-theme" id="ushmor-gallery">
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_ushmor_25_1.jpg" data-fancybox="new-year-ushmor">
+                  <a href="/images/ng_ushmor_25_1.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_ushmor_25_1.jpg" alt="Новогодний заезд в Усадьбе Ушмор" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_ushmor_25_2.jpg" data-fancybox="new-year-ushmor">
+                  <a href="/images/ng_ushmor_25_2.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_ushmor_25_2.jpg" alt="Новогодний заезд в Усадьбе Ушмор" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_ushmor_25_3.jpg" data-fancybox="new-year-ushmor">
+                  <a href="/images/ng_ushmor_25_3.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_ushmor_25_3.jpg" alt="Новогодний заезд в Усадьбе Ушмор" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_ushmor_25_4.jpg" data-fancybox="new-year-ushmor">
+                  <a href="/images/ng_ushmor_25_4.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_ushmor_25_4.jpg" alt="Новогодний заезд в Усадьбе Ушмор" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_ushmor_25_5.jpg" data-fancybox="new-year-ushmor">
+                  <a href="/images/ng_ushmor_25_5.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_ushmor_25_5.jpg" alt="Новогодний заезд в Усадьбе Ушмор" loading="lazy" />
                   </a>
                 </div>
                 <div className="new-year-gallery__item">
-                  <a href="/images/ng_ushmor_25_6.jpg" data-fancybox="new-year-ushmor">
+                  <a href="/images/ng_ushmor_25_6.jpg">
                     <img className="new-year-gallery__img" src="/images/ng_ushmor_25_6.jpg" alt="Новогодний заезд в Усадьбе Ушмор" loading="lazy" />
                   </a>
                 </div>

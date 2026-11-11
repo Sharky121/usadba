@@ -49,59 +49,59 @@ export default function PraSauna() {
         </div>
         <div className="pra-sauna__col owl-carousel owl-theme">
           <div>
-            <a href="/images/sauna_6.jpg" data-fancybox="">
+            <a href="/images/sauna_6.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_6.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_3.jpg" data-fancybox="">
+            <a href="/images/sauna_3.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_3.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_4.jpg" data-fancybox="">
+            <a href="/images/sauna_4.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_4.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_5.jpg" data-fancybox="">
+            <a href="/images/sauna_5.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_5.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_2.jpg" data-fancybox="">
+            <a href="/images/sauna_2.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_2.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_7.jpg" data-fancybox="">
+            <a href="/images/sauna_7.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_7.jpg" alt="" loading="lazy" />
             </a>
           </div>
         </div>
         <div className="pra-sauna__col owl-carousel owl-theme">
           <div>
-            <a href="/images/sauna_8.jpg" data-fancybox="">
+            <a href="/images/sauna_8.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_8.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_9.jpg" data-fancybox="">
+            <a href="/images/sauna_9.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_9.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_10.jpg" data-fancybox="">
+            <a href="/images/sauna_10.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_10.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_11.jpg" data-fancybox="">
+            <a href="/images/sauna_11.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_11.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/sauna_12.jpg" data-fancybox="">
+            <a href="/images/sauna_12.jpg">
               <img className="about-screen-carousel__img" src="/images/sauna_12.jpg" alt="" loading="lazy" />
             </a>
           </div>

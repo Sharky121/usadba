@@ -11,3 +11,8 @@
         transform: scale(1.1);
     }
 }
+// Фото в сетках открываются в полный размер (src/lib/gallery.ts)
+.gallery__image,
+.ushmor-gallery__item img {
+    cursor: zoom-in;
+}

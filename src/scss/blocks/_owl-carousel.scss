@@ -2,3 +2,28 @@
     border-radius: 10px;
     overflow: hidden;
 }
+// Все фото карусели — одной пропорции: место под слайд известно до загрузки картинки
+// (карусель не схлопывается и страница не прыгает), а слайды разной формы не оставляют пустот.
+.owl-carousel .owl-item img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 3 / 2;
+    object-fit: cover;
+    cursor: zoom-in;
+}
+
+.house-carousel .owl-item img {
+    aspect-ratio: 16 / 9;
+}
+
+// Новогодняя страница: пропорцию не фиксируем (фото разного формата, показываются на всю ширину)
+.new-year-gallery .owl-item img {
+    aspect-ratio: auto;
+    object-fit: initial;
+}
+
+// В двухколоночных секциях карусель растягивалась на высоту соседней колонки с текстом,
+// и стрелки (они стоят по центру блока) съезжали ниже середины фото.
+.owl-carousel.owl-loaded {
+    height: fit-content;
+}

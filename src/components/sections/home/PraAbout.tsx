@@ -6,42 +6,42 @@ export default function PraAbout() {
       <div className="page-section__container container">
         <div className="page-section__col page-section-col owl-carousel owl-theme">
           <div>
-            <a href="/images/pra_house_1.jpg" data-fancybox="">
+            <a href="/images/pra_house_1.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_1.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/pra_house_10.jpg" data-fancybox="">
+            <a href="/images/pra_house_10.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_10.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/pra_house_11.jpg" data-fancybox="">
+            <a href="/images/pra_house_11.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_11.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/pra_house_12.jpg" data-fancybox="">
+            <a href="/images/pra_house_12.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_12.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/pra_house_13.jpg" data-fancybox="">
+            <a href="/images/pra_house_13.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_13.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/pra_house_14.jpg" data-fancybox="">
+            <a href="/images/pra_house_14.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_14.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/pra_house_15.jpg" data-fancybox="">
+            <a href="/images/pra_house_15.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_15.jpg" alt="" loading="lazy" />
             </a>
           </div>
           <div>
-            <a href="/images/pra_house_16.jpg" data-fancybox="">
+            <a href="/images/pra_house_16.jpg">
               <img className="about-screen-carousel__img" src="/images/pra_house_16.jpg" alt="" loading="lazy" />
             </a>
           </div>

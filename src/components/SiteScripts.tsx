@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect } from "react";
+import { bindPhotoGalleries } from "@/lib/gallery";
 
 /* eslint-disable @typescript-eslint/no-explicit-any */
 declare global {
@@ -208,6 +209,8 @@ export default function SiteScripts() {
       // Вызов Fancybox.bind(document.body, selector, opts) из common.js в этой версии ничего не менял,
       // поэтому повторяем фактическое поведение — привязку с опциями по умолчанию.
       Fancybox.bind("[data-fancybox]");
+      // Фото в каруселях открываются галереей со стрелками (src/lib/gallery.ts)
+      cleanups.push(bindPhotoGalleries(Fancybox));
 
       document.querySelectorAll<HTMLInputElement>('[type="tel"]').forEach((el) => {
         const mask = IMask(el, { mask: "+{7} (000) 000-00-00" });

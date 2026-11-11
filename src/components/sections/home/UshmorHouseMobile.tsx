@@ -15,82 +15,82 @@ export default function UshmorHouseMobile() {
               </h3>
               <div className="house-item__carousel house-carousel owl-carousel owl-theme">
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_2.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_2.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_2.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_4.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_4.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_4.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_3.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_3.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_3.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_1.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_1.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_1.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_5.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_5.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_5.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_8.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_8.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_8.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_6.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_6.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_6.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_9.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_9.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_9.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/ushmor_common_1.jpg" data-fancybox="">
+                  <a href="/images/ushmor_common_1.jpg">
                     <img className="house-carousel__img" src="/images/ushmor_common_1.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div className="house-carousel__item">
-                  <a href="/images/territory_ushmor_7.jpg" data-fancybox="">
+                  <a href="/images/territory_ushmor_7.jpg">
                     <img className="house-carousel__img" src="/images/territory_ushmor_7.jpg" alt="" loading="lazy" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/ushmor_4.jpg" data-fancybox="">
+                  <a href="/images/ushmor_4.jpg">
                     <img loading="lazy" decoding="async" src="/images/ushmor_4.jpg" alt="" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/ushmor_5.jpg" data-fancybox="">
+                  <a href="/images/ushmor_5.jpg">
                     <img loading="lazy" decoding="async" src="/images/ushmor_5.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/ushmor_6.jpg" data-fancybox="">
+                  <a href="/images/ushmor_6.jpg">
                     <img loading="lazy" decoding="async" src="/images/ushmor_6.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/ushmor_7.jpg" data-fancybox="">
+                  <a href="/images/ushmor_7.jpg">
                     <img loading="lazy" decoding="async" src="/images/ushmor_7.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/ushmor_8.jpg" data-fancybox="">
+                  <a href="/images/ushmor_8.jpg">
                     <img loading="lazy" decoding="async" src="/images/ushmor_8.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
-                  <a href="/images/ushmor_9.jpg" data-fancybox="">
+                  <a href="/images/ushmor_9.jpg">
                     <img loading="lazy" decoding="async" src="/images/ushmor_9.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
