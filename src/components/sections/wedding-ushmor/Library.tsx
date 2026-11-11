@@ -7,13 +7,13 @@ export default function Library() {
           Большая библиотека и каминный зал
         </p>
         <div className="ushmor-library__item">
-          <img className="background-image" src="/images/ushmor_library_1.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_library_1.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-library__item">
-          <img className="background-image" src="/images/ushmor_library_2.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_library_2.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-library__item">
-          <img className="background-image" src="/images/ushmor_library_3.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_library_3.jpg" alt="Логотип усадьба на Пре" />
         </div>
       </div>
     </section>

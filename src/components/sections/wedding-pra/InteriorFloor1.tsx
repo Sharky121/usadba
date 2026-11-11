@@ -36,19 +36,19 @@ export default function InteriorFloor1() {
         </p>
         <div className="pra-interior__gallery gallery">
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_6.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_6.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_7.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_7.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_8.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_8.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_9.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_9.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_10.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_10.jpg" alt="Интерьеры основного дома «Усадьбы на Пре»" />
           </div>
         </div>
       </div>

@@ -9,6 +9,24 @@ const nextConfig: NextConfig = {
   turbopack: {
     root: import.meta.dirname,
   },
+  poweredByHeader: false,
+  // Файлы из public по умолчанию отдаются без кэширования — задаём его явно.
+  async headers() {
+    const cache = (source: string, value: string) => ({ source, headers: [{ key: "Cache-Control", value }] });
+    return [
+      cache("/fonts/:path*", "public, max-age=31536000, immutable"),
+      cache("/images/:path*", "public, max-age=2592000, stale-while-revalidate=86400"),
+      cache("/video/:path*", "public, max-age=2592000"),
+      cache("/pdf/:path*", "public, max-age=86400"),
+      {
+        source: "/:path*",
+        headers: [
+          { key: "X-Content-Type-Options", value: "nosniff" },
+          { key: "Referrer-Policy", value: "strict-origin-when-cross-origin" },
+        ],
+      },
+    ];
+  },
   async redirects() {
     return [
       { source: "/index.html", destination: "/", permanent: true },

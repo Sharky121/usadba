@@ -12,13 +12,13 @@ export default function GuestHouse() {
           </p>
         </div>
         <div className="ushmor-guest-house__item">
-          <img className="background-image" src="/images/guest_house_1.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/guest_house_1.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-guest-house__item">
-          <img className="background-image" src="/images/guest_house_2.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/guest_house_2.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-guest-house__item">
-          <img className="background-image" src="/images/guest_house_3.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/guest_house_3.jpg" alt="Логотип усадьба на Пре" />
         </div>
       </div>
     </section>

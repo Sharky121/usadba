@@ -12,6 +12,7 @@ declare global {
   }
 }
 
+const YMAPS_SRC = "https://api-maps.yandex.ru/2.1/?apikey=63206c9d-b428-415d-985a-17b4af8c9595&lang=ru_RU";
 const PRA_COORDS = [55.146111, 40.048516];
 const USHMOR_COORDS = [55.178604, 40.104163];
 const CENTER_COORDS = [55.139267, 40.137438];
@@ -29,7 +30,8 @@ const OWL_NAV_TEXT = [
 
 function initMap() {
   const ymaps = window.ymaps;
-  if (!document.getElementById("map")) return;
+  const el = document.getElementById("map");
+  if (!el || el.childElementCount) return;
 
   const ryazanMap = new ymaps.Map("map", { center: CENTER_COORDS, zoom: 11 });
 
@@ -144,25 +146,50 @@ export default function SiteScripts() {
     const callback = document.querySelector("#callback");
     if (callback) on(callback, "click", (e: Event) => e.preventDefault());
 
-    // Видео в блоке свадеб: React не выставляет атрибут muted при SSR — нужен для автоплея
-    document.querySelectorAll<HTMLVideoElement>("video[autoplay]").forEach((v) => {
-      v.muted = true;
-      v.play().catch(() => {});
-    });
+    // Фоновое видео (блок свадеб): грузим и запускаем только когда блок рядом с экраном, вне экрана — пауза
+    const bgVideos = document.querySelectorAll<HTMLVideoElement>("video[data-autoplay]");
+    if (bgVideos.length) {
+      const videoObserver = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            const v = entry.target as HTMLVideoElement;
+            if (entry.isIntersecting) {
+              v.muted = true; // React не выставляет атрибут muted при SSR — нужен для автоплея
+              v.play().catch(() => {});
+            } else {
+              v.pause();
+            }
+          });
+        },
+        { rootMargin: "300px 0px" },
+      );
+      bgVideos.forEach((v) => videoObserver.observe(v));
+      cleanups.push(() => videoObserver.disconnect());
+    }
 
-    // Яндекс.Карта (скрипт API подключён в layout)
-    let mapTimer: ReturnType<typeof setInterval> | undefined;
-    if (document.getElementById("map")) {
-      const tryInit = () => {
-        if (window.ymaps) {
-          clearInterval(mapTimer);
-          window.ymaps.ready(initMap);
-          return true;
-        }
-        return false;
-      };
-      if (!tryInit()) mapTimer = setInterval(tryInit, 100);
-      cleanups.push(() => clearInterval(mapTimer));
+    // Яндекс.Карта: API подгружается, когда карта приближается к экрану
+    const mapEl = document.getElementById("map");
+    if (mapEl) {
+      const mapObserver = new IntersectionObserver(
+        (entries) => {
+          if (!entries.some((e) => e.isIntersecting)) return;
+          mapObserver.disconnect();
+          if (window.ymaps) {
+            window.ymaps.ready(initMap);
+            return;
+          }
+          const script = document.createElement("script");
+          script.src = YMAPS_SRC;
+          script.async = true;
+          script.onload = () => {
+            if (!disposed) window.ymaps?.ready(initMap);
+          };
+          document.body.append(script);
+        },
+        { rootMargin: "600px 0px" },
+      );
+      mapObserver.observe(mapEl);
+      cleanups.push(() => mapObserver.disconnect());
     }
 
     (async () => {

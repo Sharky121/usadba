@@ -1,50 +1,56 @@
 @font-face {
   font-family: "Kurale";
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: local("Kurale-Regular"),
-       url("/fonts/Kurale-Regular.woff2"),
-       url("/fonts/Kurale-Regular.woff");
+       url("/fonts/Kurale-Regular.woff2") format("woff2"),
+       url("/fonts/Kurale-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Raleway";
+  font-display: swap;
   font-style: normal;
   font-weight: 400;
   src: local("Raleway-Regular"),
-       url("/fonts/Raleway-Regular.woff2"),
-       url("/fonts/Raleway-Regular.woff");
+       url("/fonts/Raleway-Regular.woff2") format("woff2"),
+       url("/fonts/Raleway-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Raleway";
+  font-display: swap;
   font-style: normal;
   font-weight: 500;
   src: local("Raleway-Medium"),
-       url("/fonts/Raleway-Medium.woff2"),
-       url("/fonts/Raleway-Medium.woff");
+       url("/fonts/Raleway-Medium.woff2") format("woff2"),
+       url("/fonts/Raleway-Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: "Raleway";
+  font-display: swap;
   font-style: italic;
   font-weight: 400;
   src: local("Raleway-Italic"),
-       url("/fonts/Raleway-Italic.woff2"),
-       url("/fonts/Raleway-Italic.woff");
+       url("/fonts/Raleway-Italic.woff2") format("woff2"),
+       url("/fonts/Raleway-Italic.woff") format("woff");
 }
 
 @font-face {
   font-family: "Raleway";
+  font-display: swap;
   font-style: italic;
   font-weight: 500;
   src: local("Raleway-MediumItalic"),
-       url("/fonts/Raleway-MediumItalic.woff2"),
-       url("/fonts/Raleway-MediumItalic.woff");
+       url("/fonts/Raleway-MediumItalic.woff2") format("woff2"),
+       url("/fonts/Raleway-MediumItalic.woff") format("woff");
 }
 
 @font-face {
 	font-family: 'Forum';
+  font-display: swap;
   font-weight: 400;
 	font-style: normal;
 	src: local('Forum'),

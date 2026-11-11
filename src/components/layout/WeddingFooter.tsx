@@ -10,7 +10,7 @@ export default function WeddingFooter({ logo }: { logo: string }) {
           свадебные агентства
         </h2>
         <div className="footer__logo">
-          <img src={logo} width="120" alt="" />
+          <img loading="lazy" decoding="async" src={logo} width="120" alt="" />
         </div>
         <div className="footer__info">
           <dl className="footer__desc-list desc-list">

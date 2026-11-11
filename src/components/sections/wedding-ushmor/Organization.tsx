@@ -28,13 +28,13 @@ export default function Organization() {
                        </ul>
                      </div>
                      <div class="ushmor-organization__item">
-                       <img class="background-image" src="./public/images/ushmor_organization_3.jpg" alt="Логотип усадьба на Пре">
+                       <img loading="lazy" decoding="async" class="background-image" src="./public/images/ushmor_organization_3.jpg" alt="Логотип усадьба на Пре">
                      </div> */}
         <div className="ushmor-organization__item">
-          <img className="background-image" src="/images/ushmor_organization_2.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_organization_2.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-organization__item">
-          <img className="background-image" src="/images/ushmor_organization_1.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_organization_1.jpg" alt="Логотип усадьба на Пре" />
         </div>
       </div>
     </section>

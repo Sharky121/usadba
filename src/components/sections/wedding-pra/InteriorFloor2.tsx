@@ -21,13 +21,13 @@ export default function InteriorFloor2() {
         </div>
         <div className="pra-interior__gallery pra-interior__gallery--three gallery">
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_11.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_11.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_12.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_12.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_13.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_13.jpg" alt="Логотип усадьба на Пре" />
           </div>
         </div>
       </div>

@@ -5,7 +5,7 @@ export default function PriceWeddingUshmor() {
     <div className="price price--ushmor" id="price-wedding-ushmor">
       <div className="price__wrapper">
         <div className="price__header">
-          <img src="/images/logo_ushmor_white.png" width="100" height="78" alt="Логотип усадьба Ушмор" />
+          <img loading="lazy" decoding="async" src="/images/logo_ushmor_white.png" width="100" height="78" alt="Логотип усадьба Ушмор" />
           {" "}
           <h3>
             Прайс лист

@@ -12,7 +12,7 @@ export default function UshmorAbout() {
           </p>
         </div>
         <div className="ushmor-about__bg">
-          <img className="background-image" src="/images/ushmor-bg.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor-bg.jpg" alt="Логотип усадьба на Пре" />
         </div>
       </div>
     </section>

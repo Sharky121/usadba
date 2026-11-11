@@ -20,7 +20,7 @@ export default function WeddingScreen() {
                          </ul> */}
         </div>
       </div>
-      <video className="wedding-screen__video" playsInline autoPlay muted loop id="wedding-video">
+      <video className="wedding-screen__video" playsInline muted loop preload="none" data-autoplay id="wedding-video">
         <source src="/video/wedding.mp4" type="video/mp4" />
       </video>
     </section>

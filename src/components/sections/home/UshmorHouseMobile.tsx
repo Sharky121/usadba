@@ -66,32 +66,32 @@ export default function UshmorHouseMobile() {
                 </div>
                 <div>
                   <a href="/images/ushmor_4.jpg" data-fancybox="">
-                    <img src="/images/ushmor_4.jpg" alt="" />
+                    <img loading="lazy" decoding="async" src="/images/ushmor_4.jpg" alt="" />
                   </a>
                 </div>
                 <div>
                   <a href="/images/ushmor_5.jpg" data-fancybox="">
-                    <img src="/images/ushmor_5.jpg" alt="Фотография Усадьба Ушмор" />
+                    <img loading="lazy" decoding="async" src="/images/ushmor_5.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
                   <a href="/images/ushmor_6.jpg" data-fancybox="">
-                    <img src="/images/ushmor_6.jpg" alt="Фотография Усадьба Ушмор" />
+                    <img loading="lazy" decoding="async" src="/images/ushmor_6.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
                   <a href="/images/ushmor_7.jpg" data-fancybox="">
-                    <img src="/images/ushmor_7.jpg" alt="Фотография Усадьба Ушмор" />
+                    <img loading="lazy" decoding="async" src="/images/ushmor_7.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
                   <a href="/images/ushmor_8.jpg" data-fancybox="">
-                    <img src="/images/ushmor_8.jpg" alt="Фотография Усадьба Ушмор" />
+                    <img loading="lazy" decoding="async" src="/images/ushmor_8.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
                 <div>
                   <a href="/images/ushmor_9.jpg" data-fancybox="">
-                    <img src="/images/ushmor_9.jpg" alt="Фотография Усадьба Ушмор" />
+                    <img loading="lazy" decoding="async" src="/images/ushmor_9.jpg" alt="Фотография Усадьба Ушмор" />
                   </a>
                 </div>
               </div>

@@ -19,34 +19,34 @@ export default function UshmorGuestHouse() {
         </div>
         <div className="page-section__col owl-carousel owl-theme">
           <div>
-            <img src="/images/ushmor-apartments_1.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_1.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_2.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_2.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_3.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_3.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_4.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_4.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_5.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_5.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_6.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_6.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_7.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_7.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_8.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_8.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_9.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_9.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-apartments_15.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-apartments_15.jpg" alt="" />
           </div>
         </div>
         <div className="page-section__btn">

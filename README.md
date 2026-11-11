@@ -63,9 +63,19 @@ src/components/
 Owl Carousel, маски телефонов (IMask), форма «Консультация», Яндекс.Карта, модалка онлайн-оплаты YooKassa (SweetAlert2 + `<template id="yookassa-template">`).
 `src/components/WeddingScripts.tsx` — порт `weddind-common.js`.
 
-Счётчики и внешние скрипты (`src/components/HeadScripts.tsx`, `BodyEndScripts.tsx`) подключены как в исходных HTML:
-Яндекс.Метрика 91549794, Google Tag Manager GTM-N6PF2LW, TravelLine, Yandex SmartCaptcha (`captcha.js`),
-YooKassa SimplePay (CSS/JS), API Яндекс.Карт.
+Счётчики и внешние скрипты (`src/components/HeadScripts.tsx`, `BodyEndScripts.tsx`): Яндекс.Метрика 91549794,
+Google Tag Manager GTM-N6PF2LW, YooKassa SimplePay (CSS/JS, `defer`).
+
+## Оптимизация для продакшена
+
+- Картинки ниже первого экрана — `loading="lazy" decoding="async"`.
+- Фоновое видео блока свадеб (`data-autoplay`, `preload="none"`) загружается и играет только рядом с экраном.
+- API Яндекс.Карт подгружается, когда карта приближается к экрану (`SiteScripts.tsx`).
+- Шрифты — `font-display: swap`, основной шрифт предзагружается.
+- Кэширование `public/` (`next.config.ts`): шрифты — год, картинки и видео — 30 дней. При замене картинки
+  меняйте имя файла (или добавляйте `?v=2`), иначе у посетителей останется старая версия из кэша.
+- Убраны неиспользуемые скрипты: Yandex SmartCaptcha (не было ни виджета, ни проверки) и TravelLine
+  (на страницах нет контейнеров формы поиска); стили flatpickr.
 
 ## Формы: PHP → API routes
 

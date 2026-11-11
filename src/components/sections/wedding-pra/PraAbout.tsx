@@ -4,7 +4,7 @@ export default function PraAbout() {
     <section className="pra-about">
       <div className="pra-about__container">
         <div className="pra-about__image">
-          <img className="background-image background-image--no-radius" src="/images/pra-wedding-about_2.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image background-image--no-radius" src="/images/pra-wedding-about_2.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="pra-about__content">
           <h2 className="pra-about__title">

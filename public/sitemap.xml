@@ -1,9 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!--Generated with https://sitemap-xml.ru-->
-<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/siteindex.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://otdyh-v-centre-meshery.ru/</loc>
-    <lastmod>2022-12-15T09:46:08+03:00</lastmod>
+    <lastmod>2026-11-11</lastmod>
     <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://otdyh-v-centre-meshery.ru/wedding_ushmor</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://otdyh-v-centre-meshery.ru/wedding_pra</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://otdyh-v-centre-meshery.ru/new-year1</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://otdyh-v-centre-meshery.ru/pay</loc>
+    <lastmod>2026-11-11</lastmod>
+    <priority>0.3</priority>
   </url>
 </urlset>

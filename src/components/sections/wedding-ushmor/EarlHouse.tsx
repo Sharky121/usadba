@@ -15,19 +15,19 @@ export default function EarlHouse() {
           </p>
         </div>
         <div className="ushmor-house__item">
-          <img className="background-image" src="/images/ushmor_house_1.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_1.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-house__item">
-          <img className="background-image" src="/images/ushmor_house_2.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_2.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-house__item">
-          <img className="background-image" src="/images/ushmor_house_3.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_3.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-house__item">
-          <img className="background-image" src="/images/ushmor_house_4.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_4.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-house__item">
-          <img className="background-image" src="/images/ushmor_house_5.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_5.jpg" alt="Логотип усадьба на Пре" />
         </div>
       </div>
     </section>

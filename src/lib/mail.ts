@@ -27,8 +27,11 @@ function createTransport() {
   });
 }
 
+let transport: ReturnType<typeof createTransport> | undefined;
+
 export async function sendMail(to: string, subject: string, html: string) {
-  await createTransport().sendMail({
+  transport ??= createTransport();
+  await transport.sendMail({
     from: process.env.MAIL_FROM || "usadba-na-pre.ru <noreply@usadba-na-pre.ru>",
     replyTo: "info@usadba-na-pre.ru",
     to,
@@ -37,9 +40,12 @@ export async function sendMail(to: string, subject: string, html: string) {
   });
 }
 
+/** Ограничение длины поля формы — защита от мусорных/огромных писем. */
+const MAX_FIELD_LENGTH = 500;
+
 export function field(data: FormData, name: string): string {
   const v = data.get(name);
-  return typeof v === "string" ? v.trim() : "";
+  return typeof v === "string" ? v.trim().slice(0, MAX_FIELD_LENGTH) : "";
 }
 
 export function esc(s: string): string {

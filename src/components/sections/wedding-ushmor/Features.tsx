@@ -8,19 +8,19 @@ export default function Features() {
         </h2>
         <div className="ushmor-features__container">
           <div className="ushmor-features__item">
-            <img className="background-image" src="/images/ushmor_features_1.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_features_1.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="ushmor-features__item">
-            <img className="background-image" src="/images/ushmor_features_2.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_features_2.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="ushmor-features__item">
-            <img className="background-image" src="/images/ushmor_features_3.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_features_3.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="ushmor-features__item">
-            <img className="background-image" src="/images/ushmor_features_4.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_features_4.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="ushmor-features__item">
-            <img className="background-image" src="/images/ushmor_features_5.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_features_5.jpg" alt="Логотип усадьба на Пре" />
           </div>
         </div>
       </div>

@@ -14,7 +14,6 @@ export default function FormScripts() {
 
     const checkEmailAddress = (email: string) => {
       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-      console.log(emailRegex.test(email));
       return emailRegex.test(email);
     };
 

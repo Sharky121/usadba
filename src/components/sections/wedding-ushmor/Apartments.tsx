@@ -7,13 +7,13 @@ export default function Apartments() {
           Апартаменты для молодоженов (50 кв.м.) с большой ванной комнатой
         </h2>
         <div className="ushmor-apartments__item">
-          <img className="background-image" src="/images/ushmor_house_6.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_6.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-apartments__item">
-          <img className="background-image" src="/images/ushmor_house_7.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_7.jpg" alt="Логотип усадьба на Пре" />
         </div>
         <div className="ushmor-apartments__item">
-          <img className="background-image" src="/images/ushmor_house_8.jpg" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="background-image" src="/images/ushmor_house_8.jpg" alt="Логотип усадьба на Пре" />
         </div>
       </div>
     </section>

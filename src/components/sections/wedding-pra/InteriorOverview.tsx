@@ -36,19 +36,19 @@ export default function InteriorOverview() {
         </div>
         <div className="pra-interior__gallery gallery">
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_3.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_3.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_2.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_2.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_5.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_5.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_4.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_4.jpg" alt="Логотип усадьба на Пре" />
           </div>
           <div className="pra-interior__gallery-item gallery__item">
-            <img className="background-image gallery__image" src="/images/pra-interior_14.jpg" alt="Логотип усадьба на Пре" />
+            <img loading="lazy" decoding="async" className="background-image gallery__image" src="/images/pra-interior_14.jpg" alt="Логотип усадьба на Пре" />
           </div>
         </div>
       </div>

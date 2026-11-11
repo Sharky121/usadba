@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /api/
+Disallow: /form
+Disallow: /video
+Host: otdyh-v-centre-meshery.ru
+Sitemap: https://otdyh-v-centre-meshery.ru/sitemap.xml

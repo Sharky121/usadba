@@ -28,34 +28,34 @@ export default function EarlHouse() {
         </div>
         <div className="page-section__col owl-carousel owl-theme">
           <div>
-            <img src="/images/ushmor-graph_1.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_1.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_2.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_2.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_3.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_3.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_4.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_4.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_5.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_5.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_6.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_6.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_7.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_7.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_8.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_8.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_9.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_9.jpg" alt="" />
           </div>
           <div>
-            <img src="/images/ushmor-graph_10.jpg" alt="" />
+            <img loading="lazy" decoding="async" src="/images/ushmor-graph_10.jpg" alt="" />
           </div>
         </div>
       </div>

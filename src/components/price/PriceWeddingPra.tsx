@@ -5,7 +5,7 @@ export default function PriceWeddingPra() {
     <div className="price" id="price-wedding-pra">
       <div className="price__wrapper">
         <div className="price__header">
-          <img className="price__logo" src="/images/logo_pra_white.png" width="100" height="78" alt="Логотип усадьба на Пре" />
+          <img loading="lazy" decoding="async" className="price__logo" src="/images/logo_pra_white.png" width="100" height="78" alt="Логотип усадьба на Пре" />
           {" "}
           <h3>
             Прайс лист
