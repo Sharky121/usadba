@@ -47,7 +47,7 @@ export default function OurHousesDesktop() {
                 В распоряжении гостей 6га охраняемой территории для прогулок, собственный лес, баня в лучших русских традиция, бильярд и библиотека.
               </p>
               {" "}
-              <a className="house-item__btn btn video-pra" id="video-pra" data-fancybox="video-gallery" href="/video/pra.mp4">
+              <a className="house-item__btn btn video-pra" id="video-pra" data-fancybox="video-pra-desktop" data-thumb="/images/video-poster-pra.jpg" href="/video/pra.mp4">
                 <span className="btn__text">
                   Смотреть видео
                 </span>
@@ -108,7 +108,7 @@ export default function OurHousesDesktop() {
                 В распоряжении гостей 10га охраняемой территории. Парк, ореховый сад, большой пруд, видовая беседка, колоннада, водный каскад, большая конюшня с манежем – части архитектурного ансамбля в стиле классицизма.
               </p>
               {" "}
-              <a className="house-item__btn btn video-ushmor" id="video-ushmor" data-fancybox="video-gallery" href="/video/ushmor.mp4">
+              <a className="house-item__btn btn video-ushmor" id="video-ushmor" data-fancybox="video-ushmor-desktop" data-thumb="/images/video-poster-ushmor.jpg" href="/video/ushmor.mp4">
                 <span className="btn__text">
                   Смотреть видео
                 </span>

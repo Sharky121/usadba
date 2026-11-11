@@ -40,7 +40,7 @@ export default function PraInterior() {
             </li>
           </ul>
           <div className="page-section-col__btn">
-            <a className="btn video-room-tour" id="video-room-tour" data-fancybox="video-gallery" href="/video/overview_pra.mp4">
+            <a className="btn video-room-tour" id="video-room-tour" data-fancybox="video-overview_pra-tour" data-thumb="/images/video-poster-overview_pra.jpg" href="/video/overview_pra.mp4">
               <span className="btn__text">
                 Видео-тур по усадьбе
               </span>

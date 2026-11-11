@@ -104,7 +104,7 @@ export default function UshmorHouseMobile() {
                 </p>
               </div>
               <div className="house-item__buttons">
-                <a className="btn video-ushmor" id="video-ushmor" data-fancybox="video-gallery" href="/video/ushmor.mp4">
+                <a className="btn video-ushmor" id="video-ushmor" data-fancybox="video-ushmor-mobile" data-thumb="/images/video-poster-ushmor.jpg" href="/video/ushmor.mp4">
                   <span className="btn__text">
                     Смотреть видео
                   </span>

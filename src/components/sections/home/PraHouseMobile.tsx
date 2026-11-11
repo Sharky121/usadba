@@ -84,7 +84,7 @@ export default function PraHouseMobile() {
                 </p>
               </div>
               <div className="house-item__buttons">
-                <a className="btn video-pra" id="video-pra" data-fancybox="video-gallery" href="/video/pra.mp4">
+                <a className="btn video-pra" id="video-pra" data-fancybox="video-pra-mobile" data-thumb="/images/video-poster-pra.jpg" href="/video/pra.mp4">
                   <span className="btn__text">
                     Смотреть видео
                   </span>
