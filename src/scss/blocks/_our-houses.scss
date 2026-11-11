@@ -17,7 +17,23 @@
   margin-top: 40px;
 }
 
+.our-houses--desktop {
+  display: none;
+}
+
+.our-houses--mobile {
+  padding-top: 0;
+}
+
 @include var.tablet-size {
+
+  .our-houses--desktop {
+    display: block;
+  }
+
+  .our-houses--mobile {
+    display: none;
+  }
 
   .our-houses__wrapper {
     padding-top: 60px;

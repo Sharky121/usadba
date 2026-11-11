@@ -90,7 +90,15 @@
   text-decoration: underline;
 }
 
+.page-section--desktop {
+  display: none;
+}
+
 @include var.tablet-size {
+
+  .page-section--desktop {
+    display: block;
+  }
 
   .page-section__container {
     flex-direction: row;

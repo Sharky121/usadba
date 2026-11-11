@@ -61,6 +61,13 @@
   background-repeat: repeat-x;
 }
 
+.house-item__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
 @include var.tablet-size {
 
   .house-item__wrapper {

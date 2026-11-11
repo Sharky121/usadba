@@ -1,0 +1,52 @@
+@use "../abstract/index" as var;
+
+// Базовый z-index у Fancybox 6 — 1050, шапка/меню сайта — 9999: без этого лайтбокс оказывается под хедером.
+.fancybox__container {
+  z-index: 10050 !important;
+
+  --fancybox-bg: rgba(28, 24, 20, 0.88);
+  --fancybox-color: #{var.$brand-white};
+  --fancybox-accent-color: rgba(134, 171, 187, 0.95);
+  --fancybox-content-bg: #{var.$brand-white};
+  --fancybox-content-color: #{var.$brand-brown};
+}
+
+.fancybox__content {
+  border-radius: 4px;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.35);
+}
+
+// Прайс и прочие inline-блоки (#price-pra / #price-ushmor): крестик «inside» — как в старом weddings/_price.scss
+.fancybox__content > .carousel__button.is-close {
+  right: -8px;
+  top: -8px;
+}
+
+// Видео (.mp4 в data-fancybox) — без лишних полей, тёмный фон, ограничение по высоте экрана
+.fancybox__content:has(.fancybox__html5video) {
+  padding: 0;
+  background: #0a0a0a;
+  border-radius: 0;
+  box-shadow: 0 24px 56px rgba(0, 0, 0, 0.55);
+}
+
+.fancybox__content:has(.fancybox__html5video) > .carousel__button.is-close {
+  right: 8px;
+  top: 8px;
+  --carousel-button-color: #{var.$brand-white};
+  --carousel-button-bg: rgba(0, 0, 0, 0.45);
+}
+
+.fancybox__html5video {
+  width: auto !important;
+  height: auto !important;
+  max-width: min(96vw, 1200px);
+  max-height: min(85vh, 720px);
+  margin: 0 auto;
+  object-fit: contain;
+  background: #000;
+}
+
+.fancybox__toolbar {
+  --carousel-button-color: #{var.$brand-white};
+}

@@ -30,21 +30,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  // margin-bottom: 40px;
-}
+  margin-bottom: 20px;
 
-.price__title {
-  margin-top: 20px;
-  margin-bottom: 0;
+  .price__logo {
+    margin: 0;
+  }
+
+  .price__title {
+    margin: 0;
+
+    font-size: 18px;
+    font-family: Forum, sans-serif;
+  }
 }
 
 .price__logo {
   margin: 0;
-}
-
-.price__title {
-  font-size: 18px;
-  font-family: Kurale, sans-serif;
 }
 
 .price--ushmor {
@@ -108,13 +109,15 @@
     padding: 20px;
   }
 
-  .price__logo {
-    width: 140px;
-    height: auto;
-  }
+  .price__header {
+    .price__logo {
+      width: 140px;
+      height: auto;
+    }
 
-  .price__title {
-    font-size: 24px;
+    .price__title {
+      font-size: 24px;
+    }
   }
 
   .price__table {

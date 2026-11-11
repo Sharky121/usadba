@@ -4,6 +4,15 @@ import {Fancybox} from "@fancyapps/ui";
 import Menu from './menu/menu';
 import {closeMenuHandler, menuToggleHandler} from './menu-toggle-handler';
 import { createRoot } from 'react-dom/client';
+import {
+  applySwalDefaults,
+  swalFormSuccess,
+  swalFormError,
+  swalServerError,
+  swalPaymentModal,
+} from './swal-config';
+
+applySwalDefaults(Swal);
 
 const desktopMediaQuery = window.matchMedia('(min-width: 1280px)')
 const menuElement = document.querySelector('#menu');
@@ -15,11 +24,14 @@ const hamburgerMenuElement = document.querySelector('#hamburger-menu');
 const closeMenuElement = document.querySelector('#close-mobile-nav');
 const menuLinksElements = document.querySelectorAll('[data-scroll]');
 const contactsElement = document.querySelectorAll('#contacts');
-const actionElement = document.querySelectorAll('#action');
 const yookassaBtn = document.querySelectorAll('.btn-pay');
 
-Fancybox.bind(actionElement, "[data-fancybox]", {});
-Fancybox.bind("[data-fancybox]", {height: '100%'});
+Fancybox.bind(document.body, '[data-fancybox]', {
+  backdropClick: 'close',
+  Carousel: {
+    infinite: true,
+  },
+});
 
 let offsetHeader = 60;
 
@@ -127,36 +139,13 @@ if (questionForm) {
     )
       .then((response) => {
         if (response.ok) {
-          Swal.fire({
-            title: 'Спасибо',
-            text: 'Менеджер свяжется с вами в ближайшее время',
-            icon: 'success',
-            confirmButtonText: 'Закрыть',
-            confirmButtonColor: '#86abbb',
-            timer: 1500
-          });
+          swalFormSuccess(Swal);
         } else {
-          Swal.fire({
-            position: 'top-center',
-            icon: 'error',
-            title: 'Произошла ошибка!',
-            showConfirmButton: false,
-            confirmButtonText: 'Закрыть',
-            confirmButtonColor: '#86abbb',
-            timer: 1500
-          });
+          swalServerError(Swal);
         }
       })
       .catch((error) => {
-        Swal.fire({
-          position: 'top-center',
-          icon: 'error',
-          title: `Произошла ошибка! ${error}`,
-          showConfirmButton: false,
-          confirmButtonText: 'Закрыть',
-          confirmButtonColor: '#86abbb',
-          timer: 11500
-        });
+        swalFormError(Swal, error);
       });
   });
 }
@@ -231,44 +220,32 @@ if (menuLinksElements) {
   });
 }
 
-Swal.fire({
-  customClass: {
-    htmlContainer: 'swal-info-container',
-    popup: 'swal-info-popup',
-    actions: 'swal-info-actions',
-  },
-  html: `
-          <div class="info-popup">
-            <h3 class="info-popup__title">Новый год и Рождество <br/> в  дворянской Усадьбе 19 века  в сердце Мещеры!</h3>  
-            <p>Большая территория ( 10 га) с парком, изысканные интерьеры, кухня, идентичная эпохе 19 века и развлечения в духе того времени, приватная атмосфера.
-            Все только для вас и Ваших близких.</p>
-            <p>Всю информацию вы можете узнать по телефону:</p>
-              <a class="info-popup__phone" href="tel:+79106130022">+7 (910) 613-00-22</a>
-            </p>
-            <p>Также, вы можете связаться с нами через форму обратной связи на сайте, <a href="whatsapp://send/?phone=+79106130022" target="_blank">Whatsapp</a> или <a href="mailto:info@usadba-na-pre.ru">email: info@usadba-na-pre.ru</a></p>
-            <p><small>Стоимость  - по запросу</small></p>
-          </div>
-        `,
-  confirmButtonText: 'Закрыть',
-  confirmButtonColor: '#86abbb',
-});
+// Swal.fire({
+//   customClass: {
+//     htmlContainer: 'swal-info-container',
+//     popup: 'swal-info-popup',
+//     actions: 'swal-info-actions',
+//   },
+//   html: `
+//           <div class="info-popup">
+//             <h3 class="info-popup__title">Новый год и Рождество <br/> в  дворянской Усадьбе 19 века  в сердце Мещеры!</h3>  
+//             <p>Большая территория ( 10 га) с парком, изысканные интерьеры, кухня, идентичная эпохе 19 века и развлечения в духе того времени, приватная атмосфера.
+//             Все только для вас и Ваших близких.</p>
+//             <p>Всю информацию вы можете узнать по телефону:</p>
+//               <a class="info-popup__phone" href="tel:+79106130022">+7 (910) 613-00-22</a>
+//             </p>
+//             <p>Также, вы можете связаться с нами через форму обратной связи на сайте, <a href="whatsapp://send/?phone=+79106130022" target="_blank">Whatsapp</a> или <a href="mailto:info@usadba-na-pre.ru">email: info@usadba-na-pre.ru</a></p>
+//             <p><small>Стоимость  - по запросу</small></p>
+//           </div>
+//         `,
+//   confirmButtonText: 'Закрыть',
+//   confirmButtonColor: '#86abbb',
+// });
 
 if(yookassaBtn.length) {
   yookassaBtn.forEach((element) => {
     element.addEventListener('click', () => {
-      Swal.fire({
-        template: "#yookassa-template",
-        confirmButtonText: 'Закрыть',
-        confirmButtonColor: '#86abbb',
-        customClass: {
-          htmlContainer: 'pay-container',
-        },
-        didOpen: () => {
-          const titleElement = Swal.getHtmlContainer().querySelector('.ym-block-title');
-          
-          titleElement.remove();
-        }
-      });
+      swalPaymentModal(Swal);
     });
   });
 }

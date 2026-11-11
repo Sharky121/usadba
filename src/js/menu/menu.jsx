@@ -40,13 +40,17 @@ const data = [
                 slug: 'ushmor-territory'
             },
             {
-                title: 'Гостевой дом Усадьбы Ушмор',
-                slug: 'ushmor-guest'
+                title: 'Графский дом',
+                slug: 'earl-house'
             },
             {
                 title: 'Обзор интерьера',
                 slug: 'ushmor-interior'
             },
+            {
+                title: 'Гостевой дом Усадьбы Ушмор',
+                slug: 'ushmor-guest'
+            }
         ],
     },
     // {
