@@ -1,76 +1,23 @@
-/* eslint-disable */
+import PriceCard from "./PriceCard";
+import { NOTES, PROMO } from "./shared";
+
 /** Прайс-лист Усадьбы Ушмор (popup #price-ushmor). */
 export default function PriceUshmor() {
   return (
-    <div className="price price--ushmor" id="price-ushmor">
-      <div className="price__wrapper">
-        <div className="price__header">
-          <img loading="lazy" decoding="async" className="price__logo" src="/images/logo_ushmor_white.png" width="100" height="78" alt="Логотип усадьба на Пре" />
-          {" "}
-          <h3 className="price__title">
-            Прайс лист
-          </h3>
-        </div>
-        <div className="price__weekdays price-weekdays">
-          {/* <h3 class="price-weekdays__title">Январь - апрель</h3> */}
-          <ul className="price-weekdays__list">
-            <li className="price-weekdays__item">
-              <strong>
-                Аренда усадьбы Ушмор &mdash; 450&nbsp;000&nbsp;₽
-              </strong>
-            </li>
-            {" "}
-            <li className="price-weekdays__item">
-              <strong>
-                Аренда усадьбы на Пре &mdash; 350&nbsp;000&nbsp;₽
-              </strong>
-            </li>
-            {" "}
-            <li className="price-weekdays__item">
-              <strong>
-                Аренда дома Пра &mdash; 150&nbsp;000&nbsp;₽
-              </strong>
-            </li>
-            {" "}
-            <li className="price-weekdays__item">
-              <strong>
-                Аренда зимнего сада &mdash; от&nbsp;300&nbsp;000&nbsp;₽
-              </strong>
-            </li>
-            {" "}
-            <li className="price-weekdays__item">
-              <strong>
-                Аренда гостевого дома &mdash; 150&nbsp;000&nbsp;₽
-              </strong>
-            </li>
-            {" "}
-            <li className="price-weekdays__item">
-              <strong>
-                Фотосессия &mdash; от&nbsp;25&nbsp;000&nbsp;₽
-              </strong>
-            </li>
-            {" "}
-            <li className="price-weekdays__item">
-              <strong>
-                Акции
-                <br />
-              </strong>
-              {" "}Для пары с понедельника по четверг 50&nbsp;тысяч&nbsp;рублей{" "}
-              <span>
-                (закрытие усадьбы полностью)
-              </span>
-              {" "}При повторном заезде - скидка 10&nbsp;%
-              <br />
-              При последующих заездах - скидка 20&nbsp;%
-            </li>
-          </ul>
-        </div>
-        <div className="price__note">
-          * усадьба сдаётся только под один заезд.
-          <br />
-          * без посторонних, под полное закрытие.
-        </div>
-      </div>
-    </div>
+    <PriceCard
+      id="price-ushmor"
+      variant="ushmor"
+      title="Усадьба Ушмор"
+      rows={[
+        { name: "Аренда усадьбы Ушмор", price: "450 000 ₽" },
+        { name: "Аренда усадьбы на Пре", price: "350 000 ₽" },
+        { name: "Аренда дома Пра", price: "150 000 ₽" },
+        { name: "Аренда зимнего сада", price: "от 300 000 ₽" },
+        { name: "Аренда гостевого дома", price: "150 000 ₽" },
+        { name: "Фотосессия", price: "от 25 000 ₽" },
+      ]}
+      promo={PROMO}
+      notes={NOTES}
+    />
   );
 }
