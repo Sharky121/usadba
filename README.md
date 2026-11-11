@@ -13,18 +13,28 @@ npm run build    # production-сборка
 npm run start    # запуск production-сборки
 ```
 
-Видео лежат в `public/video/` и в git не хранятся (~1.5 ГБ) — на сервер их нужно положить отдельно в `public/video/`.
+Видео лежат в `public/video/` и в git не хранятся — на сервер их нужно положить отдельно в `public/video/`.
+
+## Оптимизация медиа
+
+```bash
+npm run optimize:images   # public/images: до 2000px по длинной стороне, JPEG mozjpeg q78, PNG без потерь
+npm run optimize:video    # public/video: H.264 CRF 24 (фоновое wedding.mp4 — CRF 28, без звука), faststart
+```
+
+Оба скрипта заменяют файл, только если результат меньше; пути не меняются. Новые фото и видео
+прогоняйте через них перед коммитом/выкладкой. Оригиналы видео — вне репозитория.
 
 ## Страницы
 
 | Было                   | Стало              | Где код                                   |
 |------------------------|--------------------|-------------------------------------------|
-| `index.html`           | `/`                | `src/app/(main)`, разметка `src/content/home.tsx` |
-| `new-year1.html`       | `/new-year1`       | `src/app/(newyear)`, `src/content/new-year.tsx` |
-| `pay.html`             | `/pay`             | `src/app/(pay)`, `src/content/pay.tsx`    |
-| `wedding_ushmor.html`  | `/wedding_ushmor`  | `src/app/(wedding)`, `src/content/wedding-ushmor.tsx` |
-| `wedding_pra.html`     | `/wedding_pra`     | `src/app/(wedding)`, `src/content/wedding-pra.tsx` |
-| `form.html`            | `/form`            | `src/app/(form)`, `src/content/form.tsx`  |
+| `index.html`           | `/`                | `src/app/(main)`, `src/components/sections/home/*` |
+| `new-year1.html`       | `/new-year1`       | `src/app/(newyear)`, `src/components/sections/new-year/*` |
+| `pay.html`             | `/pay`             | `src/app/(pay)`, `src/components/sections/pay/*`    |
+| `wedding_ushmor.html`  | `/wedding_ushmor`  | `src/app/(wedding)`, `src/components/sections/wedding-ushmor/*` |
+| `wedding_pra.html`     | `/wedding_pra`     | `src/app/(wedding)`, `src/components/sections/wedding-pra/*` |
+| `form.html`            | `/form`            | `src/app/(form)`, `src/components/sections/form/*`  |
 | `video.html`           | `/video`           | `src/app/(video)`, `src/components/HlsPlayer.tsx` |
 
 Старые адреса `*.html` отдают 308-редирект на новые (`next.config.ts`).
@@ -32,6 +42,19 @@ npm run start    # запуск production-сборки
 Каждая группа маршрутов — свой root layout: у главной/новогодней/оплаты стили `index.css`
 (`src/styles/site.ts` → `src/scss/main.scss`), у свадебных — `wedding.css` (`src/styles/wedding.ts` → `src/scss/weddings.scss`).
 SCSS перенесены из старого проекта; `url(../images/…)` заменены на `/images/…` (файлы в `public/images`, `public/fonts`).
+
+## Компоненты
+
+```
+src/components/
+  layout/    SiteHeader (шапка, мессенджер — проп contact), WeddingFooter (футер свадебных страниц)
+  sections/  секции страниц: home/, new-year/, pay/, form/, wedding-pra/, wedding-ushmor/
+  price/     popup-прайсы (#price-pra, #price-ushmor, свадебные)
+  icons/     SVG-спрайты иконок
+  common/    GtmNoscript, YookassaTemplate
+```
+
+Страница в `src/app/**/page.tsx` только собирает секции по порядку. Цены правятся в `src/components/price/*`.
 
 ## Поведение (порт `src/js/common.js`)
 

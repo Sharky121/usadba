@@ -5,7 +5,9 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "optimize:images": "node scripts/optimize-images.mjs",
+    "optimize:video": "bash scripts/optimize-video.sh"
   },
   "dependencies": {
     "@fancyapps/ui": "4.0.31",

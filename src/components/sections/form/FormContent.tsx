@@ -1,9 +1,7 @@
-// Сгенерировано из form.html (скрипт конвертации HTML→JSX), далее правится вручную.
 /* eslint-disable */
-
-export default function FormBody() {
+/** Содержимое страницы /form. */
+export default function FormContent() {
   return (
-    <>
     <main className="page-main">
       <div className="container">
         <form className="booking__form booking-form booking-form-1 form" id="booking-example" action="send-form.php" encType="multipart/form-data">
@@ -67,6 +65,5 @@ export default function FormBody() {
         </form>
       </div>
     </main>
-    </>
   );
 }
