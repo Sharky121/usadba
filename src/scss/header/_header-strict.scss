@@ -1,0 +1,569 @@
+@use "../abstract" as var;
+
+// Строгий стиль шапки — в одном ключе с окнами прайс-листов: белый фон, тонкие линии,
+// прописные с разрядкой, прямые углы. Подключается последним и переопределяет базовые стили шапки.
+
+$line: rgba(var.$brand-brown, 0.16);
+
+@mixin caps($size: 12px) {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: $size;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+
+.page-header {
+  background-color: var.$brand-white;
+  border-bottom: 1px solid $line;
+  box-shadow: none;
+}
+
+.page-header--fixed-top {
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.08);
+}
+
+// Логотип
+.logo {
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 1.15;
+  color: var.$brand-brown;
+}
+
+// Кнопка мобильного меню: без заливки, тонкие линии
+.hamburger-menu {
+  color: var.$brand-brown;
+
+  background-color: transparent;
+  border-right: 1px solid $line;
+
+  &:hover {
+    color: var.$brand-brown;
+    opacity: 0.7;
+  }
+}
+
+.hamburger-menu__text {
+  margin-top: 3px;
+
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.hamburger-menu__line {
+  height: 2px;
+  margin-top: -1px;
+
+  background-color: var.$brand-brown;
+}
+
+.hamburger-menu:hover .hamburger-menu__line {
+  background-color: var.$brand-brown;
+}
+
+// Телефон-иконка на мобильном
+.header-contacts__phone {
+  font-family: "Raleway", Arial, sans-serif;
+  color: var.$brand-brown;
+
+  svg {
+    width: 28px;
+    height: 28px;
+    margin-right: 14px;
+  }
+}
+
+// «Онлайн оплата» — контурная прямоугольная кнопка
+.btn-pay.header-contacts__pay,
+.btn-pay.site-menu__pay {
+  padding: 9px 16px;
+
+  background-color: transparent;
+  border: 1px solid rgba(var.$brand-brown, 0.45);
+  border-radius: 2px;
+  transition: background-color 0.2s, border-color 0.2s;
+
+  span {
+    @include caps(11px);
+
+    color: var.$brand-brown;
+    transition: color 0.2s;
+  }
+
+  &:hover,
+  &:active,
+  &:focus-visible {
+    background-color: var.$brand-brown;
+    border-color: var.$brand-brown;
+    opacity: 1;
+
+    span {
+      color: var.$brand-white;
+    }
+  }
+}
+
+// Мессенджер в шапке — текстовая ссылка вместо цветного значка
+.page-header .social-link {
+  color: var.$brand-brown;
+
+  .social-link__ico {
+    display: none;
+  }
+
+  .social-link__text,
+  .social-link__text.visually-hidden {
+    position: static;
+
+    width: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    clip: auto;
+    clip-path: none;
+    white-space: nowrap;
+
+    @include caps(11px);
+
+    b {
+      font-weight: inherit;
+    }
+  }
+
+  &:hover,
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+// Выезжающее мобильное меню: белое, без фоновой картинки
+.site-menu {
+  background-image: none;
+  box-shadow: 8px 0 32px rgba(0, 0, 0, 0.12);
+
+  &::before {
+    display: none;
+  }
+}
+
+.site-menu__wrapper {
+  align-items: stretch;
+  padding: 20px 24px 28px;
+
+  text-align: left;
+}
+
+.site-menu__close-menu {
+  padding-left: 0;
+
+  @include caps(11px);
+
+  color: var.$brand-brown;
+
+  &::before {
+    display: none;
+  }
+}
+
+.site-menu__list {
+  margin-top: 28px;
+
+  text-align: left;
+  border-top: 1px solid $line;
+}
+
+.site-menu__item {
+  margin-bottom: 0;
+
+  border-bottom: 1px solid $line;
+}
+
+.site-menu__link {
+  padding: 16px 0;
+
+  @include caps(12px);
+
+  color: var.$brand-brown;
+}
+
+.site-menu__subitem {
+  margin-top: 0;
+}
+
+.menu-subitem {
+  padding: 0 0 12px;
+
+  background-color: transparent;
+  border-radius: 0;
+}
+
+.menu-subitem__item {
+  margin-bottom: 0;
+}
+
+.menu-subitem__link {
+  display: block;
+  padding: 7px 0 7px 14px;
+
+  font-size: 14px;
+  color: var.$brand-brown;
+
+  &:hover {
+    opacity: 0.65;
+  }
+}
+
+.site-menu__pay {
+  width: 100%;
+  margin-bottom: 16px;
+}
+
+.site-menu__social {
+  margin-bottom: 16px;
+
+  text-align: center;
+}
+
+.site-menu__address {
+  font-family: "Raleway", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: center;
+  color: var.$brand-brown;
+
+  b {
+    font-weight: inherit;
+  }
+}
+
+@include var.tablet-size {
+
+  // На планшетах меню тоже выезжающее — кнопка должна быть видна (раньше её не было до 1280px)
+  .site-nav__hamburger {
+    display: inline-flex;
+    height: 90px;
+    padding-right: 24px;
+    padding-left: 4px;
+
+    border-right: 0;
+  }
+
+  .logo {
+    font-size: 19px;
+    text-align: left;
+  }
+
+  // Одинаковые поля слева и справа — иначе центр шапки смещён относительно страницы
+  .page-header__container {
+    padding-right: 20px;
+    padding-left: 20px;
+  }
+
+  // В шапке два стиля текста. «Заголовочный» — шрифт Forum, жирный, прописными: логотип слева и телефон справа,
+  // они зеркалят друг друга. «Служебный» — мелкие прописные Raleway с разрядкой: пункты меню и кнопки.
+  // Блок контактов прижат к правому краю: номер сверху, под ним две кнопки одной высоты.
+  .header-contacts {
+    display: grid;
+    grid-template-columns: auto auto;
+    justify-content: end;
+    gap: 9px 8px;
+  }
+
+  .header-contact__wrapper {
+    display: contents;
+  }
+
+  .header-contacts__phone {
+    grid-column: 1 / -1;
+
+    font-family: Forum, serif;
+    font-size: 21px;
+    font-weight: 700;
+    font-feature-settings: "lnum";
+    line-height: 1;
+    letter-spacing: 0.08em;
+    text-align: right;
+    white-space: nowrap;
+
+    span {
+      // letter-spacing добавляет зазор после последней цифры — убираем, чтобы край совпал с кнопками
+      margin-right: -0.08em;
+
+      color: var.$brand-brown;
+    }
+
+    b {
+      font-weight: inherit;
+    }
+  }
+
+  // Под номером — строка из двух текстовых ссылок через тонкую черту («Онлайн оплата | Telegram»).
+  // Без рамок: вторая строка блока повторяет ритм логотипа и не спорит с номером.
+  .btn-pay.header-contacts__pay,
+  .header-contacts__social .social-link {
+    display: block;
+    width: auto;
+    height: auto;
+    margin: 0;
+    padding: 0;
+
+    line-height: 1;
+    color: rgba(var.$brand-brown, 0.72);
+
+    background-color: transparent;
+    border: 0;
+    border-radius: 0;
+    transition: color 0.2s ease;
+
+    &:hover,
+    &:active,
+    &:focus-visible {
+      color: var.$brand-brown;
+
+      background-color: transparent;
+      opacity: 1;
+    }
+  }
+
+  .btn-pay.header-contacts__pay span,
+  .header-contacts__social .social-link .social-link__text,
+  .header-contacts__social .social-link .social-link__text.visually-hidden {
+    display: inline-block;
+    padding-bottom: 3px;
+
+    font-size: 10px;
+    font-weight: 600;
+    line-height: 1;
+    letter-spacing: 0.18em;
+    white-space: nowrap;
+    color: inherit;
+
+    // Тонкое подчёркивание проявляется слева направо при наведении
+    background-image: linear-gradient(currentColor, currentColor);
+    background-repeat: no-repeat;
+    background-position: 0 100%;
+    background-size: 0 1px;
+    transition: background-size 0.3s ease, color 0.2s ease;
+  }
+
+  .btn-pay.header-contacts__pay:hover span,
+  .btn-pay.header-contacts__pay:focus-visible span,
+  .header-contacts__social .social-link:hover .social-link__text,
+  .header-contacts__social .social-link:focus-visible .social-link__text {
+    color: inherit;
+
+    // letter-spacing добавляет пустоту после последней буквы — линия короче на эту величину
+    background-size: calc(100% - 0.18em) 1px;
+  }
+
+  .header-contacts {
+    gap: 9px 0;
+    align-items: center;
+  }
+
+  .header-contacts__social {
+    display: block;
+    margin-left: 12px;
+    padding-left: 12px;
+
+    border-left: 1px solid rgba(var.$brand-brown, 0.3);
+
+    .social__list,
+    .social__item {
+      display: block;
+    }
+
+    // Убираем хвост разрядки после последней буквы, чтобы правый край совпал с номером
+    .social-link__text {
+      margin-right: -0.18em;
+    }
+  }
+}
+
+@include var.desktop-size {
+
+  .site-nav__hamburger {
+    display: none;
+  }
+
+  .logo {
+    font-size: 21px;
+    line-height: 1.2;
+  }
+
+  .site-menu {
+    box-shadow: none;
+  }
+
+  .site-menu__wrapper {
+    padding: 0;
+  }
+
+  .site-menu__list {
+    gap: 6px;
+    margin-top: 0;
+
+    border-top: 0;
+  }
+
+  .site-menu__item {
+    border-bottom: 0;
+  }
+
+  // Три колонки: логотип | меню | контакты. Боковые колонки равной ширины,
+  // поэтому меню всегда ровно по центру шапки, независимо от ширины логотипа и контактов.
+  .site-nav {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+  }
+
+  .site-nav__logo {
+    justify-self: start;
+  }
+
+  .site-nav__contacts {
+    justify-self: end;
+  }
+
+  .site-menu__link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 37px 20px;
+
+    @include caps(12px);
+
+    color: rgba(var.$brand-brown, 0.78);
+    transition: color 0.2s ease, background-color 0.2s ease;
+
+    // Линий под пунктами нет: наведение и открытый пункт отмечаются мягкой подложкой на всю высоту шапки
+    &::before {
+      display: none;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var.$brand-brown;
+
+      background-color: rgba(var.$brand-brown, 0.05);
+    }
+  }
+
+  // Стрелка у пунктов с подменю; переворачивается, когда подменю открыто
+  span.site-menu__link::after {
+    content: "";
+
+    width: 5px;
+    height: 5px;
+    margin-top: -3px;
+
+    border-right: 1.5px solid currentColor;
+    border-bottom: 1.5px solid currentColor;
+    opacity: 0.7;
+    transform: rotate(45deg);
+    transition: transform 0.25s ease, margin-top 0.25s ease;
+  }
+
+  // Открытый пункт: та же подложка, что у выпадающего списка под ним — они читаются как одно целое
+  span.site-menu__link:has(+ .site-menu__subitem) {
+    color: var.$brand-brown;
+
+    background-color: rgba(var.$brand-brown, 0.05);
+
+    &::after {
+      margin-top: 3px;
+
+      transform: rotate(-135deg);
+    }
+  }
+
+  // Выпадающий список: вплотную под шапкой, по левому краю пункта, плавно проявляется
+  .site-menu__subitem {
+    top: 100%;
+    left: 0;
+
+    width: max-content;
+    min-width: 100%;
+    margin-top: 1px;
+    margin-left: 0;
+
+    animation: header-dropdown-in 0.22s ease both;
+  }
+
+  .menu-subitem {
+    padding: 8px 0;
+
+    background-color: var.$brand-white;
+    border: 0;
+    border-radius: 0;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.14);
+  }
+
+  .menu-subitem__link {
+    position: relative;
+
+    padding: 11px 44px 11px 20px;
+
+    color: rgba(var.$brand-brown, 0.85);
+    white-space: nowrap;
+    transition: background-color 0.25s ease, color 0.25s ease;
+
+    // Черта слева у строки под курсором: вырастает от середины вверх и вниз.
+    // Анимируется transform — он идёт плавно, без рывков (в отличие от тени или ширины).
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+
+      width: 2px;
+
+      background-color: var.$brand-brown;
+      opacity: 0;
+      transform: scaleY(0);
+      transform-origin: center;
+      transition: transform 0.3s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.2s ease;
+      will-change: transform;
+    }
+
+    &:hover,
+    &:focus-visible {
+      color: var.$brand-brown;
+
+      background-color: rgba(var.$brand-brown, 0.05);
+      opacity: 1;
+
+      &::before {
+        opacity: 1;
+        transform: scaleY(1);
+      }
+    }
+  }
+}
+
+@keyframes header-dropdown-in {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .site-menu__subitem {
+    animation: none;
+  }
+}

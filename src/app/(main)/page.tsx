@@ -13,7 +13,6 @@ import PraInterior from "@/components/sections/home/PraInterior";
 import PraInteriorReview from "@/components/sections/home/PraInteriorReview";
 import PraSauna from "@/components/sections/home/PraSauna";
 import PraTerritory from "@/components/sections/home/PraTerritory";
-import Question from "@/components/sections/home/Question";
 import UshmorAbout from "@/components/sections/home/UshmorAbout";
 import UshmorGuestHouse from "@/components/sections/home/UshmorGuestHouse";
 import UshmorHouseMobile from "@/components/sections/home/UshmorHouseMobile";
@@ -49,7 +48,6 @@ export default function HomePage() {
         <UshmorInterior />
         <UshmorGuestHouse />
         <Location />
-        <Question />
       </main>
       <SpriteHome />
       <PricePra />
